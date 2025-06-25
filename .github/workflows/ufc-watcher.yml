@@ -58,11 +58,19 @@ jobs:
           git push origin main
         continue-on-error: true
 
-      - name: Notify on success
+      - name: Notify on success with changes
         if: steps.ufc-watcher.outcome == 'success' && steps.git-check.outputs.changes == 'true'
         run: |
           curl -H "Content-Type: application/json" \
                -d '{"content":"✅ UFC Watcher completed successfully! Fight data updated."}' \
+               ${{ secrets.DISCORD_WEBHOOK_URL }}
+        continue-on-error: true
+
+      - name: Notify on success with no changes
+        if: steps.ufc-watcher.outcome == 'success' && steps.git-check.outputs.changes == 'false'
+        run: |
+          curl -H "Content-Type: application/json" \
+               -d '{"content":"ℹ️ UFC Watcher ran successfully - no changes detected. Data is up to date."}' \
                ${{ secrets.DISCORD_WEBHOOK_URL }}
         continue-on-error: true
 
