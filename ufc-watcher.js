@@ -1,189 +1,438 @@
+// ufc-watcher.js
 import fetch from "node-fetch";
+import 'dotenv/config';
 import fs from "fs";
+import { promisify } from 'util';
 
-const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1387213888709460008/y5ABTwgCN1rBq_8BPM48UWruwdhKytwDFdq___EBMEBoCS-TAGdapWxB8yhXQtWc1bIz";
-
+const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
 const KNOWN_FIGHTS_FILE = "knownFights.json";
 const KNOWN_EVENTS_FILE = "knownEvents.json";
 const PAST_EVENTS_FILE = "pastEvents.json";
 const UPCOMING_UNANNOUNCED_FILE = "upcomingUnannouncedFights.json";
+const FIGHT_LOG_FILE = "fightLog.json";
+const FIGHT_DETAILS_FILE = "fightDetails.json"; // New file to store fight details
 
-function loadJson(file) {
+// Athlete cache to avoid redundant API calls
+const athleteCache = new Map();
+
+// Rate limiting
+const delay = promisify(setTimeout);
+let lastRequestTime = 0;
+const MIN_REQUEST_INTERVAL = 50; // 50ms between requests
+
+const rateLimitedFetch = async (url, options = {}) => {
+  const now = Date.now();
+  const timeSinceLastRequest = now - lastRequestTime;
+  
+  if (timeSinceLastRequest < MIN_REQUEST_INTERVAL) {
+    await delay(MIN_REQUEST_INTERVAL - timeSinceLastRequest);
+  }
+  
+  lastRequestTime = Date.now();
+  return fetch(url, options);
+};
+
+const loadJson = (file) => {
   try {
     return JSON.parse(fs.readFileSync(file));
   } catch {
-    return [];
+    return file === FIGHT_DETAILS_FILE ? {} : [];
   }
-}
+};
 
-function saveJson(file, data) {
+const saveJson = (file, data) => {
   fs.writeFileSync(file, JSON.stringify(data, null, 2));
-}
+};
 
-function appendPastEvent(fullEventObj) {
+const appendPastEvent = (fullEventObj) => {
   const existing = loadJson(PAST_EVENTS_FILE);
-  const alreadyExists = existing.some((e) => e.eventId === fullEventObj.eventId);
-  if (!alreadyExists) {
+  if (!existing.some(e => e.eventId === fullEventObj.eventId)) {
     existing.push(fullEventObj);
     saveJson(PAST_EVENTS_FILE, existing);
   }
-}
+};
 
-function saveUnannouncedFights(unannounced) {
+const saveUnannouncedFights = (unannounced) => {
   saveJson(UPCOMING_UNANNOUNCED_FILE, unannounced);
-}
+};
 
-async function sendDiscordAlert(eventName, fightIds) {
-  const content = `🚨 **${eventName}**\nNew fights added: ${fightIds.join(', ')}`;
+const saveFightDetails = (details) => {
+  saveJson(FIGHT_DETAILS_FILE, details);
+};
+
+const logNewFights = (entries) => {
+  const log = loadJson(FIGHT_LOG_FILE);
+  const updated = [...log, ...entries];
+  saveJson(FIGHT_LOG_FILE, updated);
+};
+
+const sendDiscordMessage = async (content) => {
+  try {
+    await fetch(DISCORD_WEBHOOK_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ content }),
+    });
+  } catch (err) {
+    console.error("Discord message failed:", err.message);
+  }
+};
+
+const sendDiscordAlert = async (eventName, fightNames) => {
+  const content = `🚨 **${eventName}**\nNew fights added:\n${fightNames.map(name => `- ${name}`).join('\n')}`;
   await sendDiscordMessage(content);
-}
+};
 
-async function sendDiscordMessage(content) {
-  await fetch(DISCORD_WEBHOOK_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ content }),
-  });
-}
+const sendUpdatedFightsAlert = async (eventName, fightNames) => {
+  const content = `🔄 **${eventName}**\nUpdated fights:\n${fightNames.map(name => `- ${name}`).join('\n')}`;
+  await sendDiscordMessage(content);
+};
 
-async function getUFCFights() {
+const sendFightChangesAlert = async (eventName, changes) => {
+  const content = `⚠️ **${eventName}**\nFight changes detected:\n${changes.map(change => `- ${change}`).join('\n')}`;
+  await sendDiscordMessage(content);
+};
+
+const sendRemovedFightsAlert = async (removedFights) => {
+  const content = `❌ **Fights Removed**\n${removedFights.map(fight => `- ${fight.eventName}: ${fight.fightName}`).join('\n')}`;
+  await sendDiscordMessage(content);
+};
+
+const safeFetch = async (url, retries = 2, delay = 500) => {
+  for (let attempt = 0; attempt < retries; attempt++) {
+    try {
+      const res = await rateLimitedFetch(url);
+      if (!res.ok) {
+        if (res.status === 429) {
+          console.log(`⏳ Rate limited, waiting ${delay * 2}ms...`);
+          await new Promise(resolve => setTimeout(resolve, delay * 2));
+          continue;
+        }
+        throw new Error(`HTTP ${res.status}`);
+      }
+      return await res.json();
+    } catch (err) {
+      console.error(`⚠️  Attempt ${attempt + 1}/${retries} failed for ${url.substring(0, 50)}...`);
+      if (attempt < retries - 1) {
+        await new Promise(res => setTimeout(res, delay * (attempt + 1)));
+      }
+    }
+  }
+  console.error(`❌ All attempts failed for ${url.substring(0, 50)}...`);
+  return null;
+};
+
+// Batch fetch athletes with caching and concurrency limit
+const fetchAthletesBatch = async (athleteRefs, concurrencyLimit = 8) => {
+  if (athleteRefs.length === 0) return [];
+  
+  const results = [];
+  const toFetch = [];
+  const refToIndexMap = new Map();
+  
+  // Check cache first and build index mapping
+  for (let i = 0; i < athleteRefs.length; i++) {
+    const ref = athleteRefs[i];
+    if (athleteCache.has(ref)) {
+      results[i] = athleteCache.get(ref);
+    } else {
+      results[i] = null;
+      toFetch.push({ ref, originalIndex: i });
+      refToIndexMap.set(ref, i);
+    }
+  }
+  
+  if (toFetch.length === 0) return results;
+  
+  console.log(`  📡 Fetching ${toFetch.length} new athletes...`);
+  
+  // Process in smaller chunks to avoid overwhelming the API
+  const chunks = [];
+  for (let i = 0; i < toFetch.length; i += concurrencyLimit) {
+    chunks.push(toFetch.slice(i, i + concurrencyLimit));
+  }
+  
+  let fetchedCount = 0;
+  for (const chunk of chunks) {
+    const promises = chunk.map(async ({ ref, originalIndex }) => {
+      const athlete = await safeFetch(ref + "?lang=en&region=us");
+      const name = athlete?.displayName || "Unknown Fighter";
+      athleteCache.set(ref, name);
+      fetchedCount++;
+      
+      // Show progress for large batches
+      if (toFetch.length > 10 && fetchedCount % 5 === 0) {
+        console.log(`    ⚡ Progress: ${fetchedCount}/${toFetch.length} athletes fetched`);
+      }
+      
+      return { originalIndex, name };
+    });
+    
+    const chunkResults = await Promise.all(promises);
+    
+    // Update results array
+    for (const { originalIndex, name } of chunkResults) {
+      results[originalIndex] = name;
+    }
+  }
+  
+  return results;
+};
+
+// Process competitions in batches to reduce API calls
+const processEventCompetitions = async (competitions, eventId, eventName) => {
+  const allAthleteRefs = [];
+  const competitionData = [];
+  
+  // Collect all athlete references first
+  for (const comp of competitions) {
+    const athleteRefs = comp.competitors.map(c => c.athlete.$ref);
+    allAthleteRefs.push(...athleteRefs);
+    competitionData.push({
+      fightId: comp.id,
+      athleteRefs,
+      startIndex: allAthleteRefs.length - athleteRefs.length
+    });
+  }
+  
+  // Batch fetch all athletes for this event
+  const allAthleteNames = await fetchAthletesBatch(allAthleteRefs);
+  
+  // Process fights with cached athlete data
+  const fights = [];
+  for (const compData of competitionData) {
+    const athleteNames = compData.athleteRefs.map((_, index) => 
+      allAthleteNames[compData.startIndex + index]
+    );
+    
+    fights.push({
+      fightId: compData.fightId,
+      athletes: athleteNames,
+      fightName: athleteNames.join(" vs "),
+      unannounced: athleteNames.every(name => name.toLowerCase().includes("tba")),
+      eventId,
+      eventName
+    });
+  }
+  
+  return fights;
+};
+
+// Compare fight details to detect changes
+const detectFightChanges = (previousDetails, currentFights) => {
+  const changes = [];
+  const removedFights = [];
+  const currentFightIds = new Set(currentFights.map(f => f.fightId));
+  
+  // Check for removed fights
+  for (const [fightId, oldFight] of Object.entries(previousDetails)) {
+    if (!currentFightIds.has(fightId)) {
+      removedFights.push({
+        fightId,
+        fightName: oldFight.fightName,
+        eventName: oldFight.eventName
+      });
+      console.log(`  ❌ Fight removed: ${oldFight.fightName} from ${oldFight.eventName}`);
+    }
+  }
+  
+  // Check for fighter changes in existing fights
+  for (const currentFight of currentFights) {
+    const oldFight = previousDetails[currentFight.fightId];
+    if (oldFight) {
+      // Compare fighters
+      const oldFighters = oldFight.athletes.sort();
+      const newFighters = currentFight.athletes.sort();
+      
+      if (JSON.stringify(oldFighters) !== JSON.stringify(newFighters)) {
+        const changeMsg = `${oldFight.fightName} → ${currentFight.fightName}`;
+        changes.push(changeMsg);
+        console.log(`  🔄 Fight changed: ${changeMsg} in ${currentFight.eventName}`);
+      }
+    }
+  }
+  
+  return { changes, removedFights };
+};
+
+export async function getUFCFights() {
+  console.log("🚀 Starting optimized UFC watcher...");
+  const startTime = Date.now();
+  
   await sendDiscordMessage(`👀 Running UFC watcher script at ${new Date().toLocaleString()}`);
 
   const knownFights = loadJson(KNOWN_FIGHTS_FILE);
   const knownEvents = loadJson(KNOWN_EVENTS_FILE);
   const upcomingUnannounced = loadJson(UPCOMING_UNANNOUNCED_FILE);
+  const previousFightDetails = loadJson(FIGHT_DETAILS_FILE); // Load previous fight details
 
   try {
-    const boardRes = await fetch("https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard");
-    const board = await boardRes.json();
-    const calendar = board.leagues?.[0]?.calendar || [];
+    const board = await safeFetch("https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard");
+    const calendar = board?.leagues?.[0]?.calendar || [];
 
     const now = new Date();
     const fourMonthsFromNow = new Date();
     fourMonthsFromNow.setMonth(now.getMonth() + 4);
 
-    const eventIds = calendar.map((item) => {
-      const ref = item.event?.$ref;
-      const match = ref && ref.match(/events\/(\d+)/);
-      return match ? match[1] : null;
-    }).filter(Boolean);
-
+    const eventIds = calendar.map(item => item.event?.$ref?.match(/events\/(\d+)/)?.[1]).filter(Boolean);
     const allEventIdsRaw = Array.from(new Set([...knownEvents, ...eventIds]));
+
+    // Batch fetch all events with concurrency limit
+    console.log(`📡 Fetching ${allEventIdsRaw.length} events...`);
+    const eventChunks = [];
+    const chunkSize = 6; // Further reduced to be more API-friendly
+    for (let i = 0; i < allEventIdsRaw.length; i += chunkSize) {
+      eventChunks.push(allEventIdsRaw.slice(i, i + chunkSize));
+    }
+
+    const allEvents = [];
+    let processedEvents = 0;
+    
+    for (const chunk of eventChunks) {
+      const promises = chunk.map(async eventId => {
+        const url = `https://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/events/${eventId}?lang=en&region=us`;
+        const event = await safeFetch(url);
+        processedEvents++;
+        
+        if (allEventIdsRaw.length > 20 && processedEvents % 10 === 0) {
+          console.log(`  ⚡ Events progress: ${processedEvents}/${allEventIdsRaw.length}`);
+        }
+        
+        return (event && event.name && event.competitions && event.date) ? { eventId, event } : null;
+      });
+      const chunkResults = await Promise.all(promises);
+      allEvents.push(...chunkResults.filter(Boolean));
+    }
+
+    allEvents.sort((a, b) => new Date(a.event.date) - new Date(b.event.date));
+
     const validEventIds = [];
     const validFightIds = [];
     const newFightIdsGlobal = [];
     const updatedUnannounced = [];
+    const newFightLogEntries = [];
+    const currentFightDetails = {}; // Store current fight details
+    const allCurrentFights = []; // Store all current fights for change detection
 
-    for (const eventId of allEventIdsRaw) {
-      try {
-        const url = `https://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/events/${eventId}?lang=en&region=us`;
-        const res = await fetch(url);
-        const event = await res.json();
-        const eventDate = new Date(event.date);
+    console.log(`⚡ Processing ${allEvents.length} valid events...`);
 
-        if (!event.name || !event.competitions) continue;
-
-        if (eventDate < now) {
-          const pastEvent = {
-            eventId,
-            eventName: event.name,
-            fights: []
-          };
-
-          for (const comp of event.competitions) {
-            const fightId = comp.id;
-            const competitors = [];
-
-            for (const c of comp.competitors) {
-              try {
-                const athleteRes = await fetch(c.athlete.$ref + "?lang=en&region=us");
-                const athlete = await athleteRes.json();
-                competitors.push(athlete.displayName);
-              } catch {
-                competitors.push(c.athlete.displayName || "Unknown Fighter");
-              }
-            }
-
-            pastEvent.fights.push({ fightId, athletes: competitors });
-          }
-
-          appendPastEvent(pastEvent);
-          continue;
-        }
-
-        if (eventDate > fourMonthsFromNow) continue;
-
-        validEventIds.push(eventId);
-        const dateStr = eventDate.toDateString();
-        console.log(`\n📅 Event: ${event.name} on ${dateStr}`);
-
-        const newFightsThisEvent = [];
-
-        for (const comp of event.competitions) {
-          const fightId = comp.id;
-          validFightIds.push(fightId);
-          const competitorsInfo = [];
-
-          let unannounced = true;
-
-          for (const c of comp.competitors) {
-            try {
-              const athleteRes = await fetch(c.athlete.$ref + "?lang=en&region=us");
-              const athlete = await athleteRes.json();
-              competitorsInfo.push(athlete.displayName);
-              if (!athlete.displayName.toLowerCase().includes("tba")) unannounced = false;
-            } catch {
-              competitorsInfo.push(c.athlete.displayName || "Unknown Fighter");
-            }
-          }
-
-          const wasUnannounced = upcomingUnannounced.find(f => f.fightId === fightId);
-          if (!unannounced && wasUnannounced) {
-            console.log(`  🔄 UPDATED FIGHT: ${competitorsInfo.join(" vs ")} (ID: ${fightId}) was previously unannounced.`);
-          }
-
-          if (unannounced) {
-            updatedUnannounced.push({ eventId, eventName: event.name, fightId });
-          }
-
-          console.log(`  🥊 Fight: ${competitorsInfo.join(" vs ")} (ID: ${fightId})`);
-
-          if (!knownFights.includes(fightId)) {
-            newFightsThisEvent.push(fightId);
-            newFightIdsGlobal.push(fightId);
-          }
-        }
-
-        if (newFightsThisEvent.length) {
-          console.log(`  🚨 NEW FIGHTS for this event: ${newFightsThisEvent.join(', ')}`);
-          await sendDiscordAlert(event.name, newFightsThisEvent);
-        } else {
-          console.log("  ✅ No new fights for this event.");
-        }
-
-      } catch (err) {
-        console.error(`❌ Error processing event ID ${eventId}:`, err);
+    for (const { eventId, event } of allEvents) {
+      const eventDate = new Date(event.date);
+      
+      if (eventDate < now) {
+        // Handle past events quickly
+        const pastEvent = { 
+          eventId, 
+          eventName: event.name, 
+          fights: event.competitions.map(comp => ({
+            fightId: comp.id,
+            athletes: comp.competitors.map(c => c.athlete.displayName || "Unknown Fighter")
+          }))
+        };
+        appendPastEvent(pastEvent);
+        continue;
       }
+
+      if (eventDate > fourMonthsFromNow) continue;
+
+      validEventIds.push(eventId);
+      console.log(`\n📅 Event: ${event.name} on ${eventDate.toDateString()}`);
+
+      // Process all fights for this event in batch
+      const fights = await processEventCompetitions(event.competitions, eventId, event.name);
+      allCurrentFights.push(...fights); // Add to global fights list
+      
+      const newFightsThisEvent = [];
+      const updatedFightsThisEvent = [];
+
+      for (const fight of fights) {
+        validFightIds.push(fight.fightId);
+        
+        // Store current fight details
+        currentFightDetails[fight.fightId] = {
+          fightName: fight.fightName,
+          athletes: fight.athletes,
+          eventId: fight.eventId,
+          eventName: fight.eventName,
+          unannounced: fight.unannounced
+        };
+        
+        console.log(`  🥊 Fight: ${fight.fightName} (ID: ${fight.fightId})`);
+        
+        const wasUnannounced = upcomingUnannounced.find(f => f.fightId === fight.fightId);
+        if (!fight.unannounced && wasUnannounced) {
+          updatedFightsThisEvent.push(fight.fightName);
+        }
+        if (fight.unannounced) {
+          updatedUnannounced.push({ eventId, eventName: event.name, fightId: fight.fightId });
+        }
+
+        if (!knownFights.includes(fight.fightId)) {
+          newFightsThisEvent.push(fight.fightName);
+          newFightIdsGlobal.push(fight.fightId);
+          newFightLogEntries.push({ 
+            timestamp: new Date().toISOString(), 
+            eventName: event.name, 
+            fight: fight.fightName 
+          });
+        }
+      }
+
+      // Send Discord notifications
+      if (newFightsThisEvent.length) await sendDiscordAlert(event.name, newFightsThisEvent);
+      if (updatedFightsThisEvent.length) await sendUpdatedFightsAlert(event.name, updatedFightsThisEvent);
     }
 
+    // Detect fight changes and removals
+    console.log("\n🔍 Checking for fight changes and removals...");
+    const { changes, removedFights } = detectFightChanges(previousFightDetails, allCurrentFights);
+    
+    // Group changes by event for cleaner notifications
+    const changesByEvent = {};
+    for (const change of changes) {
+      const fight = allCurrentFights.find(f => change.includes(f.fightName));
+      if (fight) {
+        if (!changesByEvent[fight.eventName]) {
+          changesByEvent[fight.eventName] = [];
+        }
+        changesByEvent[fight.eventName].push(change);
+      }
+    }
+    
+    // Send change notifications
+    for (const [eventName, eventChanges] of Object.entries(changesByEvent)) {
+      await sendFightChangesAlert(eventName, eventChanges);
+    }
+    
+    if (removedFights.length > 0) {
+      await sendRemovedFightsAlert(removedFights);
+    }
+
+    // Save all data
     saveJson(KNOWN_EVENTS_FILE, validEventIds);
     const cleanedFights = Array.from(new Set([...knownFights, ...newFightIdsGlobal]))
       .filter(id => validFightIds.includes(id));
     saveJson(KNOWN_FIGHTS_FILE, cleanedFights);
     saveUnannouncedFights(updatedUnannounced);
-
-    if (newFightIdsGlobal.length === 0) {
-      await sendDiscordMessage("✅ UFC watcher ran — no new fights detected.");
+    saveFightDetails(currentFightDetails); // Save current fight details for next run
+    if (newFightLogEntries.length) logNewFights(newFightLogEntries);
+    
+    if (newFightIdsGlobal.length === 0 && changes.length === 0 && removedFights.length === 0) {
+      await sendDiscordMessage("✅ UFC watcher ran — no changes detected.");
     }
 
+    const executionTime = ((Date.now() - startTime) / 1000).toFixed(2);
+    console.log(`⚡ Completed in ${executionTime} seconds`);
+    console.log(`📊 Cache stats: ${athleteCache.size} athletes cached`);
+    console.log(`📊 Changes detected: ${changes.length} fighter changes, ${removedFights.length} removed fights`);
+    await sendDiscordMessage(`✅ UFC watcher completed in ${executionTime}s - Cache: ${athleteCache.size} athletes, ${changes.length} changes, ${removedFights.length} removals`);
+    
   } catch (err) {
     console.error("❌ General failure in getUFCFights:", err);
+    await sendDiscordMessage(`❌ UFC watcher failed: ${err.message}`);
   }
 }
 
-export { getUFCFights };
-
-// Only run if this file is executed directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   getUFCFights();
 }

@@ -1,0 +1,702 @@
+{
+  "401758683": {
+    "fightName": "Charles Oliveira vs Ilia Topuria",
+    "athletes": [
+      "Charles Oliveira",
+      "Ilia Topuria"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  },
+  "401758684": {
+    "fightName": "Jack Hermansson vs Gregory Rodrigues",
+    "athletes": [
+      "Jack Hermansson",
+      "Gregory Rodrigues"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  },
+  "401765007": {
+    "fightName": "Robert Whittaker vs Reinier de Ridder",
+    "athletes": [
+      "Robert Whittaker",
+      "Reinier de Ridder"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401765008": {
+    "fightName": "Ibo Aslan vs Billy Elekana",
+    "athletes": [
+      "Ibo Aslan",
+      "Billy Elekana"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401766298": {
+    "fightName": "Diego Lopes vs Jean Silva",
+    "athletes": [
+      "Diego Lopes",
+      "Jean Silva"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "unannounced": false
+  },
+  "401766299": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "unannounced": true
+  },
+  "401769288": {
+    "fightName": "Dustin Poirier vs Max Holloway",
+    "athletes": [
+      "Dustin Poirier",
+      "Max Holloway"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401769290": {
+    "fightName": "Adam Fugitt vs Islam Dulatov",
+    "athletes": [
+      "Adam Fugitt",
+      "Islam Dulatov"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401769291": {
+    "fightName": "Nicolle Caliari vs Carli Judice",
+    "athletes": [
+      "Nicolle Caliari",
+      "Carli Judice"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401772509": {
+    "fightName": "Alexandre Pantoja vs Kai Kara-France",
+    "athletes": [
+      "Alexandre Pantoja",
+      "Kai Kara-France"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  },
+  "401772650": {
+    "fightName": "Renato Moicano vs Beneil Dariush",
+    "athletes": [
+      "Renato Moicano",
+      "Beneil Dariush"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  },
+  "401772653": {
+    "fightName": "Tracy Cortez vs Viviane Araujo",
+    "athletes": [
+      "Tracy Cortez",
+      "Viviane Araujo"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  },
+  "401772654": {
+    "fightName": "Dricus Du Plessis vs Khamzat Chimaev",
+    "athletes": [
+      "Dricus Du Plessis",
+      "Khamzat Chimaev"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401772655": {
+    "fightName": "King Green vs Diego Ferreira",
+    "athletes": [
+      "King Green",
+      "Diego Ferreira"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401772656": {
+    "fightName": "Nursulton Ruziboev vs Bryan Battle",
+    "athletes": [
+      "Nursulton Ruziboev",
+      "Bryan Battle"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401772657": {
+    "fightName": "Brandon Royval vs Joshua Van",
+    "athletes": [
+      "Brandon Royval",
+      "Joshua Van"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  },
+  "401772658": {
+    "fightName": "Marc-Andre Barriault vs Shara Magomedov",
+    "athletes": [
+      "Marc-Andre Barriault",
+      "Shara Magomedov"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401772659": {
+    "fightName": "Nikita Krylov vs Bogdan Guskov",
+    "athletes": [
+      "Nikita Krylov",
+      "Bogdan Guskov"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401772660": {
+    "fightName": "Asu Almabayev vs Ramazan Temirov",
+    "athletes": [
+      "Asu Almabayev",
+      "Ramazan Temirov"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401773313": {
+    "fightName": "Marvin Vettori vs Brendan Allen",
+    "athletes": [
+      "Marvin Vettori",
+      "Brendan Allen"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401773314": {
+    "fightName": "Gunnar Nelson vs Neil Magny",
+    "athletes": [
+      "Gunnar Nelson",
+      "Neil Magny"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401774502": {
+    "fightName": "Derrick Lewis vs Tallison Teixeira",
+    "athletes": [
+      "Derrick Lewis",
+      "Tallison Teixeira"
+    ],
+    "eventId": "600054061",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "unannounced": false
+  },
+  "401774507": {
+    "fightName": "Steve Garcia vs Calvin Kattar",
+    "athletes": [
+      "Steve Garcia",
+      "Calvin Kattar"
+    ],
+    "eventId": "600054061",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "unannounced": false
+  },
+  "401776541": {
+    "fightName": "Kyler Phillips vs Vinicius Oliveira",
+    "athletes": [
+      "Kyler Phillips",
+      "Vinicius Oliveira"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401776542": {
+    "fightName": "Marcin Prachnio vs Jimmy Crute",
+    "athletes": [
+      "Marcin Prachnio",
+      "Jimmy Crute"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401776543": {
+    "fightName": "Ikram Aliskerov vs Brunno Ferreira",
+    "athletes": [
+      "Ikram Aliskerov",
+      "Brunno Ferreira"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401776550": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Shanghai",
+    "unannounced": true
+  },
+  "401776551": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Shanghai",
+    "unannounced": true
+  },
+  "401776615": {
+    "fightName": "Amir Albazi vs Tatsuro Taira",
+    "athletes": [
+      "Amir Albazi",
+      "Tatsuro Taira"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401776616": {
+    "fightName": "Nick Klein vs Andrey Pulyaev",
+    "athletes": [
+      "Nick Klein",
+      "Andrey Pulyaev"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401777392": {
+    "fightName": "Chidi Njokuani vs Jake Matthews",
+    "athletes": [
+      "Chidi Njokuani",
+      "Jake Matthews"
+    ],
+    "eventId": "600054061",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "unannounced": false
+  },
+  "401777402": {
+    "fightName": "Tuco Tokkos vs Junior Tafa",
+    "athletes": [
+      "Tuco Tokkos",
+      "Junior Tafa"
+    ],
+    "eventId": "600054061",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "unannounced": false
+  },
+  "401777404": {
+    "fightName": "Austen Lane vs Vitor Petrino",
+    "athletes": [
+      "Austen Lane",
+      "Vitor Petrino"
+    ],
+    "eventId": "600054061",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "unannounced": false
+  },
+  "401777406": {
+    "fightName": "Chris Curtis vs Max Griffin",
+    "athletes": [
+      "Chris Curtis",
+      "Max Griffin"
+    ],
+    "eventId": "600054061",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "unannounced": false
+  },
+  "401777407": {
+    "fightName": "Melissa Martinez vs Fatima Kline",
+    "athletes": [
+      "Melissa Martinez",
+      "Fatima Kline"
+    ],
+    "eventId": "600054061",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "unannounced": false
+  },
+  "401777408": {
+    "fightName": "Lauren Murphy vs Eduarda Moura",
+    "athletes": [
+      "Lauren Murphy",
+      "Eduarda Moura"
+    ],
+    "eventId": "600054061",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "unannounced": false
+  },
+  "401777480": {
+    "fightName": "Stephen Thompson vs Gabriel Bonfim",
+    "athletes": [
+      "Stephen Thompson",
+      "Gabriel Bonfim"
+    ],
+    "eventId": "600054061",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "unannounced": false
+  },
+  "401777790": {
+    "fightName": "Anthony Hernandez vs Roman Dolidze",
+    "athletes": [
+      "Anthony Hernandez",
+      "Roman Dolidze"
+    ],
+    "eventId": "600054396",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "unannounced": false
+  },
+  "401777791": {
+    "fightName": "Alex Perez vs Steve Erceg",
+    "athletes": [
+      "Alex Perez",
+      "Steve Erceg"
+    ],
+    "eventId": "600054396",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "unannounced": false
+  },
+  "401777792": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600054396",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "unannounced": true
+  },
+  "401777944": {
+    "fightName": "Nassourdine Imavov vs Caio Borralho",
+    "athletes": [
+      "Nassourdine Imavov",
+      "Caio Borralho"
+    ],
+    "eventId": "600054419",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "unannounced": false
+  },
+  "401777945": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600054419",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "unannounced": true
+  },
+  "401777975": {
+    "fightName": "Karol Rosa vs Nora Cornolle",
+    "athletes": [
+      "Karol Rosa",
+      "Nora Cornolle"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401777984": {
+    "fightName": "Rodolfo Vieira vs Tresean Gore",
+    "athletes": [
+      "Rodolfo Vieira",
+      "Tresean Gore"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401777987": {
+    "fightName": "Felipe Bunes vs Andre Lima",
+    "athletes": [
+      "Felipe Bunes",
+      "Andre Lima"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401777988": {
+    "fightName": "Ketlen Souza vs Piera Rodriguez",
+    "athletes": [
+      "Ketlen Souza",
+      "Piera Rodriguez"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401777989": {
+    "fightName": "Torrez Finney vs Azamat Bekoev",
+    "athletes": [
+      "Torrez Finney",
+      "Azamat Bekoev"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401780156": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600054473",
+    "eventName": "UFC 320",
+    "unannounced": true
+  },
+  "401780157": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600054473",
+    "eventName": "UFC 320",
+    "unannounced": true
+  },
+  "401780158": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600054473",
+    "eventName": "UFC 320",
+    "unannounced": true
+  },
+  "401780824": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600054482",
+    "eventName": "UFC Fight Night: Vancouver",
+    "unannounced": true
+  },
+  "401780825": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600054482",
+    "eventName": "UFC Fight Night: Vancouver",
+    "unannounced": true
+  },
+  "401782308": {
+    "fightName": "Michael Page vs Jared Cannonier",
+    "athletes": [
+      "Michael Page",
+      "Jared Cannonier"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401782335": {
+    "fightName": "Robert Valentin vs Ateba Gautier",
+    "athletes": [
+      "Robert Valentin",
+      "Ateba Gautier"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401783699": {
+    "fightName": "Hyder Amil vs Jose Miguel Delgado",
+    "athletes": [
+      "Hyder Amil",
+      "Jose Miguel Delgado"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  },
+  "401783700": {
+    "fightName": "Terrance McKinney vs Viacheslav Borshchev",
+    "athletes": [
+      "Terrance McKinney",
+      "Viacheslav Borshchev"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  },
+  "401783701": {
+    "fightName": "Felipe Lima vs Payton Talbott",
+    "athletes": [
+      "Felipe Lima",
+      "Payton Talbott"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  },
+  "401783702": {
+    "fightName": "Niko Price vs Jacobe Smith",
+    "athletes": [
+      "Niko Price",
+      "Jacobe Smith"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  },
+  "401784468": {
+    "fightName": "Tim Elliott vs Kai Asakura",
+    "athletes": [
+      "Tim Elliott",
+      "Kai Asakura"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401784469": {
+    "fightName": "Gerald Meerschaert vs Michal Oleksiejczuk",
+    "athletes": [
+      "Gerald Meerschaert",
+      "Michal Oleksiejczuk"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401784470": {
+    "fightName": "JJ Aldrich vs Karine Silva",
+    "athletes": [
+      "JJ Aldrich",
+      "Karine Silva"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401784471": {
+    "fightName": "Jessica Andrade vs Loopy Godínez",
+    "athletes": [
+      "Jessica Andrade",
+      "Loopy Godínez"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401784472": {
+    "fightName": "Alexander Hernandez vs Chase Hooper",
+    "athletes": [
+      "Alexander Hernandez",
+      "Chase Hooper"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401784494": {
+    "fightName": "Edson Barboza vs Drakkar Klose",
+    "athletes": [
+      "Edson Barboza",
+      "Drakkar Klose"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401785969": {
+    "fightName": "Petr Yan vs Marcus McGhee",
+    "athletes": [
+      "Petr Yan",
+      "Marcus McGhee"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401785970": {
+    "fightName": "Movsar Evloev vs Aaron Pico",
+    "athletes": [
+      "Movsar Evloev",
+      "Aaron Pico"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401785971": {
+    "fightName": "Said Nurmagomedov vs Bryce Mitchell",
+    "athletes": [
+      "Said Nurmagomedov",
+      "Bryce Mitchell"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401789026": {
+    "fightName": "Jhonata Diniz vs Alvin Hines",
+    "athletes": [
+      "Jhonata Diniz",
+      "Alvin Hines"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  },
+  "401789179": {
+    "fightName": "Paulo Costa vs Roman Kopylov",
+    "athletes": [
+      "Paulo Costa",
+      "Roman Kopylov"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401789807": {
+    "fightName": "Christopher Ewert vs Jackson McVey",
+    "athletes": [
+      "Christopher Ewert",
+      "Jackson McVey"
+    ],
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "unannounced": false
+  }
+}

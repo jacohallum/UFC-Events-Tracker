@@ -1,0 +1,98 @@
+name: Run UFC Watcher
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"  # Every 6 hours - fixed the cron syntax
+  workflow_dispatch:  # Allows manual triggering
+
+permissions:
+  contents: write  # Required for pushing changes back to repo
+
+jobs:
+  run-ufc-watcher:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0  # Fetch full history for better git operations
+       
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+         
+      - name: Install dependencies
+        run: npm install
+        continue-on-error: false
+       
+      - name: Run UFC Watcher
+        id: ufc-watcher
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: node ufc-watcher.js
+        continue-on-error: true
+       
+      - name: Check for changes
+        id: git-check
+        if: steps.ufc-watcher.outcome == 'success'
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected"
+          fi
+       
+      - name: Commit and push changes
+        if: steps.git-check.outputs.changes == 'true' && steps.ufc-watcher.outcome == 'success'
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "🥊 Update UFC fight data - $(date '+%Y-%m-%d %H:%M:%S UTC')"
+          git push origin main
+        continue-on-error: true
+
+      - name: Notify on success
+        if: steps.ufc-watcher.outcome == 'success' && steps.git-check.outputs.changes == 'true'
+        run: |
+          curl -H "Content-Type: application/json" \
+               -d '{"content":"✅ UFC Watcher completed successfully! Fight data updated."}' \
+               ${{ secrets.DISCORD_WEBHOOK_URL }}
+        continue-on-error: true
+
+      - name: Notify on UFC Watcher failure
+        if: steps.ufc-watcher.outcome == 'failure'
+        run: |
+          curl -H "Content-Type: application/json" \
+               -d '{"content":"🚨 UFC Watcher script failed! Check the logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+               ${{ secrets.DISCORD_WEBHOOK_URL }}
+        continue-on-error: true
+
+      - name: Notify on git push failure
+        if: steps.ufc-watcher.outcome == 'success' && steps.git-check.outputs.changes == 'true' && failure()
+        run: |
+          curl -H "Content-Type: application/json" \
+               -d '{"content":"⚠️ UFC Watcher ran successfully but failed to push changes to GitHub. Check the logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+               ${{ secrets.DISCORD_WEBHOOK_URL }}
+        continue-on-error: true
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## UFC Watcher Run Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Timestamp:** $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "- **UFC Watcher Status:** ${{ steps.ufc-watcher.outcome }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Changes Detected:** ${{ steps.git-check.outputs.changes || 'N/A' }}" >> $GITHUB_STEP_SUMMARY
+          if [[ "${{ steps.ufc-watcher.outcome }}" == "failure" ]]; then
+            echo "- **Error:** UFC Watcher script failed" >> $GITHUB_STEP_SUMMARY
+          elif [[ "${{ steps.git-check.outputs.changes }}" == "true" ]]; then
+            echo "- **Result:** Fight data updated successfully" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **Result:** No changes detected, data is up to date" >> $GITHUB_STEP_SUMMARY
+          fi

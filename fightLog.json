@@ -1,0 +1,742 @@
+[
+  {
+    "timestamp": "2025-06-25T02:02:10.584Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Nick Klein vs Andrey Pulyaev"
+  },
+  {
+    "timestamp": "2025-06-25T02:02:11.042Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Torrez Finney vs Azamat Bekoev"
+  },
+  {
+    "timestamp": "2025-06-25T02:02:11.563Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Ketlen Souza vs Piera Rodriguez"
+  },
+  {
+    "timestamp": "2025-06-25T02:02:12.308Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Felipe Bunes vs Andre Lima"
+  },
+  {
+    "timestamp": "2025-06-25T02:02:13.149Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Rodolfo Vieira vs Tresean Gore"
+  },
+  {
+    "timestamp": "2025-06-25T02:02:13.777Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Karol Rosa vs Nora Cornolle"
+  },
+  {
+    "timestamp": "2025-06-25T02:02:14.300Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Amir Albazi vs Tatsuro Taira"
+  },
+  {
+    "timestamp": "2025-06-25T02:12:38.410Z",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:12:38.880Z",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "fight": "Nassourdine Imavov vs Caio Borralho"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:17.544Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Jhonata Diniz vs Alvin Hines"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:18.245Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Niko Price vs Jacobe Smith"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:18.674Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Terrance McKinney vs Viacheslav Borshchev"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:19.289Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Tracy Cortez vs Viviane Araujo"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:19.688Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Hyder Amil vs Jose Miguel Delgado"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:20.399Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Jack Hermansson vs Gregory Rodrigues"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:20.796Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Felipe Lima vs Payton Talbott"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:21.226Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Renato Moicano vs Beneil Dariush"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:21.641Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Brandon Royval vs Joshua Van"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:22.045Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Alexandre Pantoja vs Kai Kara-France"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:22.444Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Charles Oliveira vs Ilia Topuria"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:23.766Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Melissa Martinez vs Fatima Kline"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:24.156Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Lauren Murphy vs Eduarda Moura"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:24.546Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Chidi Njokuani vs Jake Matthews"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:24.938Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Chris Curtis vs Max Griffin"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:25.337Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Tuco Tokkos vs Junior Tafa"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:25.720Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Austen Lane vs Vitor Petrino"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:26.160Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Steve Garcia vs Calvin Kattar"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:26.558Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Stephen Thompson vs Gabriel Bonfim"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:26.986Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Derrick Lewis vs Tallison Teixeira"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:27.905Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Gunnar Nelson vs Neil Magny"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:28.303Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Paulo Costa vs Roman Kopylov"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:28.693Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Adam Fugitt vs Islam Dulatov"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:29.109Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Nicolle Caliari vs Carli Judice"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:29.512Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Marcin Prachnio vs Jimmy Crute"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:29.908Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Ikram Aliskerov vs Brunno Ferreira"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:30.308Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Marvin Vettori vs Brendan Allen"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:30.700Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Kyler Phillips vs Vinicius Oliveira"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:31.095Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Robert Valentin vs Ateba Gautier"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:31.517Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Dustin Poirier vs Max Holloway"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:32.429Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Ibo Aslan vs Billy Elekana"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:32.840Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Asu Almabayev vs Ramazan Temirov"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:33.445Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Movsar Evloev vs Aaron Pico"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:33.835Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Petr Yan vs Marcus McGhee"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:34.239Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Nikita Krylov vs Bogdan Guskov"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:34.644Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Said Nurmagomedov vs Bryce Mitchell"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:35.048Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Marc-Andre Barriault vs Shara Magomedov"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:35.473Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Robert Whittaker vs Reinier de Ridder"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:36.541Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Nick Klein vs Andrey Pulyaev"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:36.957Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Torrez Finney vs Azamat Bekoev"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:37.358Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Ketlen Souza vs Piera Rodriguez"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:37.748Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Felipe Bunes vs Andre Lima"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:38.152Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Rodolfo Vieira vs Tresean Gore"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:39.024Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Karol Rosa vs Nora Cornolle"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:39.636Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Amir Albazi vs Tatsuro Taira"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:40.602Z",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:40.994Z",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "fight": "Alex Perez vs Steve Erceg"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:41.383Z",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "fight": "Anthony Hernandez vs Roman Dolidze"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:42.376Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Gerald Meerschaert vs Michal Oleksiejczuk"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:42.767Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Alexander Hernandez vs Chase Hooper"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:43.185Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Nursulton Ruziboev vs Bryan Battle"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:43.577Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Tim Elliott vs Kai Asakura"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:44.165Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "King Green vs Diego Ferreira"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:44.565Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Jessica Andrade vs Loopy Godínez"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:45.160Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "JJ Aldrich vs Karine Silva"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:45.553Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Edson Barboza vs Drakkar Klose"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:45.947Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Michael Page vs Jared Cannonier"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:46.349Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Dricus Du Plessis vs Khamzat Chimaev"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:49.617Z",
+    "eventName": "UFC Fight Night: Shanghai",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:50.221Z",
+    "eventName": "UFC Fight Night: Shanghai",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:51.258Z",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:51.656Z",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "fight": "Nassourdine Imavov vs Caio Borralho"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:52.524Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:52.936Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "Diego Lopes vs Jean Silva"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:53.825Z",
+    "eventName": "UFC 320",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:54.215Z",
+    "eventName": "UFC 320",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:54.811Z",
+    "eventName": "UFC 320",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:55.846Z",
+    "eventName": "UFC Fight Night: Vancouver",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:28:56.299Z",
+    "eventName": "UFC Fight Night: Vancouver",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:02.246Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Jhonata Diniz vs Alvin Hines"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:02.659Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Niko Price vs Jacobe Smith"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:03.126Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Terrance McKinney vs Viacheslav Borshchev"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:03.514Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Tracy Cortez vs Viviane Araujo"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:03.924Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Hyder Amil vs Jose Miguel Delgado"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:04.333Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Jack Hermansson vs Gregory Rodrigues"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:04.744Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Felipe Lima vs Payton Talbott"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:05.160Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Renato Moicano vs Beneil Dariush"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:05.553Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Brandon Royval vs Joshua Van"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:05.949Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Alexandre Pantoja vs Kai Kara-France"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:06.339Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Charles Oliveira vs Ilia Topuria"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:08.859Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Melissa Martinez vs Fatima Kline"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:09.263Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Lauren Murphy vs Eduarda Moura"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:09.674Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Chidi Njokuani vs Jake Matthews"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:10.082Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Chris Curtis vs Max Griffin"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:10.522Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Tuco Tokkos vs Junior Tafa"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:10.926Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Austen Lane vs Vitor Petrino"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:11.525Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Steve Garcia vs Calvin Kattar"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:11.938Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Stephen Thompson vs Gabriel Bonfim"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:12.343Z",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fight": "Derrick Lewis vs Tallison Teixeira"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:13.832Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Gunnar Nelson vs Neil Magny"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:14.243Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Paulo Costa vs Roman Kopylov"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:14.852Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Adam Fugitt vs Islam Dulatov"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:15.285Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Nicolle Caliari vs Carli Judice"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:15.710Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Marcin Prachnio vs Jimmy Crute"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:16.101Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Ikram Aliskerov vs Brunno Ferreira"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:16.490Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Marvin Vettori vs Brendan Allen"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:16.899Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Kyler Phillips vs Vinicius Oliveira"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:17.308Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Robert Valentin vs Ateba Gautier"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:17.701Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Dustin Poirier vs Max Holloway"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:20.309Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Ibo Aslan vs Billy Elekana"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:20.719Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Asu Almabayev vs Ramazan Temirov"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:21.130Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Movsar Evloev vs Aaron Pico"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:21.527Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Petr Yan vs Marcus McGhee"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:21.931Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Nikita Krylov vs Bogdan Guskov"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:22.339Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Said Nurmagomedov vs Bryce Mitchell"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:22.750Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Marc-Andre Barriault vs Shara Magomedov"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:23.145Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Robert Whittaker vs Reinier de Ridder"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:24.405Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Nick Klein vs Andrey Pulyaev"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:24.827Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Torrez Finney vs Azamat Bekoev"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:25.303Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Ketlen Souza vs Piera Rodriguez"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:25.713Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Felipe Bunes vs Andre Lima"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:26.128Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Rodolfo Vieira vs Tresean Gore"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:26.963Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Karol Rosa vs Nora Cornolle"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:27.385Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Amir Albazi vs Tatsuro Taira"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:28.333Z",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:28.741Z",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "fight": "Alex Perez vs Steve Erceg"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:29.140Z",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "fight": "Anthony Hernandez vs Roman Dolidze"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:30.029Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Gerald Meerschaert vs Michal Oleksiejczuk"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:30.427Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Alexander Hernandez vs Chase Hooper"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:30.822Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Nursulton Ruziboev vs Bryan Battle"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:31.215Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Tim Elliott vs Kai Asakura"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:31.620Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "King Green vs Diego Ferreira"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:32.013Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Jessica Andrade vs Loopy Godínez"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:32.614Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "JJ Aldrich vs Karine Silva"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:33.007Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Edson Barboza vs Drakkar Klose"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:33.500Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Michael Page vs Jared Cannonier"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:33.905Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Dricus Du Plessis vs Khamzat Chimaev"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:34.762Z",
+    "eventName": "UFC Fight Night: Shanghai",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:35.158Z",
+    "eventName": "UFC Fight Night: Shanghai",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:36.217Z",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:36.622Z",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "fight": "Nassourdine Imavov vs Caio Borralho"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:37.536Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:37.932Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "Diego Lopes vs Jean Silva"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:38.858Z",
+    "eventName": "UFC 320",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:39.262Z",
+    "eventName": "UFC 320",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:39.674Z",
+    "eventName": "UFC 320",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:40.798Z",
+    "eventName": "UFC Fight Night: Vancouver",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:30:41.191Z",
+    "eventName": "UFC Fight Night: Vancouver",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-06-25T02:39:47.328Z",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fight": "Christopher Ewert vs Jackson McVey"
+  }
+]
