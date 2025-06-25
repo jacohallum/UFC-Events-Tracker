@@ -1,0 +1,1899 @@
+[
+  {
+    "eventId": "600051441",
+    "eventName": "UFC Fight Night: Dern vs Ribas 2",
+    "fights": [
+      {
+        "fightId": "401744281",
+        "athletes": [
+          "Joe Solecki",
+          "Nurullo Aliev"
+        ]
+      },
+      {
+        "fightId": "401738379",
+        "athletes": [
+          "Fatima Kline",
+          "Viktoriia Dudakova"
+        ]
+      },
+      {
+        "fightId": "401738373",
+        "athletes": [
+          "Bruno Lopes",
+          "Magomed Gadzhiyasulov"
+        ]
+      },
+      {
+        "fightId": "401738377",
+        "athletes": [
+          "Nicolle Caliari",
+          "Ernesta Kareckaite"
+        ]
+      },
+      {
+        "fightId": "401744280",
+        "athletes": [
+          "Preston Parsons",
+          "Jacobe Smith"
+        ]
+      },
+      {
+        "fightId": "401738372",
+        "athletes": [
+          "Thiago Moises",
+          "Trey Ogden"
+        ]
+      },
+      {
+        "fightId": "401738371",
+        "athletes": [
+          "Ihor Potieria",
+          "Marco Tulio"
+        ]
+      },
+      {
+        "fightId": "401738375",
+        "athletes": [
+          "Jose Johnson",
+          "Felipe Bunes"
+        ]
+      },
+      {
+        "fightId": "401738374",
+        "athletes": [
+          "Punahele Soriano",
+          "Uros Medic"
+        ]
+      },
+      {
+        "fightId": "401735188",
+        "athletes": [
+          "Christian Rodriguez",
+          "Austin Bashi"
+        ]
+      },
+      {
+        "fightId": "401738370",
+        "athletes": [
+          "Chris Curtis",
+          "Roman Kopylov"
+        ]
+      },
+      {
+        "fightId": "401735189",
+        "athletes": [
+          "Abdul Razak Alhassan",
+          "Cesar Almeida"
+        ]
+      },
+      {
+        "fightId": "401737957",
+        "athletes": [
+          "Santiago Ponzinibbio",
+          "Carlston Harris"
+        ]
+      },
+      {
+        "fightId": "401734541",
+        "athletes": [
+          "Mackenzie Dern",
+          "Amanda Ribas"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600051442",
+    "eventName": "UFC 311: Makhachev vs. Moicano",
+    "fights": [
+      {
+        "fightId": "401737005",
+        "athletes": [
+          "Tagir Ulanbekov",
+          "Clayton Carpenter"
+        ]
+      },
+      {
+        "fightId": "401737004",
+        "athletes": [
+          "Ricky Turcios",
+          "Bernardo Sopaj"
+        ]
+      },
+      {
+        "fightId": "401737003",
+        "athletes": [
+          "Muin Gafurov",
+          "Rinya Nakamura"
+        ]
+      },
+      {
+        "fightId": "401734544",
+        "athletes": [
+          "Karol Rosa",
+          "Ailin Perez"
+        ]
+      },
+      {
+        "fightId": "401737002",
+        "athletes": [
+          "Diego Ferreira",
+          "Grant Dawson"
+        ]
+      },
+      {
+        "fightId": "401746227",
+        "athletes": [
+          "Billy Elekana",
+          "Bogdan Guskov"
+        ]
+      },
+      {
+        "fightId": "401746235",
+        "athletes": [
+          "Azamat Bekoev",
+          "Zachary Reese"
+        ]
+      },
+      {
+        "fightId": "401734545",
+        "athletes": [
+          "Raoni Barcelos",
+          "Payton Talbott"
+        ]
+      },
+      {
+        "fightId": "401736916",
+        "athletes": [
+          "Kevin Holland",
+          "Reinier de Ridder"
+        ]
+      },
+      {
+        "fightId": "401736917",
+        "athletes": [
+          "Serghei Spivac",
+          "Jailton Almeida"
+        ]
+      },
+      {
+        "fightId": "401735013",
+        "athletes": [
+          "Jiří Procházka",
+          "Jamahal Hill"
+        ]
+      },
+      {
+        "fightId": "401736876",
+        "athletes": [
+          "Merab Dvalishvili",
+          "Umar Nurmagomedov"
+        ]
+      },
+      {
+        "fightId": "401751541",
+        "athletes": [
+          "Renato Moicano",
+          "Islam Makhachev"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600051443",
+    "eventName": "UFC Fight Night: Adesanya vs. Imavov",
+    "fights": [
+      {
+        "fightId": "401741554",
+        "athletes": [
+          "Jamal Pogues",
+          "Hamdy Abdelwahab"
+        ]
+      },
+      {
+        "fightId": "401734547",
+        "athletes": [
+          "Lucas Alexander",
+          "Bogdan Grad"
+        ]
+      },
+      {
+        "fightId": "401734827",
+        "athletes": [
+          "Mayra Bueno Silva",
+          "Jasmine Jasudavicius"
+        ]
+      },
+      {
+        "fightId": "401741553",
+        "athletes": [
+          "Damir Hadzovic",
+          "Terrance McKinney"
+        ]
+      },
+      {
+        "fightId": "401741555",
+        "athletes": [
+          "Thomas Petersen",
+          "Shamil Gaziev"
+        ]
+      },
+      {
+        "fightId": "401741288",
+        "athletes": [
+          "Muhammad Naimov",
+          "Kaan Ofli"
+        ]
+      },
+      {
+        "fightId": "401743550",
+        "athletes": [
+          "Farés Ziam",
+          "Mike Davis"
+        ]
+      },
+      {
+        "fightId": "401741286",
+        "athletes": [
+          "Said Nurmagomedov",
+          "Vinicius Oliveira"
+        ]
+      },
+      {
+        "fightId": "401741557",
+        "athletes": [
+          "Sergei Pavlovich",
+          "Jairzinho Rozenstruik"
+        ]
+      },
+      {
+        "fightId": "401738308",
+        "athletes": [
+          "Michael Page",
+          "Shara Magomedov"
+        ]
+      },
+      {
+        "fightId": "401734546",
+        "athletes": [
+          "Israel Adesanya",
+          "Nassourdine Imavov"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600050481",
+    "eventName": "UFC 312: Du Plessis vs. Strickland 2",
+    "fights": [
+      {
+        "fightId": "401729652",
+        "athletes": [
+          "Anshul Jubli",
+          "Quillan Salkilld"
+        ]
+      },
+      {
+        "fightId": "401745671",
+        "athletes": [
+          "Kevin Jousset",
+          "Jonathan Micallef"
+        ]
+      },
+      {
+        "fightId": "401754768",
+        "athletes": [
+          "Rongzhu",
+          "Kody Steele"
+        ]
+      },
+      {
+        "fightId": "401755004",
+        "athletes": [
+          "Aleksandre Topuria",
+          "Colby Thicknesse"
+        ]
+      },
+      {
+        "fightId": "401744559",
+        "athletes": [
+          "Wang Cong",
+          "Bruna Brasil"
+        ]
+      },
+      {
+        "fightId": "401740672",
+        "athletes": [
+          "Viacheslav Borshchev",
+          "Tom Nolan"
+        ]
+      },
+      {
+        "fightId": "401740673",
+        "athletes": [
+          "Jack Jenkins",
+          "Gabriel Santos"
+        ]
+      },
+      {
+        "fightId": "401750090",
+        "athletes": [
+          "Jake Matthews",
+          "Francisco Prado"
+        ]
+      },
+      {
+        "fightId": "401745828",
+        "athletes": [
+          "Jimmy Crute",
+          "Rodolfo Bellato"
+        ]
+      },
+      {
+        "fightId": "401738384",
+        "athletes": [
+          "Justin Tafa",
+          "Tallison Teixeira"
+        ]
+      },
+      {
+        "fightId": "401737156",
+        "athletes": [
+          "Tatiana Suarez",
+          "Zhang Weili"
+        ]
+      },
+      {
+        "fightId": "401729651",
+        "athletes": [
+          "Sean Strickland",
+          "Dricus Du Plessis"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600051444",
+    "eventName": "UFC Fight Night: Cannonier vs. Rodrigues",
+    "fights": [
+      {
+        "fightId": "401738092",
+        "athletes": [
+          "Julia Avila",
+          "Jacqueline Cavalcanti"
+        ]
+      },
+      {
+        "fightId": "401738094",
+        "athletes": [
+          "Don'Tale Mayes",
+          "Valter Walker"
+        ]
+      },
+      {
+        "fightId": "401750093",
+        "athletes": [
+          "Vince Morales",
+          "Elijah Smith"
+        ]
+      },
+      {
+        "fightId": "401757145",
+        "athletes": [
+          "Khaos Williams",
+          "Gabriel Bonfim"
+        ]
+      },
+      {
+        "fightId": "401738093",
+        "athletes": [
+          "Jesus Aguilar",
+          "Rafael Estevam"
+        ]
+      },
+      {
+        "fightId": "401746229",
+        "athletes": [
+          "Angela Hill",
+          "Ketlen Souza"
+        ]
+      },
+      {
+        "fightId": "401746230",
+        "athletes": [
+          "Connor Matthews",
+          "Jose Miguel Delgado"
+        ]
+      },
+      {
+        "fightId": "401748604",
+        "athletes": [
+          "Rodolfo Vieira",
+          "Andre Petroski"
+        ]
+      },
+      {
+        "fightId": "401746231",
+        "athletes": [
+          "Ismael Bonfim",
+          "Nazim Sadykhov"
+        ]
+      },
+      {
+        "fightId": "401746232",
+        "athletes": [
+          "Edmen Shahbazyan",
+          "Dylan Budka"
+        ]
+      },
+      {
+        "fightId": "401745915",
+        "athletes": [
+          "Calvin Kattar",
+          "Youssef Zalal"
+        ]
+      },
+      {
+        "fightId": "401734548",
+        "athletes": [
+          "Jared Cannonier",
+          "Gregory Rodrigues"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600051445",
+    "eventName": "UFC Fight Night: Cejudo vs. Song",
+    "fights": [
+      {
+        "fightId": "401740671",
+        "athletes": [
+          "Modestas Bukauskas",
+          "Rafael Cerqueira"
+        ]
+      },
+      {
+        "fightId": "401758750",
+        "athletes": [
+          "Eric McConico",
+          "Nursulton Ruziboev"
+        ]
+      },
+      {
+        "fightId": "401760267",
+        "athletes": [
+          "Austin Vanderford",
+          "Nikolay Veretennikov"
+        ]
+      },
+      {
+        "fightId": "401744288",
+        "athletes": [
+          "Ricky Simon",
+          "Javid Basharat"
+        ]
+      },
+      {
+        "fightId": "401755211",
+        "athletes": [
+          "Nick Klein",
+          "Mansur Abdul-Malik"
+        ]
+      },
+      {
+        "fightId": "401744287",
+        "athletes": [
+          "Andre Fili",
+          "Melquizael Costa"
+        ]
+      },
+      {
+        "fightId": "401740173",
+        "athletes": [
+          "Ion Cutelaba",
+          "Ibo Aslan"
+        ]
+      },
+      {
+        "fightId": "401758749",
+        "athletes": [
+          "Alonzo Menifield",
+          "Julius Walker"
+        ]
+      },
+      {
+        "fightId": "401741552",
+        "athletes": [
+          "Melsik Baghdasaryan",
+          "Jean Silva"
+        ]
+      },
+      {
+        "fightId": "401759979",
+        "athletes": [
+          "Rob Font",
+          "Jean Matsumoto"
+        ]
+      },
+      {
+        "fightId": "401744286",
+        "athletes": [
+          "Brendan Allen",
+          "Anthony Hernandez"
+        ]
+      },
+      {
+        "fightId": "401734550",
+        "athletes": [
+          "Henry Cejudo",
+          "Song Yadong"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600051446",
+    "eventName": "UFC Fight Night: Kape vs. Almabayev",
+    "fights": [
+      {
+        "fightId": "401745719",
+        "athletes": [
+          "Charles Johnson",
+          "Ramazan Temirov"
+        ]
+      },
+      {
+        "fightId": "401753997",
+        "athletes": [
+          "JJ Aldrich",
+          "Andrea Lee"
+        ]
+      },
+      {
+        "fightId": "401754019",
+        "athletes": [
+          "Danny Silva",
+          "Lucas Almeida"
+        ]
+      },
+      {
+        "fightId": "401754016",
+        "athletes": [
+          "Ricardo Ramos",
+          "Chepe Mariscal"
+        ]
+      },
+      {
+        "fightId": "401754036",
+        "athletes": [
+          "Austen Lane",
+          "Mario Pinto"
+        ]
+      },
+      {
+        "fightId": "401754017",
+        "athletes": [
+          "Sam Patterson",
+          "Danny Barlow"
+        ]
+      },
+      {
+        "fightId": "401753996",
+        "athletes": [
+          "William Gomis",
+          "Hyder Amil"
+        ]
+      },
+      {
+        "fightId": "401734553",
+        "athletes": [
+          "Nasrat Haqparast",
+          "Esteban Ribovics"
+        ]
+      },
+      {
+        "fightId": "401753974",
+        "athletes": [
+          "Julian Marquez",
+          "Cody Brundage"
+        ]
+      },
+      {
+        "fightId": "401757624",
+        "athletes": [
+          "Manel Kape",
+          "Asu Almabayev"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600051447",
+    "eventName": "UFC 313: Pereira vs. Ankalaev",
+    "fights": [
+      {
+        "fightId": "401734556",
+        "athletes": [
+          "Ozzy Diaz",
+          "Djorden Santos"
+        ]
+      },
+      {
+        "fightId": "401734555",
+        "athletes": [
+          "Mairon Santos",
+          "Francis Marshall"
+        ]
+      },
+      {
+        "fightId": "401752410",
+        "athletes": [
+          "Alex Morono",
+          "Carlos Leal"
+        ]
+      },
+      {
+        "fightId": "401752411",
+        "athletes": [
+          "Armen Petrosyan",
+          "Brunno Ferreira"
+        ]
+      },
+      {
+        "fightId": "401761549",
+        "athletes": [
+          "Joshua Van",
+          "Rei Tsuruya"
+        ]
+      },
+      {
+        "fightId": "401757019",
+        "athletes": [
+          "King Green",
+          "Mauricio Ruffy"
+        ]
+      },
+      {
+        "fightId": "401752409",
+        "athletes": [
+          "Amanda Lemos",
+          "Iasmin Lucindo"
+        ]
+      },
+      {
+        "fightId": "401759980",
+        "athletes": [
+          "Ignacio Bahamondes",
+          "Jalin Turner"
+        ]
+      },
+      {
+        "fightId": "401761545",
+        "athletes": [
+          "Justin Gaethje",
+          "Rafael Fiziev"
+        ]
+      },
+      {
+        "fightId": "401734554",
+        "athletes": [
+          "Magomed Ankalaev",
+          "Alex Pereira"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600051448",
+    "eventName": "UFC Fight Night: Vettori vs. Dolidze 2",
+    "fights": [
+      {
+        "fightId": "401760299",
+        "athletes": [
+          "Carli Judice",
+          "Yuneisy Duben"
+        ]
+      },
+      {
+        "fightId": "401760298",
+        "athletes": [
+          "Priscila Cachoeira",
+          "Josiane Nunes"
+        ]
+      },
+      {
+        "fightId": "401734558",
+        "athletes": [
+          "Daniel Barez",
+          "Andre Lima"
+        ]
+      },
+      {
+        "fightId": "401760296",
+        "athletes": [
+          "Sam Hughes",
+          "Stephanie Luciano"
+        ]
+      },
+      {
+        "fightId": "401760104",
+        "athletes": [
+          "Carlos Vera",
+          "Josias Musasa"
+        ]
+      },
+      {
+        "fightId": "401760274",
+        "athletes": [
+          "AJ Cunningham",
+          "SuYoung You"
+        ]
+      },
+      {
+        "fightId": "401760275",
+        "athletes": [
+          "Ryan Spann",
+          "Waldo Cortes-Acosta"
+        ]
+      },
+      {
+        "fightId": "401760270",
+        "athletes": [
+          "SeungWoo Choi",
+          "Kevin Vallejos"
+        ]
+      },
+      {
+        "fightId": "401760297",
+        "athletes": [
+          "Brendson Ribeiro",
+          "Diyar Nurgozhay"
+        ]
+      },
+      {
+        "fightId": "401760273",
+        "athletes": [
+          "Cody Gibson",
+          "Da'Mon Blackshear"
+        ]
+      },
+      {
+        "fightId": "401760271",
+        "athletes": [
+          "Kurt Holobaugh",
+          "Alexander Hernandez"
+        ]
+      },
+      {
+        "fightId": "401760269",
+        "athletes": [
+          "Chidi Njokuani",
+          "Elizeu Zaleski dos Santos"
+        ]
+      },
+      {
+        "fightId": "401734557",
+        "athletes": [
+          "Marvin Vettori",
+          "Roman Dolidze"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600051194",
+    "eventName": "UFC Fight Night: Edwards vs. Brady",
+    "fights": [
+      {
+        "fightId": "401762916",
+        "athletes": [
+          "Guram Kutateladze",
+          "Kauê Fernandes"
+        ]
+      },
+      {
+        "fightId": "401748574",
+        "athletes": [
+          "Nathan Fletcher",
+          "Caolán Loughran"
+        ]
+      },
+      {
+        "fightId": "401737906",
+        "athletes": [
+          "Puja Tomar",
+          "Shauna Bannon"
+        ]
+      },
+      {
+        "fightId": "401737903",
+        "athletes": [
+          "Christian Leroy Duncan",
+          "Andrey Pulyaev"
+        ]
+      },
+      {
+        "fightId": "401734080",
+        "athletes": [
+          "Marcin Tybura",
+          "Mick Parkin"
+        ]
+      },
+      {
+        "fightId": "401748575",
+        "athletes": [
+          "Felipe dos Santos",
+          "Lone'er Kavanagh"
+        ]
+      },
+      {
+        "fightId": "401748576",
+        "athletes": [
+          "Chris Padilla",
+          "Jai Herbert"
+        ]
+      },
+      {
+        "fightId": "401748603",
+        "athletes": [
+          "Nathaniel Wood",
+          "Morgan Charrière"
+        ]
+      },
+      {
+        "fightId": "401757020",
+        "athletes": [
+          "Jordan Vucenic",
+          "Chris Duncan"
+        ]
+      },
+      {
+        "fightId": "401763579",
+        "athletes": [
+          "Molly McCann",
+          "Alexia Thainara"
+        ]
+      },
+      {
+        "fightId": "401757021",
+        "athletes": [
+          "Gunnar Nelson",
+          "Kevin Holland"
+        ]
+      },
+      {
+        "fightId": "401737632",
+        "athletes": [
+          "Jan Blachowicz",
+          "Carlos Ulberg"
+        ]
+      },
+      {
+        "fightId": "401760307",
+        "athletes": [
+          "Leon Edwards",
+          "Sean Brady"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600051449",
+    "eventName": "UFC Fight Night: Moreno vs. Erceg",
+    "fights": [
+      {
+        "fightId": "401765009",
+        "athletes": [
+          "Austin Hubbard",
+          "MarQuel Mederos"
+        ]
+      },
+      {
+        "fightId": "401764309",
+        "athletes": [
+          "Gabriel Miranda",
+          "Jamall Emmers"
+        ]
+      },
+      {
+        "fightId": "401760882",
+        "athletes": [
+          "Vinc Pichel",
+          "Rafa Garcia"
+        ]
+      },
+      {
+        "fightId": "401759245",
+        "athletes": [
+          "Julia Polastri",
+          "Loopy Godínez"
+        ]
+      },
+      {
+        "fightId": "401762967",
+        "athletes": [
+          "Melquizael Costa",
+          "Christian Rodriguez"
+        ]
+      },
+      {
+        "fightId": "401760106",
+        "athletes": [
+          "Jose Daniel Medina",
+          "Ateba Gautier"
+        ]
+      },
+      {
+        "fightId": "401734560",
+        "athletes": [
+          "Ronaldo Rodríguez",
+          "Kevin Borjas"
+        ]
+      },
+      {
+        "fightId": "401760107",
+        "athletes": [
+          "David Martinez",
+          "Saimon Oliveira"
+        ]
+      },
+      {
+        "fightId": "401762815",
+        "athletes": [
+          "Vince Morales",
+          "Raul Rosas Jr."
+        ]
+      },
+      {
+        "fightId": "401760301",
+        "athletes": [
+          "CJ Vergara",
+          "Édgar Cháirez"
+        ]
+      },
+      {
+        "fightId": "401759244",
+        "athletes": [
+          "Drew Dober",
+          "Manuel Torres"
+        ]
+      },
+      {
+        "fightId": "401734559",
+        "athletes": [
+          "Brandon Moreno",
+          "Steve Erceg"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600053226",
+    "eventName": "UFC Fight Night: Emmett vs. Murphy",
+    "fights": [
+      {
+        "fightId": "401762779",
+        "athletes": [
+          "Vanessa Demopoulos",
+          "Talita Alencar"
+        ]
+      },
+      {
+        "fightId": "401766498",
+        "athletes": [
+          "Martin Buday",
+          "Uran Satybaldiev"
+        ]
+      },
+      {
+        "fightId": "401762778",
+        "athletes": [
+          "Victor Henry",
+          "Pedro Falcão"
+        ]
+      },
+      {
+        "fightId": "401766035",
+        "athletes": [
+          "Istela Nunes",
+          "Loma Lookboonmee"
+        ]
+      },
+      {
+        "fightId": "401761551",
+        "athletes": [
+          "Rhys McKee",
+          "Daniel Frunza"
+        ]
+      },
+      {
+        "fightId": "401760109",
+        "athletes": [
+          "Diana Belbita",
+          "Dione Barbosa"
+        ]
+      },
+      {
+        "fightId": "401761552",
+        "athletes": [
+          "Torrez Finney",
+          "Robert Valentin"
+        ]
+      },
+      {
+        "fightId": "401762776",
+        "athletes": [
+          "Ode' Osbourne",
+          "Luis Gurule"
+        ]
+      },
+      {
+        "fightId": "401762762",
+        "athletes": [
+          "Brad Tavares",
+          "Gerald Meerschaert"
+        ]
+      },
+      {
+        "fightId": "401760344",
+        "athletes": [
+          "Cortavious Romious",
+          "ChangHo Lee"
+        ]
+      },
+      {
+        "fightId": "401762781",
+        "athletes": [
+          "Pat Sabatini",
+          "Joanderson Brito"
+        ]
+      },
+      {
+        "fightId": "401760108",
+        "athletes": [
+          "Josh Emmett",
+          "Lerone Murphy"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600053165",
+    "eventName": "UFC 314: Volkanovski vs. Lopes",
+    "fights": [
+      {
+        "fightId": "401762882",
+        "athletes": [
+          "Hailey Cowan",
+          "Nora Cornolle"
+        ]
+      },
+      {
+        "fightId": "401760883",
+        "athletes": [
+          "Tresean Gore",
+          "Marco Tulio"
+        ]
+      },
+      {
+        "fightId": "401760317",
+        "athletes": [
+          "Sumudaerji",
+          "Mitch Raposo"
+        ]
+      },
+      {
+        "fightId": "401757865",
+        "athletes": [
+          "Michal Oleksiejczuk",
+          "Sedriques Dumas"
+        ]
+      },
+      {
+        "fightId": "401760316",
+        "athletes": [
+          "Darren Elkins",
+          "Julian Erosa"
+        ]
+      },
+      {
+        "fightId": "401760313",
+        "athletes": [
+          "Jim Miller",
+          "Chase Hooper"
+        ]
+      },
+      {
+        "fightId": "401760312",
+        "athletes": [
+          "Yan Xiaonan",
+          "Virna Jandiroba"
+        ]
+      },
+      {
+        "fightId": "401757864",
+        "athletes": [
+          "Dan Ige",
+          "Sean Woodson"
+        ]
+      },
+      {
+        "fightId": "401760311",
+        "athletes": [
+          "Nikita Krylov",
+          "Dominick Reyes"
+        ]
+      },
+      {
+        "fightId": "401761546",
+        "athletes": [
+          "Bryce Mitchell",
+          "Jean Silva"
+        ]
+      },
+      {
+        "fightId": "401760309",
+        "athletes": [
+          "Patricio Pitbull",
+          "Yair Rodriguez"
+        ]
+      },
+      {
+        "fightId": "401760308",
+        "athletes": [
+          "Michael Chandler",
+          "Paddy Pimblett"
+        ]
+      },
+      {
+        "fightId": "401757863",
+        "athletes": [
+          "Alexander Volkanovski",
+          "Diego Lopes"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600053312",
+    "eventName": "UFC Fight Night: Machado Garry vs. Prates",
+    "fights": [
+      {
+        "fightId": "401762878",
+        "athletes": [
+          "Chelsea Chandler",
+          "Joselyne Edwards"
+        ]
+      },
+      {
+        "fightId": "401766554",
+        "athletes": [
+          "Timmy Cuamba",
+          "Roberto Romero"
+        ]
+      },
+      {
+        "fightId": "401762880",
+        "athletes": [
+          "Polyana Viana",
+          "Jaqueline Amorim"
+        ]
+      },
+      {
+        "fightId": "401762881",
+        "athletes": [
+          "Cameron Saaiman",
+          "Malcolm Wellmaker"
+        ]
+      },
+      {
+        "fightId": "401766553",
+        "athletes": [
+          "Alatengheili",
+          "Da'Mon Blackshear"
+        ]
+      },
+      {
+        "fightId": "401768185",
+        "athletes": [
+          "Chris Gutierrez",
+          "John Castaneda"
+        ]
+      },
+      {
+        "fightId": "401768763",
+        "athletes": [
+          "Evan Elder",
+          "Gauge Young"
+        ]
+      },
+      {
+        "fightId": "401762877",
+        "athletes": [
+          "Jimmy Flick",
+          "Matt Schnell"
+        ]
+      },
+      {
+        "fightId": "401761543",
+        "athletes": [
+          "Andre Muniz",
+          "Ikram Aliskerov"
+        ]
+      },
+      {
+        "fightId": "401761544",
+        "athletes": [
+          "Nicolas Dalby",
+          "Randy Brown"
+        ]
+      },
+      {
+        "fightId": "401761542",
+        "athletes": [
+          "Abus Magomedov",
+          "Michel Pereira"
+        ]
+      },
+      {
+        "fightId": "401761541",
+        "athletes": [
+          "Giga Chikadze",
+          "David Onama"
+        ]
+      },
+      {
+        "fightId": "401761540",
+        "athletes": [
+          "Anthony Smith",
+          "Zhang Mingyang"
+        ]
+      },
+      {
+        "fightId": "401766386",
+        "athletes": [
+          "Carlos Prates",
+          "Ian Machado Garry"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600053455",
+    "eventName": "UFC Fight Night: Sandhagen vs. Figueiredo",
+    "fights": [
+      {
+        "fightId": "401766056",
+        "athletes": [
+          "Juliana Miller",
+          "Ivana Petrovic"
+        ]
+      },
+      {
+        "fightId": "401764798",
+        "athletes": [
+          "Don'Tale Mayes",
+          "Thomas Petersen"
+        ]
+      },
+      {
+        "fightId": "401766949",
+        "athletes": [
+          "Gaston Bolaños",
+          "Quang Le"
+        ]
+      },
+      {
+        "fightId": "401763455",
+        "athletes": [
+          "Gillian Robertson",
+          "Marina Rodriguez"
+        ]
+      },
+      {
+        "fightId": "401764799",
+        "athletes": [
+          "Azamat Bekoev",
+          "Ryan Loder"
+        ]
+      },
+      {
+        "fightId": "401763454",
+        "athletes": [
+          "Miesha Tate",
+          "Yana Santos"
+        ]
+      },
+      {
+        "fightId": "401763556",
+        "athletes": [
+          "Jeremy Stephens",
+          "Mason Jones"
+        ]
+      },
+      {
+        "fightId": "401763576",
+        "athletes": [
+          "Cameron Smotherman",
+          "Serhiy Sidey"
+        ]
+      },
+      {
+        "fightId": "401764797",
+        "athletes": [
+          "Montel Jackson",
+          "Daniel Marcos"
+        ]
+      },
+      {
+        "fightId": "401763453",
+        "athletes": [
+          "Santiago Ponzinibbio",
+          "Daniel Rodriguez"
+        ]
+      },
+      {
+        "fightId": "401763555",
+        "athletes": [
+          "Reinier de Ridder",
+          "Bo Nickal"
+        ]
+      },
+      {
+        "fightId": "401763554",
+        "athletes": [
+          "Deiveson Figueiredo",
+          "Cory Sandhagen"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600053073",
+    "eventName": "UFC 315: Muhammad vs. Della Maddalena",
+    "fights": [
+      {
+        "fightId": "401761578",
+        "athletes": [
+          "Brad Katona",
+          "Bekzat Almakhan"
+        ]
+      },
+      {
+        "fightId": "401772433",
+        "athletes": [
+          "Daniel Santos",
+          "JeongYeong Lee"
+        ]
+      },
+      {
+        "fightId": "401757598",
+        "athletes": [
+          "Bruno Silva",
+          "Marc-Andre Barriault"
+        ]
+      },
+      {
+        "fightId": "401762416",
+        "athletes": [
+          "Ivan Erslan",
+          "Navajo Stirling"
+        ]
+      },
+      {
+        "fightId": "401762439",
+        "athletes": [
+          "Ion Cutelaba",
+          "Modestas Bukauskas"
+        ]
+      },
+      {
+        "fightId": "401761366",
+        "athletes": [
+          "Jessica Andrade",
+          "Jasmine Jasudavicius"
+        ]
+      },
+      {
+        "fightId": "401760881",
+        "athletes": [
+          "Mike Malott",
+          "Charles Radtke"
+        ]
+      },
+      {
+        "fightId": "401770061",
+        "athletes": [
+          "Kyle Prepolec",
+          "Benoît Saint Denis"
+        ]
+      },
+      {
+        "fightId": "401757597",
+        "athletes": [
+          "Alexa Grasso",
+          "Natalia Silva"
+        ]
+      },
+      {
+        "fightId": "401761375",
+        "athletes": [
+          "José Aldo",
+          "Aiemann Zahabi"
+        ]
+      },
+      {
+        "fightId": "401760319",
+        "athletes": [
+          "Valentina Shevchenko",
+          "Manon Fiorot"
+        ]
+      },
+      {
+        "fightId": "401757596",
+        "athletes": [
+          "Belal Muhammad",
+          "Jack Della Maddalena"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600053676",
+    "eventName": "UFC Fight Night: Burns vs. Morales",
+    "fights": [
+      {
+        "fightId": "401768764",
+        "athletes": [
+          "Tecia Pennington",
+          "Luana Pinheiro"
+        ]
+      },
+      {
+        "fightId": "401766555",
+        "athletes": [
+          "Carlos Hernandez",
+          "HyunSung Park"
+        ]
+      },
+      {
+        "fightId": "401768765",
+        "athletes": [
+          "Elise Reed",
+          "Denise Gomes"
+        ]
+      },
+      {
+        "fightId": "401766466",
+        "athletes": [
+          "Tainara Lisboa",
+          "Luana Santos"
+        ]
+      },
+      {
+        "fightId": "401770130",
+        "athletes": [
+          "Connor Matthews",
+          "Yadier del Valle"
+        ]
+      },
+      {
+        "fightId": "401769263",
+        "athletes": [
+          "Jared Gordon",
+          "Thiago Moises"
+        ]
+      },
+      {
+        "fightId": "401769091",
+        "athletes": [
+          "Gabe Green",
+          "Matheus Camilo"
+        ]
+      },
+      {
+        "fightId": "401769261",
+        "athletes": [
+          "Julian Erosa",
+          "Melquizael Costa"
+        ]
+      },
+      {
+        "fightId": "401769264",
+        "athletes": [
+          "Nursulton Ruziboev",
+          "Dustin Stoltzfus"
+        ]
+      },
+      {
+        "fightId": "401769262",
+        "athletes": [
+          "Sodiq Yusuff",
+          "Mairon Santos"
+        ]
+      },
+      {
+        "fightId": "401766464",
+        "athletes": [
+          "Gilbert Burns",
+          "Michael Morales"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600053606",
+    "eventName": "UFC Fight Night: Blanchfield vs. Barber",
+    "fights": [
+      {
+        "fightId": "401766034",
+        "athletes": [
+          "Alice Ardelean",
+          "Rayanne dos Santos"
+        ]
+      },
+      {
+        "fightId": "401777378",
+        "athletes": [
+          "Bolaji Oki",
+          "Michael Aswell Jr."
+        ]
+      },
+      {
+        "fightId": "401769814",
+        "athletes": [
+          "Kurt Holobaugh",
+          "Jordan Leavitt"
+        ]
+      },
+      {
+        "fightId": "401769793",
+        "athletes": [
+          "Allan Nascimento",
+          "Jafel Filho"
+        ]
+      },
+      {
+        "fightId": "401766385",
+        "athletes": [
+          "Duško Todorović",
+          "Zachary Reese"
+        ]
+      },
+      {
+        "fightId": "401769677",
+        "athletes": [
+          "Ketlen Vieira",
+          "Macy Chiasson"
+        ]
+      },
+      {
+        "fightId": "401769723",
+        "athletes": [
+          "Dustin Jacoby",
+          "Bruno Lopes"
+        ]
+      },
+      {
+        "fightId": "401777316",
+        "athletes": [
+          "Ramiz Brahimaj",
+          "Billy Ray Goff"
+        ]
+      },
+      {
+        "fightId": "401769294",
+        "athletes": [
+          "Mateusz Gamrot",
+          "Ludovit Klein"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600053672",
+    "eventName": "UFC 316: Dvalishvili vs. O'Malley 2",
+    "fights": [
+      {
+        "fightId": "401777878",
+        "athletes": [
+          "MarQuel Mederos",
+          "Mark Choinski"
+        ]
+      },
+      {
+        "fightId": "401772661",
+        "athletes": [
+          "Yanal Ashmouz",
+          "Quillan Salkilld"
+        ]
+      },
+      {
+        "fightId": "401772671",
+        "athletes": [
+          "Jeka Saragih",
+          "JooSang Yoo"
+        ]
+      },
+      {
+        "fightId": "401766389",
+        "athletes": [
+          "Wang Cong",
+          "Ariane da Silva"
+        ]
+      },
+      {
+        "fightId": "401777877",
+        "athletes": [
+          "Khaos Williams",
+          "Andreas Gustafsson"
+        ]
+      },
+      {
+        "fightId": "401774469",
+        "athletes": [
+          "Serghei Spivac",
+          "Waldo Cortes-Acosta"
+        ]
+      },
+      {
+        "fightId": "401768103",
+        "athletes": [
+          "Azamat Murzakanov",
+          "Brendson Ribeiro"
+        ]
+      },
+      {
+        "fightId": "401766950",
+        "athletes": [
+          "Bruno Silva",
+          "Joshua Van"
+        ]
+      },
+      {
+        "fightId": "401768699",
+        "athletes": [
+          "Vicente Luque",
+          "Kevin Holland"
+        ]
+      },
+      {
+        "fightId": "401768102",
+        "athletes": [
+          "Patchy Mix",
+          "Mario Bautista"
+        ]
+      },
+      {
+        "fightId": "401766390",
+        "athletes": [
+          "Kelvin Gastelum",
+          "Joe Pyfer"
+        ]
+      },
+      {
+        "fightId": "401766388",
+        "athletes": [
+          "Julianna Peña",
+          "Kayla Harrison"
+        ]
+      },
+      {
+        "fightId": "401766387",
+        "athletes": [
+          "Merab Dvalishvili",
+          "Sean O'Malley"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600053732",
+    "eventName": "UFC Fight Night: Usman vs. Buckley",
+    "fights": [
+      {
+        "fightId": "401780174",
+        "athletes": [
+          "Vanessa Demopoulos",
+          "Jamey-Lyn Horth"
+        ]
+      },
+      {
+        "fightId": "401780173",
+        "athletes": [
+          "Phil Rowe",
+          "Ange Loosa"
+        ]
+      },
+      {
+        "fightId": "401781199",
+        "athletes": [
+          "Ricky Simon",
+          "Cameron Smotherman"
+        ]
+      },
+      {
+        "fightId": "401769683",
+        "athletes": [
+          "Cody Durden",
+          "Jose Ochoa"
+        ]
+      },
+      {
+        "fightId": "401780172",
+        "athletes": [
+          "Kris Moutinho",
+          "Malcolm Wellmaker"
+        ]
+      },
+      {
+        "fightId": "401769680",
+        "athletes": [
+          "Court McGee",
+          "Michael Chiesa"
+        ]
+      },
+      {
+        "fightId": "401776706",
+        "athletes": [
+          "Paul Craig",
+          "Rodolfo Bellato"
+        ]
+      },
+      {
+        "fightId": "401769684",
+        "athletes": [
+          "Alonzo Menifield",
+          "Oumar Sy"
+        ]
+      },
+      {
+        "fightId": "401769681",
+        "athletes": [
+          "Cody Brundage",
+          "Mansur Abdul-Malik"
+        ]
+      },
+      {
+        "fightId": "401776705",
+        "athletes": [
+          "Raoni Barcelos",
+          "Cody Garbrandt"
+        ]
+      },
+      {
+        "fightId": "401769682",
+        "athletes": [
+          "Edmen Shahbazyan",
+          "Andre Petroski"
+        ]
+      },
+      {
+        "fightId": "401769301",
+        "athletes": [
+          "Rose Namajunas",
+          "Miranda Maverick"
+        ]
+      },
+      {
+        "fightId": "401766604",
+        "athletes": [
+          "Kamaru Usman",
+          "Joaquin Buckley"
+        ]
+      }
+    ]
+  },
+  {
+    "eventId": "600053795",
+    "eventName": "UFC Fight Night: Hill vs. Rountree Jr.",
+    "fights": [
+      {
+        "fightId": "401767882",
+        "athletes": [
+          "Mohammed Usman",
+          "Hamdy Abdelwahab"
+        ]
+      },
+      {
+        "fightId": "401776558",
+        "athletes": [
+          "Tagir Ulanbekov",
+          "Azat Maksum"
+        ]
+      },
+      {
+        "fightId": "401767884",
+        "athletes": [
+          "Irina Alekseeva",
+          "Klaudia Syguła"
+        ]
+      },
+      {
+        "fightId": "401767883",
+        "athletes": [
+          "Daria Zhelezniakova",
+          "Melissa Mullins"
+        ]
+      },
+      {
+        "fightId": "401767027",
+        "athletes": [
+          "JunYong Park",
+          "Ismail Naurdiev"
+        ]
+      },
+      {
+        "fightId": "401777379",
+        "athletes": [
+          "Seokhyeon Ko",
+          "Oban Elliott"
+        ]
+      },
+      {
+        "fightId": "401774492",
+        "athletes": [
+          "Muhammad Naimov",
+          "Bogdan Grad"
+        ]
+      },
+      {
+        "fightId": "401769295",
+        "athletes": [
+          "Nikolas Motta",
+          "Nazim Sadykhov"
+        ]
+      },
+      {
+        "fightId": "401778070",
+        "athletes": [
+          "Tofiq Musayev",
+          "Myktybek Orolbai"
+        ]
+      },
+      {
+        "fightId": "401767880",
+        "athletes": [
+          "Curtis Blaydes",
+          "Rizvan Kuniev"
+        ]
+      },
+      {
+        "fightId": "401788414",
+        "athletes": [
+          "Ignacio Bahamondes",
+          "Rafael Fiziev"
+        ]
+      },
+      {
+        "fightId": "401767026",
+        "athletes": [
+          "Khalil Rountree Jr.",
+          "Jamahal Hill"
+        ]
+      }
+    ]
+  }
+]
