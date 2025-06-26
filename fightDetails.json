@@ -266,7 +266,7 @@
       "Zhang Mingyang"
     ],
     "eventId": "600054141",
-    "eventName": "UFC Fight Night: Shanghai",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
     "unannounced": false
   },
   "401776551": {
@@ -276,7 +276,7 @@
       "Brian Ortega"
     ],
     "eventId": "600054141",
-    "eventName": "UFC Fight Night: Shanghai",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
     "unannounced": false
   },
   "401776615": {
@@ -757,6 +757,56 @@
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "unannounced": false
+  },
+  "401792132": {
+    "fightName": "Sumudaerji vs Kevin Borjas",
+    "athletes": [
+      "Sumudaerji",
+      "Kevin Borjas"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "unannounced": false
+  },
+  "401792133": {
+    "fightName": "Charles Johnson vs Lone'er Kavanagh",
+    "athletes": [
+      "Charles Johnson",
+      "Lone'er Kavanagh"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "unannounced": false
+  },
+  "401792134": {
+    "fightName": "Uran Satybaldiev vs Diyar Nurgozhay",
+    "athletes": [
+      "Uran Satybaldiev",
+      "Diyar Nurgozhay"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "unannounced": false
+  },
+  "401792135": {
+    "fightName": "Michel Pereira vs Marco Tulio",
+    "athletes": [
+      "Michel Pereira",
+      "Marco Tulio"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "unannounced": false
+  },
+  "401792136": {
+    "fightName": "Sergei Pavlovich vs Waldo Cortes-Acosta",
+    "athletes": [
+      "Sergei Pavlovich",
+      "Waldo Cortes-Acosta"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
     "unannounced": false
   }
 }
