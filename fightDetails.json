@@ -260,24 +260,24 @@
     "unannounced": false
   },
   "401776550": {
-    "fightName": "TBA vs Opponent TBA",
+    "fightName": "Johnny Walker vs Zhang Mingyang",
     "athletes": [
-      "Opponent TBA",
-      "TBA"
+      "Johnny Walker",
+      "Zhang Mingyang"
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Shanghai",
-    "unannounced": true
+    "unannounced": false
   },
   "401776551": {
-    "fightName": "TBA vs Opponent TBA",
+    "fightName": "Aljamain Sterling vs Brian Ortega",
     "athletes": [
-      "Opponent TBA",
-      "TBA"
+      "Aljamain Sterling",
+      "Brian Ortega"
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Shanghai",
-    "unannounced": true
+    "unannounced": false
   },
   "401776615": {
     "fightName": "Amir Albazi vs Tatsuro Taira",
@@ -702,8 +702,8 @@
   "401790367": {
     "fightName": "Nate Landwehr vs Morgan Charrière",
     "athletes": [
-      "Nate Landwehr",
-      "Morgan Charrière"
+      "Morgan Charrière",
+      "Nate Landwehr"
     ],
     "eventId": "600054061",
     "eventName": "UFC Fight Night: Lewis vs. Teixeira",
@@ -742,8 +742,8 @@
   "401790371": {
     "fightName": "Toshiomi Kazama vs Elijah Smith",
     "athletes": [
-      "Toshiomi Kazama",
-      "Elijah Smith"
+      "Elijah Smith",
+      "Toshiomi Kazama"
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
@@ -752,8 +752,8 @@
   "401790372": {
     "fightName": "Miles Johns vs Jean Matsumoto",
     "athletes": [
-      "Miles Johns",
-      "Jean Matsumoto"
+      "Jean Matsumoto",
+      "Miles Johns"
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
