@@ -256,13 +256,25 @@ const detectFightChanges = (previousDetails, currentFights) => {
 };
 
 export async function getUFCFights() {
+  const startTime = Date.now(); // 🔼 moved to top
   console.log("🚀 Starting optimized UFC watcher...");
-  const pstTime = new Date().toLocaleString("en-US", { 
-    timeZone: "America/Los_Angeles", 
-    hour12: true 
-  });
 
-await sendDiscordMessage(`👀 Running UFC watcher script at ${pstTime}`);
+  let pstTime;
+  try {
+    pstTime = new Date().toLocaleString("en-US", {
+      timeZone: "America/Los_Angeles",
+      hour12: true
+    });
+  } catch (timeErr) {
+    console.warn("⚠️ Could not apply PST formatting:", timeErr);
+    pstTime = new Date().toISOString();
+  }
+
+  try {
+    await sendDiscordMessage(`👀 Running UFC watcher script at ${pstTime}`);
+  } catch (discordErr) {
+    console.error("❌ Failed to send initial Discord message:", discordErr);
+  }
 
   const knownFights = loadJson(KNOWN_FIGHTS_FILE);
   const knownEvents = loadJson(KNOWN_EVENTS_FILE);
