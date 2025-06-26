@@ -257,9 +257,12 @@ const detectFightChanges = (previousDetails, currentFights) => {
 
 export async function getUFCFights() {
   console.log("🚀 Starting optimized UFC watcher...");
-  const startTime = Date.now();
-  
-  await sendDiscordMessage(`👀 Running UFC watcher script at ${new Date().toLocaleString()}`);
+  const pstTime = new Date().toLocaleString("en-US", { 
+    timeZone: "America/Los_Angeles", 
+    hour12: true 
+  });
+
+await sendDiscordMessage(`👀 Running UFC watcher script at ${pstTime}`);
 
   const knownFights = loadJson(KNOWN_FIGHTS_FILE);
   const knownEvents = loadJson(KNOWN_EVENTS_FILE);
