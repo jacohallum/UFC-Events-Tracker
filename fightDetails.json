@@ -762,8 +762,8 @@
   "401792132": {
     "fightName": "Sumudaerji vs Kevin Borjas",
     "athletes": [
-      "Sumudaerji",
-      "Kevin Borjas"
+      "Kevin Borjas",
+      "Sumudaerji"
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
@@ -782,8 +782,8 @@
   "401792134": {
     "fightName": "Uran Satybaldiev vs Diyar Nurgozhay",
     "athletes": [
-      "Uran Satybaldiev",
-      "Diyar Nurgozhay"
+      "Diyar Nurgozhay",
+      "Uran Satybaldiev"
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
@@ -792,8 +792,8 @@
   "401792135": {
     "fightName": "Michel Pereira vs Marco Tulio",
     "athletes": [
-      "Michel Pereira",
-      "Marco Tulio"
+      "Marco Tulio",
+      "Michel Pereira"
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
@@ -807,6 +807,26 @@
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "unannounced": false
+  },
+  "401792137": {
+    "fightName": "Paulo Costa vs Roman Kopylov",
+    "athletes": [
+      "Paulo Costa",
+      "Roman Kopylov"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401792218": {
+    "fightName": "Michael Johnson vs Daniel Zellhuber",
+    "athletes": [
+      "Michael Johnson",
+      "Daniel Zellhuber"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
     "unannounced": false
   }
 }

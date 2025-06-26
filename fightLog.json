@@ -793,5 +793,15 @@
     "timestamp": "2025-06-26T22:13:47.847Z",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
     "fight": "Sumudaerji vs Kevin Borjas"
+  },
+  {
+    "timestamp": "2025-06-26T22:21:59.605Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Michael Johnson vs Daniel Zellhuber"
+  },
+  {
+    "timestamp": "2025-06-26T22:21:59.605Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Paulo Costa vs Roman Kopylov"
   }
 ]
