@@ -1895,5 +1895,88 @@
         ]
       }
     ]
+  },
+  {
+    "eventId": "600053168",
+    "eventName": "UFC 317: Topuria vs. Oliveira",
+    "fights": [
+      {
+        "fightId": "401789026",
+        "athletes": [
+          "Unknown Fighter",
+          "Unknown Fighter"
+        ]
+      },
+      {
+        "fightId": "401783702",
+        "athletes": [
+          "Unknown Fighter",
+          "Unknown Fighter"
+        ]
+      },
+      {
+        "fightId": "401783700",
+        "athletes": [
+          "Unknown Fighter",
+          "Unknown Fighter"
+        ]
+      },
+      {
+        "fightId": "401772653",
+        "athletes": [
+          "Unknown Fighter",
+          "Unknown Fighter"
+        ]
+      },
+      {
+        "fightId": "401783699",
+        "athletes": [
+          "Unknown Fighter",
+          "Unknown Fighter"
+        ]
+      },
+      {
+        "fightId": "401758684",
+        "athletes": [
+          "Unknown Fighter",
+          "Unknown Fighter"
+        ]
+      },
+      {
+        "fightId": "401783701",
+        "athletes": [
+          "Unknown Fighter",
+          "Unknown Fighter"
+        ]
+      },
+      {
+        "fightId": "401772650",
+        "athletes": [
+          "Unknown Fighter",
+          "Unknown Fighter"
+        ]
+      },
+      {
+        "fightId": "401772657",
+        "athletes": [
+          "Unknown Fighter",
+          "Unknown Fighter"
+        ]
+      },
+      {
+        "fightId": "401772509",
+        "athletes": [
+          "Unknown Fighter",
+          "Unknown Fighter"
+        ]
+      },
+      {
+        "fightId": "401758683",
+        "athletes": [
+          "Unknown Fighter",
+          "Unknown Fighter"
+        ]
+      }
+    ]
   }
 ]

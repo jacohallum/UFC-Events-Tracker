@@ -803,5 +803,55 @@
     "timestamp": "2025-06-26T22:21:59.605Z",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
     "fight": "Paulo Costa vs Roman Kopylov"
+  },
+  {
+    "timestamp": "2025-06-29T02:11:13.809Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Michael Johnson vs Daniel Zellhuber"
+  },
+  {
+    "timestamp": "2025-06-29T02:11:15.435Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "fight": "TBA vs Yuri Panferov"
+  },
+  {
+    "timestamp": "2025-06-29T02:11:15.435Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "fight": "Radley da Silva vs George Mangos"
+  },
+  {
+    "timestamp": "2025-06-29T02:11:15.435Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "fight": "Murtaza Talha vs Damian Pinas"
+  },
+  {
+    "timestamp": "2025-06-29T02:11:15.435Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "fight": "Jimmy Drago vs Ty Miller"
+  },
+  {
+    "timestamp": "2025-06-29T02:11:15.435Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "fight": "Ilian Bouafia vs Neemias Santana"
+  },
+  {
+    "timestamp": "2025-06-29T02:11:16.137Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "fight": "Jose Delano vs Manuel Exposito"
+  },
+  {
+    "timestamp": "2025-06-29T02:11:16.842Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 3",
+    "fight": "Vitor Costa vs Ryan Gandra"
+  },
+  {
+    "timestamp": "2025-06-29T02:11:17.099Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 4",
+    "fight": "Jean-Paul Lebosnoyani vs Jack Congdon"
+  },
+  {
+    "timestamp": "2025-06-29T02:11:17.553Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 5",
+    "fight": "Guilherme Pat vs Anthony Guarascio"
   }
 ]

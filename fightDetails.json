@@ -1,24 +1,4 @@
 {
-  "401758683": {
-    "fightName": "Charles Oliveira vs Ilia Topuria",
-    "athletes": [
-      "Charles Oliveira",
-      "Ilia Topuria"
-    ],
-    "eventId": "600053168",
-    "eventName": "UFC 317: Topuria vs. Oliveira",
-    "unannounced": false
-  },
-  "401758684": {
-    "fightName": "Jack Hermansson vs Gregory Rodrigues",
-    "athletes": [
-      "Gregory Rodrigues",
-      "Jack Hermansson"
-    ],
-    "eventId": "600053168",
-    "eventName": "UFC 317: Topuria vs. Oliveira",
-    "unannounced": false
-  },
   "401765007": {
     "fightName": "Robert Whittaker vs Reinier de Ridder",
     "athletes": [
@@ -89,36 +69,6 @@
     "eventName": "UFC 318: Holloway vs Poirier 3",
     "unannounced": false
   },
-  "401772509": {
-    "fightName": "Alexandre Pantoja vs Kai Kara-France",
-    "athletes": [
-      "Alexandre Pantoja",
-      "Kai Kara-France"
-    ],
-    "eventId": "600053168",
-    "eventName": "UFC 317: Topuria vs. Oliveira",
-    "unannounced": false
-  },
-  "401772650": {
-    "fightName": "Renato Moicano vs Beneil Dariush",
-    "athletes": [
-      "Beneil Dariush",
-      "Renato Moicano"
-    ],
-    "eventId": "600053168",
-    "eventName": "UFC 317: Topuria vs. Oliveira",
-    "unannounced": false
-  },
-  "401772653": {
-    "fightName": "Tracy Cortez vs Viviane Araujo",
-    "athletes": [
-      "Tracy Cortez",
-      "Viviane Araujo"
-    ],
-    "eventId": "600053168",
-    "eventName": "UFC 317: Topuria vs. Oliveira",
-    "unannounced": false
-  },
   "401772654": {
     "fightName": "Dricus Du Plessis vs Khamzat Chimaev",
     "athletes": [
@@ -147,16 +97,6 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "unannounced": false
-  },
-  "401772657": {
-    "fightName": "Brandon Royval vs Joshua Van",
-    "athletes": [
-      "Brandon Royval",
-      "Joshua Van"
-    ],
-    "eventId": "600053168",
-    "eventName": "UFC 317: Topuria vs. Oliveira",
     "unannounced": false
   },
   "401772658": {
@@ -539,46 +479,6 @@
     "eventName": "UFC 318: Holloway vs Poirier 3",
     "unannounced": false
   },
-  "401783699": {
-    "fightName": "Hyder Amil vs Jose Miguel Delgado",
-    "athletes": [
-      "Hyder Amil",
-      "Jose Miguel Delgado"
-    ],
-    "eventId": "600053168",
-    "eventName": "UFC 317: Topuria vs. Oliveira",
-    "unannounced": false
-  },
-  "401783700": {
-    "fightName": "Terrance McKinney vs Viacheslav Borshchev",
-    "athletes": [
-      "Terrance McKinney",
-      "Viacheslav Borshchev"
-    ],
-    "eventId": "600053168",
-    "eventName": "UFC 317: Topuria vs. Oliveira",
-    "unannounced": false
-  },
-  "401783701": {
-    "fightName": "Felipe Lima vs Payton Talbott",
-    "athletes": [
-      "Felipe Lima",
-      "Payton Talbott"
-    ],
-    "eventId": "600053168",
-    "eventName": "UFC 317: Topuria vs. Oliveira",
-    "unannounced": false
-  },
-  "401783702": {
-    "fightName": "Niko Price vs Jacobe Smith",
-    "athletes": [
-      "Jacobe Smith",
-      "Niko Price"
-    ],
-    "eventId": "600053168",
-    "eventName": "UFC 317: Topuria vs. Oliveira",
-    "unannounced": false
-  },
   "401784468": {
     "fightName": "Tim Elliott vs Kai Asakura",
     "athletes": [
@@ -667,16 +567,6 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
-    "unannounced": false
-  },
-  "401789026": {
-    "fightName": "Jhonata Diniz vs Alvin Hines",
-    "athletes": [
-      "Alvin Hines",
-      "Jhonata Diniz"
-    ],
-    "eventId": "600053168",
-    "eventName": "UFC 317: Topuria vs. Oliveira",
     "unannounced": false
   },
   "401789179": {
@@ -799,24 +689,104 @@
     "eventName": "UFC Fight Night: Walker vs. Zhang",
     "unannounced": false
   },
-  "401792137": {
-    "fightName": "Paulo Costa vs Roman Kopylov",
+  "401793731": {
+    "fightName": "Ilian Bouafia vs Neemias Santana",
     "athletes": [
-      "Paulo Costa",
-      "Roman Kopylov"
+      "Ilian Bouafia",
+      "Neemias Santana"
     ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventId": "600055020",
+    "eventName": "Dana White's Contender Series: Season 9, Week 1",
     "unannounced": false
   },
-  "401792218": {
+  "401793732": {
+    "fightName": "Jimmy Drago vs Ty Miller",
+    "athletes": [
+      "Jimmy Drago",
+      "Ty Miller"
+    ],
+    "eventId": "600055020",
+    "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "unannounced": false
+  },
+  "401793733": {
+    "fightName": "Murtaza Talha vs Damian Pinas",
+    "athletes": [
+      "Murtaza Talha",
+      "Damian Pinas"
+    ],
+    "eventId": "600055020",
+    "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "unannounced": false
+  },
+  "401793734": {
+    "fightName": "Radley da Silva vs George Mangos",
+    "athletes": [
+      "Radley da Silva",
+      "George Mangos"
+    ],
+    "eventId": "600055020",
+    "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "unannounced": false
+  },
+  "401793735": {
+    "fightName": "TBA vs Yuri Panferov",
+    "athletes": [
+      "TBA",
+      "Yuri Panferov"
+    ],
+    "eventId": "600055020",
+    "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "unannounced": false
+  },
+  "401794120": {
     "fightName": "Michael Johnson vs Daniel Zellhuber",
     "athletes": [
-      "Daniel Zellhuber",
-      "Michael Johnson"
+      "Michael Johnson",
+      "Daniel Zellhuber"
     ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401794169": {
+    "fightName": "Jose Delano vs Manuel Exposito",
+    "athletes": [
+      "Jose Delano",
+      "Manuel Exposito"
+    ],
+    "eventId": "600055021",
+    "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "unannounced": false
+  },
+  "401794170": {
+    "fightName": "Vitor Costa vs Ryan Gandra",
+    "athletes": [
+      "Vitor Costa",
+      "Ryan Gandra"
+    ],
+    "eventId": "600055005",
+    "eventName": "Dana White's Contender Series: Season 9, Week 3",
+    "unannounced": false
+  },
+  "401794187": {
+    "fightName": "Jean-Paul Lebosnoyani vs Jack Congdon",
+    "athletes": [
+      "Jean-Paul Lebosnoyani",
+      "Jack Congdon"
+    ],
+    "eventId": "600055006",
+    "eventName": "Dana White's Contender Series: Season 9, Week 4",
+    "unannounced": false
+  },
+  "401794188": {
+    "fightName": "Guilherme Pat vs Anthony Guarascio",
+    "athletes": [
+      "Guilherme Pat",
+      "Anthony Guarascio"
+    ],
+    "eventId": "600055007",
+    "eventName": "Dana White's Contender Series: Season 9, Week 5",
     "unannounced": false
   }
 }
