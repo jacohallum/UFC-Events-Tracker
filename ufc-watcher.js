@@ -224,15 +224,27 @@ const detectFightChanges = (previousDetails, currentFights) => {
   const removedFights = [];
   const currentFightIds = new Set(currentFights.map(f => f.fightId));
   
-  // Check for removed fights
+  // Check for removed fights - but exclude fights from recently completed events
+  const now = new Date();
+  const oneDayAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+  
   for (const [fightId, oldFight] of Object.entries(previousDetails)) {
     if (!currentFightIds.has(fightId)) {
-      removedFights.push({
-        fightId,
-        fightName: oldFight.fightName,
-        eventName: oldFight.eventName
-      });
-      console.log(`  ❌ Fight removed: ${oldFight.fightName} from ${oldFight.eventName}`);
+      // Check if this fight is from a recently completed event
+      // If so, don't report it as removed - it's just moved to past events
+      const isRecentlyCompleted = currentFights.length > 0 && 
+        !currentFights.some(f => f.eventId === oldFight.eventId);
+      
+      if (!isRecentlyCompleted) {
+        removedFights.push({
+          fightId,
+          fightName: oldFight.fightName,
+          eventName: oldFight.eventName
+        });
+        console.log(`  ❌ Fight removed: ${oldFight.fightName} from ${oldFight.eventName}`);
+      } else {
+        console.log(`  📝 Fight moved to past events: ${oldFight.fightName} from ${oldFight.eventName}`);
+      }
     }
   }
   
@@ -256,7 +268,7 @@ const detectFightChanges = (previousDetails, currentFights) => {
 };
 
 export async function getUFCFights() {
-  const startTime = Date.now(); // 🔼 moved to top
+  const startTime = Date.now();
   console.log("🚀 Starting optimized UFC watcher...");
 
   let pstTime;
@@ -279,7 +291,7 @@ export async function getUFCFights() {
   const knownFights = loadJson(KNOWN_FIGHTS_FILE);
   const knownEvents = loadJson(KNOWN_EVENTS_FILE);
   const upcomingUnannounced = loadJson(UPCOMING_UNANNOUNCED_FILE);
-  const previousFightDetails = loadJson(FIGHT_DETAILS_FILE); // Load previous fight details
+  const previousFightDetails = loadJson(FIGHT_DETAILS_FILE);
 
   try {
     const board = await safeFetch("https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard");
@@ -295,7 +307,7 @@ export async function getUFCFights() {
     // Batch fetch all events with concurrency limit
     console.log(`📡 Fetching ${allEventIdsRaw.length} events...`);
     const eventChunks = [];
-    const chunkSize = 6; // Further reduced to be more API-friendly
+    const chunkSize = 6;
     for (let i = 0; i < allEventIdsRaw.length; i += chunkSize) {
       eventChunks.push(allEventIdsRaw.slice(i, i + chunkSize));
     }
@@ -326,22 +338,26 @@ export async function getUFCFights() {
     const newFightIdsGlobal = [];
     const updatedUnannounced = [];
     const newFightLogEntries = [];
-    const currentFightDetails = {}; // Store current fight details
-    const allCurrentFights = []; // Store all current fights for change detection
+    const currentFightDetails = {};
+    const allCurrentFights = [];
 
     console.log(`⚡ Processing ${allEvents.length} valid events...`);
 
     for (const { eventId, event } of allEvents) {
       const eventDate = new Date(event.date);
       
+      // FIXED: Use the same processEventCompetitions function for past events too
       if (eventDate < now) {
-        // Handle past events quickly
+        console.log(`📝 Processing past event: ${event.name}`);
+        // Use the same processing function to get proper athlete names
+        const pastFights = await processEventCompetitions(event.competitions, eventId, event.name);
+        
         const pastEvent = { 
           eventId, 
           eventName: event.name, 
-          fights: event.competitions.map(comp => ({
-            fightId: comp.id,
-            athletes: comp.competitors.map(c => c.athlete.displayName || "Unknown Fighter")
+          fights: pastFights.map(fight => ({
+            fightId: fight.fightId,
+            athletes: fight.athletes
           }))
         };
         appendPastEvent(pastEvent);
@@ -355,7 +371,7 @@ export async function getUFCFights() {
 
       // Process all fights for this event in batch
       const fights = await processEventCompetitions(event.competitions, eventId, event.name);
-      allCurrentFights.push(...fights); // Add to global fights list
+      allCurrentFights.push(...fights);
       
       const newFightsThisEvent = [];
       const updatedFightsThisEvent = [];
@@ -419,6 +435,7 @@ export async function getUFCFights() {
       await sendFightChangesAlert(eventName, eventChanges);
     }
     
+    // Only send removal notifications if there are actually removed fights (not just moved to past events)
     if (removedFights.length > 0) {
       await sendRemovedFightsAlert(removedFights);
     }
@@ -429,7 +446,7 @@ export async function getUFCFights() {
       .filter(id => validFightIds.includes(id));
     saveJson(KNOWN_FIGHTS_FILE, cleanedFights);
     saveUnannouncedFights(updatedUnannounced);
-    saveFightDetails(currentFightDetails); // Save current fight details for next run
+    saveFightDetails(currentFightDetails);
     if (newFightLogEntries.length) logNewFights(newFightLogEntries);
     
     if (newFightIdsGlobal.length === 0 && changes.length === 0 && removedFights.length === 0) {
