@@ -712,8 +712,8 @@
   "401793733": {
     "fightName": "Murtaza Talha vs Damian Pinas",
     "athletes": [
-      "Murtaza Talha",
-      "Damian Pinas"
+      "Damian Pinas",
+      "Murtaza Talha"
     ],
     "eventId": "600055020",
     "eventName": "Dana White's Contender Series: Season 9, Week 1",
@@ -722,8 +722,8 @@
   "401793734": {
     "fightName": "Radley da Silva vs George Mangos",
     "athletes": [
-      "Radley da Silva",
-      "George Mangos"
+      "George Mangos",
+      "Radley da Silva"
     ],
     "eventId": "600055020",
     "eventName": "Dana White's Contender Series: Season 9, Week 1",
@@ -742,8 +742,8 @@
   "401794120": {
     "fightName": "Michael Johnson vs Daniel Zellhuber",
     "athletes": [
-      "Michael Johnson",
-      "Daniel Zellhuber"
+      "Daniel Zellhuber",
+      "Michael Johnson"
     ],
     "eventId": "600053891",
     "eventName": "UFC 318: Holloway vs Poirier 3",
@@ -762,8 +762,8 @@
   "401794170": {
     "fightName": "Vitor Costa vs Ryan Gandra",
     "athletes": [
-      "Vitor Costa",
-      "Ryan Gandra"
+      "Ryan Gandra",
+      "Vitor Costa"
     ],
     "eventId": "600055005",
     "eventName": "Dana White's Contender Series: Season 9, Week 3",
@@ -772,8 +772,8 @@
   "401794187": {
     "fightName": "Jean-Paul Lebosnoyani vs Jack Congdon",
     "athletes": [
-      "Jean-Paul Lebosnoyani",
-      "Jack Congdon"
+      "Jack Congdon",
+      "Jean-Paul Lebosnoyani"
     ],
     "eventId": "600055006",
     "eventName": "Dana White's Contender Series: Season 9, Week 4",
@@ -782,11 +782,21 @@
   "401794188": {
     "fightName": "Guilherme Pat vs Anthony Guarascio",
     "athletes": [
-      "Guilherme Pat",
-      "Anthony Guarascio"
+      "Anthony Guarascio",
+      "Guilherme Pat"
     ],
     "eventId": "600055007",
     "eventName": "Dana White's Contender Series: Season 9, Week 5",
+    "unannounced": false
+  },
+  "401794200": {
+    "fightName": "Patricio Pitbull vs Dan Ige",
+    "athletes": [
+      "Patricio Pitbull",
+      "Dan Ige"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
     "unannounced": false
   }
 }
