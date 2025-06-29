@@ -2,7 +2,7 @@ name: Run UFC Watcher
 
 on:
   schedule:
-    - cron: "0 */6 * * *"  # Every 6 hours - fixed the cron syntax
+    - cron: "0 */3 * * *"  # Every 3 hours
   workflow_dispatch:  # Allows manual triggering
 
 permissions:
