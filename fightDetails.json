@@ -868,5 +868,25 @@
     "eventId": "600055055",
     "eventName": "Dana White's Contender Series: Season 9, Week 10",
     "unannounced": true
+  },
+  "401795134": {
+    "fightName": "Ante Delija vs Marcin Tybura",
+    "athletes": [
+      "Ante Delija",
+      "Marcin Tybura"
+    ],
+    "eventId": "600054419",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "unannounced": false
+  },
+  "401795977": {
+    "fightName": "Kennedy Freeman vs Yuneisy Duben",
+    "athletes": [
+      "Kennedy Freeman",
+      "Yuneisy Duben"
+    ],
+    "eventId": "600054419",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "unannounced": false
   }
 }
