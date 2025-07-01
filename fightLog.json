@@ -858,5 +858,40 @@
     "timestamp": "2025-06-29T06:33:55.931Z",
     "eventName": "UFC 318: Holloway vs Poirier 3",
     "fight": "Patricio Pitbull vs Dan Ige"
+  },
+  {
+    "timestamp": "2025-07-01T01:51:30.402Z",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "fight": "Sam Hughes vs Shauna Bannon"
+  },
+  {
+    "timestamp": "2025-07-01T01:51:30.402Z",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "fight": "Rinat Fakhretdinov vs Andreas Gustafsson"
+  },
+  {
+    "timestamp": "2025-07-01T01:51:32.886Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 6",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-07-01T01:51:33.009Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 7",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-07-01T01:51:33.121Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 8",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-07-01T01:51:33.264Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 9",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-07-01T01:51:33.390Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 10",
+    "fight": "TBA vs Opponent TBA"
   }
 ]

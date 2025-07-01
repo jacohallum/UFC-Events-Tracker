@@ -350,14 +350,14 @@
     "unannounced": false
   },
   "401777945": {
-    "fightName": "TBA vs Opponent TBA",
+    "fightName": "Mason Jones vs Bolaji Oki",
     "athletes": [
-      "Opponent TBA",
-      "TBA"
+      "Bolaji Oki",
+      "Mason Jones"
     ],
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
-    "unannounced": true
+    "unannounced": false
   },
   "401777975": {
     "fightName": "Karol Rosa vs Nora Cornolle",
@@ -798,5 +798,75 @@
     "eventId": "600053891",
     "eventName": "UFC 318: Holloway vs Poirier 3",
     "unannounced": false
+  },
+  "401794767": {
+    "fightName": "Rinat Fakhretdinov vs Andreas Gustafsson",
+    "athletes": [
+      "Rinat Fakhretdinov",
+      "Andreas Gustafsson"
+    ],
+    "eventId": "600054419",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "unannounced": false
+  },
+  "401794768": {
+    "fightName": "Sam Hughes vs Shauna Bannon",
+    "athletes": [
+      "Sam Hughes",
+      "Shauna Bannon"
+    ],
+    "eventId": "600054419",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "unannounced": false
+  },
+  "401794769": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600055031",
+    "eventName": "Dana White's Contender Series: Season 9, Week 6",
+    "unannounced": true
+  },
+  "401794770": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600055032",
+    "eventName": "Dana White's Contender Series: Season 9, Week 7",
+    "unannounced": true
+  },
+  "401794771": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600055033",
+    "eventName": "Dana White's Contender Series: Season 9, Week 8",
+    "unannounced": true
+  },
+  "401794772": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600055054",
+    "eventName": "Dana White's Contender Series: Season 9, Week 9",
+    "unannounced": true
+  },
+  "401794773": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600055055",
+    "eventName": "Dana White's Contender Series: Season 9, Week 10",
+    "unannounced": true
   }
 }
