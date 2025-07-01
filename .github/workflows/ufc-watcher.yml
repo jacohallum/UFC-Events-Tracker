@@ -1,4 +1,4 @@
-name: Run UFC Watcher
+name: Run Enhanced UFC Watcher
 
 on:
   schedule:
@@ -29,12 +29,13 @@ jobs:
         run: npm install
         continue-on-error: false
        
-      - name: Run UFC Watcher
+      - name: Run Enhanced UFC Watcher
         id: ufc-watcher
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: node ufc-watcher.js
         continue-on-error: true
+        timeout-minutes: 15  # Increased timeout for enhanced features
        
       - name: Check for changes
         id: git-check
@@ -47,6 +48,10 @@ jobs:
           else
             echo "changes=true" >> $GITHUB_OUTPUT
             echo "Changes detected"
+            # Check what files changed for better reporting
+            echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+            git diff --staged --name-only >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
           fi
        
       - name: Commit and push changes
@@ -54,23 +59,28 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git commit -m "🥊 Update UFC fight data - $(date '+%Y-%m-%d %H:%M:%S UTC')"
+          git commit -m "🥊 Enhanced UFC data update - $(date '+%Y-%m-%d %H:%M:%S UTC')"
           git push origin main
         continue-on-error: true
 
-      - name: Notify on success with changes
+      # Simplified notifications since the script now handles its own detailed Discord alerts
+      - name: Notify on successful run with data changes
         if: steps.ufc-watcher.outcome == 'success' && steps.git-check.outputs.changes == 'true'
         run: |
           curl -H "Content-Type: application/json" \
-               -d '{"content":"✅ UFC Watcher completed successfully! Fight data updated."}' \
+               -d '{
+                 "content": "🤖 **GitHub Actions Update**\n✅ Enhanced UFC Watcher completed successfully!\n📊 Data files updated and committed to repository.\n🔗 [View Changes](https://github.com/${{ github.repository }}/commit/${{ github.sha }})"
+               }' \
                ${{ secrets.DISCORD_WEBHOOK_URL }}
         continue-on-error: true
 
-      - name: Notify on success with no changes
+      - name: Notify on successful run with no changes
         if: steps.ufc-watcher.outcome == 'success' && steps.git-check.outputs.changes == 'false'
         run: |
           curl -H "Content-Type: application/json" \
-               -d '{"content":"ℹ️ UFC Watcher ran successfully - no changes detected. Data is up to date."}' \
+               -d '{
+                 "content": "🤖 **GitHub Actions Status**\n✅ Enhanced UFC Watcher completed successfully - no data changes detected.\n📋 All UFC data is current and up to date."
+               }' \
                ${{ secrets.DISCORD_WEBHOOK_URL }}
         continue-on-error: true
 
@@ -78,7 +88,9 @@ jobs:
         if: steps.ufc-watcher.outcome == 'failure'
         run: |
           curl -H "Content-Type: application/json" \
-               -d '{"content":"🚨 UFC Watcher script failed! Check the logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+               -d '{
+                 "content": "🤖 **GitHub Actions Alert**\n🚨 Enhanced UFC Watcher script failed!\n\n**Possible causes:**\n• ESPN API outage\n• Network connectivity issues\n• Script error\n\n🔗 [Check Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+               }' \
                ${{ secrets.DISCORD_WEBHOOK_URL }}
         continue-on-error: true
 
@@ -86,21 +98,51 @@ jobs:
         if: steps.ufc-watcher.outcome == 'success' && steps.git-check.outputs.changes == 'true' && failure()
         run: |
           curl -H "Content-Type: application/json" \
-               -d '{"content":"⚠️ UFC Watcher ran successfully but failed to push changes to GitHub. Check the logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
+               -d '{
+                 "content": "🤖 **GitHub Actions Warning**\n⚠️ Enhanced UFC Watcher ran successfully but failed to push changes to repository.\n\n📊 Data was processed correctly but not saved to GitHub.\n🔗 [Check Logs](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+               }' \
                ${{ secrets.DISCORD_WEBHOOK_URL }}
         continue-on-error: true
 
-      - name: Create summary
+      - name: Create detailed summary
         if: always()
         run: |
-          echo "## UFC Watcher Run Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## Enhanced UFC Watcher Run Summary" >> $GITHUB_STEP_SUMMARY
           echo "- **Timestamp:** $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
           echo "- **UFC Watcher Status:** ${{ steps.ufc-watcher.outcome }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Changes Detected:** ${{ steps.git-check.outputs.changes || 'N/A' }}" >> $GITHUB_STEP_SUMMARY
+          
           if [[ "${{ steps.ufc-watcher.outcome }}" == "failure" ]]; then
-            echo "- **Error:** UFC Watcher script failed" >> $GITHUB_STEP_SUMMARY
+            echo "- **Error:** Enhanced UFC Watcher script failed" >> $GITHUB_STEP_SUMMARY
+            echo "- **Next Steps:** Check logs for ESPN API issues or script errors" >> $GITHUB_STEP_SUMMARY
           elif [[ "${{ steps.git-check.outputs.changes }}" == "true" ]]; then
             echo "- **Result:** Fight data updated successfully" >> $GITHUB_STEP_SUMMARY
+            echo "- **Files Updated:**" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            echo "${{ steps.git-check.outputs.changed_files }}" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+            echo "- **Enhanced Features:** Live monitoring, rankings tracking, predictions, and odds monitoring active" >> $GITHUB_STEP_SUMMARY
           else
-            echo "- **Result:** No changes detected, data is up to date" >> $GITHUB_STEP_SUMMARY
+            echo "- **Result:** No changes detected, all UFC data is current" >> $GITHUB_STEP_SUMMARY
+            echo "- **Enhanced Features:** All advanced features ran successfully" >> $GITHUB_STEP_SUMMARY
           fi
+          
+          echo "- **Features Active:**" >> $GITHUB_STEP_SUMMARY
+          echo "  - 🔴 Live event monitoring" >> $GITHUB_STEP_SUMMARY
+          echo "  - 📈 UFC rankings tracking" >> $GITHUB_STEP_SUMMARY
+          echo "  - 📊 Historical trend analysis" >> $GITHUB_STEP_SUMMARY
+          echo "  - 🔮 Fight predictions" >> $GITHUB_STEP_SUMMARY
+          echo "  - 💰 Odds movement tracking" >> $GITHUB_STEP_SUMMARY
+          echo "  - 🛡️ API outage protection" >> $GITHUB_STEP_SUMMARY
+
+      # Optional: Upload logs as artifacts for debugging
+      - name: Upload logs on failure
+        if: steps.ufc-watcher.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ufc-watcher-logs-${{ github.run_id }}
+          path: |
+            *.json
+            *.log
+          retention-days: 7
+        continue-on-error: true

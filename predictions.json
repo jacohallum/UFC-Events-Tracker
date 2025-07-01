@@ -1,0 +1,324 @@
+{
+  "600053891": {
+    "predictions": [
+      {
+        "fightId": "401773314",
+        "fighters": "Gunnar Nelson vs Neil Magny",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      },
+      {
+        "fightId": "401769291",
+        "fighters": "Carli Judice vs Nicolle Caliari",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      },
+      {
+        "fightId": "401769290",
+        "fighters": "Adam Fugitt vs Islam Dulatov",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      },
+      {
+        "fightId": "401776542",
+        "fighters": "Jimmy Crute vs Marcin Prachnio",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      },
+      {
+        "fightId": "401776543",
+        "fighters": "Brunno Ferreira vs Ikram Aliskerov",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      },
+      {
+        "fightId": "401776541",
+        "fighters": "Kyler Phillips vs Vinicius Oliveira",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      },
+      {
+        "fightId": "401773313",
+        "fighters": "Brendan Allen vs Marvin Vettori",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      },
+      {
+        "fightId": "401794120",
+        "fighters": "Daniel Zellhuber vs Michael Johnson",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      },
+      {
+        "fightId": "401789179",
+        "fighters": "Paulo Costa vs Roman Kopylov",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      },
+      {
+        "fightId": "401782335",
+        "fighters": "Ateba Gautier vs Robert Valentin",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      },
+      {
+        "fightId": "401794200",
+        "fighters": "Dan Ige vs Patricio Pitbull",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      },
+      {
+        "fightId": "401769288",
+        "fighters": "Dustin Poirier vs Max Holloway",
+        "eventName": "UFC 318: Holloway vs Poirier 3",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-19T22:00Z"
+      }
+    ],
+    "generatedAt": "2025-07-01T03:49:20.189Z"
+  },
+  "600054061": {
+    "predictions": [
+      {
+        "fightId": "401777407",
+        "fighters": "Fatima Kline vs Melissa Martinez",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      },
+      {
+        "fightId": "401790369",
+        "fighters": "Mike Davis vs Mitch Ramirez",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      },
+      {
+        "fightId": "401790368",
+        "fighters": "Kennedy Nzechukwu vs Valter Walker",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      },
+      {
+        "fightId": "401777408",
+        "fighters": "Eduarda Moura vs Lauren Murphy",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      },
+      {
+        "fightId": "401777392",
+        "fighters": "Chidi Njokuani vs Jake Matthews",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      },
+      {
+        "fightId": "401777406",
+        "fighters": "Chris Curtis vs Max Griffin",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      },
+      {
+        "fightId": "401777402",
+        "fighters": "Junior Tafa vs Tuco Tokkos",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      },
+      {
+        "fightId": "401777404",
+        "fighters": "Austen Lane vs Vitor Petrino",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      },
+      {
+        "fightId": "401790367",
+        "fighters": "Morgan Charrière vs Nate Landwehr",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      },
+      {
+        "fightId": "401774507",
+        "fighters": "Calvin Kattar vs Steve Garcia",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      },
+      {
+        "fightId": "401777480",
+        "fighters": "Gabriel Bonfim vs Stephen Thompson",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      },
+      {
+        "fightId": "401774502",
+        "fighters": "Derrick Lewis vs Tallison Teixeira",
+        "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+        "prediction": {
+          "favorite": null,
+          "confidence": 0,
+          "factors": [],
+          "prediction": "Too close to call - even matchup"
+        },
+        "venue": "TBA",
+        "date": "2025-07-12T22:00Z"
+      }
+    ],
+    "generatedAt": "2025-07-01T03:49:03.516Z"
+  }
+}

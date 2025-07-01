@@ -1,0 +1,162 @@
+{
+  "2025-06-30": {
+    "count": 24,
+    "pageIndex": 1,
+    "pageSize": 25,
+    "pageCount": 1,
+    "items": [
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/pound-for-pound?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-pound-for-pound?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/heavyweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/light-heavyweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/middleweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/welterweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/lightweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/featherweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/bantamweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/flyweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-bantamweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-strawweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/heavyweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/light-heavyweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/middleweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/welterweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/lightweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/featherweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/bantamweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/flyweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-bantamweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-strawweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-flyweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-flyweight?lang=en&region=us"
+      }
+    ]
+  },
+  "2025-07-01": {
+    "count": 24,
+    "pageIndex": 1,
+    "pageSize": 25,
+    "pageCount": 1,
+    "items": [
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/pound-for-pound?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-pound-for-pound?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/heavyweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/light-heavyweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/middleweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/welterweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/lightweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/featherweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/bantamweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/flyweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-bantamweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-strawweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/heavyweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/light-heavyweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/middleweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/welterweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/lightweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/featherweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/bantamweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/flyweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-bantamweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-strawweight?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-flyweight-champions?lang=en&region=us"
+      },
+      {
+        "$ref": "http://sports.core.api.espn.com/v2/sports/mma/leagues/ufc/rankings/womens-flyweight?lang=en&region=us"
+      }
+    ]
+  }
+}
