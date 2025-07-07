@@ -888,5 +888,25 @@
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
     "unannounced": false
+  },
+  "401799265": {
+    "fightName": "Paul Craig vs Modestas Bukauskas",
+    "athletes": [
+      "Paul Craig",
+      "Modestas Bukauskas"
+    ],
+    "eventId": "600054419",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "unannounced": false
+  },
+  "401799266": {
+    "fightName": "Song Kenan vs Kiefer Crosbie",
+    "athletes": [
+      "Song Kenan",
+      "Kiefer Crosbie"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "unannounced": false
   }
 }

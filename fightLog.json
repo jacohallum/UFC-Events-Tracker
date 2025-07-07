@@ -903,5 +903,15 @@
     "timestamp": "2025-07-01T21:18:29.976Z",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
     "fight": "Ante Delija vs Marcin Tybura"
+  },
+  {
+    "timestamp": "2025-07-07T21:18:31.424Z",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "fight": "Song Kenan vs Kiefer Crosbie"
+  },
+  {
+    "timestamp": "2025-07-07T21:18:32.104Z",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "fight": "Paul Craig vs Modestas Bukauskas"
   }
 ]
