@@ -908,5 +908,15 @@
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
     "unannounced": false
+  },
+  "401799502": {
+    "fightName": "Eryk Anders vs Christian Leroy Duncan",
+    "athletes": [
+      "Eryk Anders",
+      "Christian Leroy Duncan"
+    ],
+    "eventId": "600054396",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "unannounced": false
   }
 }
