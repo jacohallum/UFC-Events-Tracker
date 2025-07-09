@@ -918,5 +918,40 @@
     "timestamp": "2025-07-08T21:19:10.698Z",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
     "fight": "Eryk Anders vs Christian Leroy Duncan"
+  },
+  {
+    "timestamp": "2025-07-09T01:43:19.817Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Brunno Ferreira vs Jackson McVey"
+  },
+  {
+    "timestamp": "2025-07-09T01:43:19.817Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Ryan Spann vs Lukasz Brzeski"
+  },
+  {
+    "timestamp": "2025-07-09T01:43:19.817Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Nikolay Veretennikov vs Francisco Prado"
+  },
+  {
+    "timestamp": "2025-07-09T01:43:19.817Z",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "fight": "Kevin Holland vs Daniel Rodriguez"
+  },
+  {
+    "timestamp": "2025-07-09T01:43:20.328Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Mohammad Yahya vs Steven Nguyen"
+  },
+  {
+    "timestamp": "2025-07-09T01:43:20.328Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Davey Grant vs Da'Mon Blackshear"
+  },
+  {
+    "timestamp": "2025-07-09T01:43:20.328Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Amanda Ribas vs Tabatha Ricci"
   }
 ]

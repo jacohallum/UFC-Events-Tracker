@@ -139,16 +139,6 @@
     "eventName": "UFC 318: Holloway vs Poirier 3",
     "unannounced": false
   },
-  "401773314": {
-    "fightName": "Gunnar Nelson vs Neil Magny",
-    "athletes": [
-      "Gunnar Nelson",
-      "Neil Magny"
-    ],
-    "eventId": "600053891",
-    "eventName": "UFC 318: Holloway vs Poirier 3",
-    "unannounced": false
-  },
   "401774502": {
     "fightName": "Derrick Lewis vs Tallison Teixeira",
     "athletes": [
@@ -184,16 +174,6 @@
     "athletes": [
       "Jimmy Crute",
       "Marcin Prachnio"
-    ],
-    "eventId": "600053891",
-    "eventName": "UFC 318: Holloway vs Poirier 3",
-    "unannounced": false
-  },
-  "401776543": {
-    "fightName": "Ikram Aliskerov vs Brunno Ferreira",
-    "athletes": [
-      "Brunno Ferreira",
-      "Ikram Aliskerov"
     ],
     "eventId": "600053891",
     "eventName": "UFC 318: Holloway vs Poirier 3",
@@ -912,11 +892,81 @@
   "401799502": {
     "fightName": "Eryk Anders vs Christian Leroy Duncan",
     "athletes": [
-      "Eryk Anders",
-      "Christian Leroy Duncan"
+      "Christian Leroy Duncan",
+      "Eryk Anders"
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "unannounced": false
+  },
+  "401799503": {
+    "fightName": "Amanda Ribas vs Tabatha Ricci",
+    "athletes": [
+      "Amanda Ribas",
+      "Tabatha Ricci"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401799504": {
+    "fightName": "Davey Grant vs Da'Mon Blackshear",
+    "athletes": [
+      "Davey Grant",
+      "Da'Mon Blackshear"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401799505": {
+    "fightName": "Mohammad Yahya vs Steven Nguyen",
+    "athletes": [
+      "Mohammad Yahya",
+      "Steven Nguyen"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401799529": {
+    "fightName": "Kevin Holland vs Daniel Rodriguez",
+    "athletes": [
+      "Kevin Holland",
+      "Daniel Rodriguez"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401799530": {
+    "fightName": "Nikolay Veretennikov vs Francisco Prado",
+    "athletes": [
+      "Nikolay Veretennikov",
+      "Francisco Prado"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401799531": {
+    "fightName": "Ryan Spann vs Lukasz Brzeski",
+    "athletes": [
+      "Ryan Spann",
+      "Lukasz Brzeski"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401799532": {
+    "fightName": "Brunno Ferreira vs Jackson McVey",
+    "athletes": [
+      "Brunno Ferreira",
+      "Jackson McVey"
+    ],
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs Poirier 3",
     "unannounced": false
   }
 }
