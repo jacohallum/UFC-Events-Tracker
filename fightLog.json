@@ -953,5 +953,25 @@
     "timestamp": "2025-07-09T01:43:20.328Z",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
     "fight": "Amanda Ribas vs Tabatha Ricci"
+  },
+  {
+    "timestamp": "2025-07-09T03:53:10.544Z",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "fight": "Rafael Cerqueira vs Julius Walker"
+  },
+  {
+    "timestamp": "2025-07-09T03:53:10.544Z",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "fight": "Angela Hill vs Iasmin Lucindo"
+  },
+  {
+    "timestamp": "2025-07-09T03:53:10.544Z",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "fight": "Priscila Cachoeira vs Joselyne Edwards"
+  },
+  {
+    "timestamp": "2025-07-09T03:53:10.544Z",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "fight": "Andre Fili vs Christian Rodriguez"
   }
 ]

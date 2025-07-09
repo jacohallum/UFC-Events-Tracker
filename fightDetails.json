@@ -912,8 +912,8 @@
   "401799504": {
     "fightName": "Davey Grant vs Da'Mon Blackshear",
     "athletes": [
-      "Davey Grant",
-      "Da'Mon Blackshear"
+      "Da'Mon Blackshear",
+      "Davey Grant"
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
@@ -932,8 +932,8 @@
   "401799529": {
     "fightName": "Kevin Holland vs Daniel Rodriguez",
     "athletes": [
-      "Kevin Holland",
-      "Daniel Rodriguez"
+      "Daniel Rodriguez",
+      "Kevin Holland"
     ],
     "eventId": "600053891",
     "eventName": "UFC 318: Holloway vs Poirier 3",
@@ -942,8 +942,8 @@
   "401799530": {
     "fightName": "Nikolay Veretennikov vs Francisco Prado",
     "athletes": [
-      "Nikolay Veretennikov",
-      "Francisco Prado"
+      "Francisco Prado",
+      "Nikolay Veretennikov"
     ],
     "eventId": "600053891",
     "eventName": "UFC 318: Holloway vs Poirier 3",
@@ -952,8 +952,8 @@
   "401799531": {
     "fightName": "Ryan Spann vs Lukasz Brzeski",
     "athletes": [
-      "Ryan Spann",
-      "Lukasz Brzeski"
+      "Lukasz Brzeski",
+      "Ryan Spann"
     ],
     "eventId": "600053891",
     "eventName": "UFC 318: Holloway vs Poirier 3",
@@ -967,6 +967,46 @@
     ],
     "eventId": "600053891",
     "eventName": "UFC 318: Holloway vs Poirier 3",
+    "unannounced": false
+  },
+  "401799776": {
+    "fightName": "Andre Fili vs Christian Rodriguez",
+    "athletes": [
+      "Andre Fili",
+      "Christian Rodriguez"
+    ],
+    "eventId": "600054396",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "unannounced": false
+  },
+  "401799777": {
+    "fightName": "Priscila Cachoeira vs Joselyne Edwards",
+    "athletes": [
+      "Priscila Cachoeira",
+      "Joselyne Edwards"
+    ],
+    "eventId": "600054396",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "unannounced": false
+  },
+  "401799778": {
+    "fightName": "Angela Hill vs Iasmin Lucindo",
+    "athletes": [
+      "Angela Hill",
+      "Iasmin Lucindo"
+    ],
+    "eventId": "600054396",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "unannounced": false
+  },
+  "401799779": {
+    "fightName": "Rafael Cerqueira vs Julius Walker",
+    "athletes": [
+      "Rafael Cerqueira",
+      "Julius Walker"
+    ],
+    "eventId": "600054396",
+    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
     "unannounced": false
   }
 }
