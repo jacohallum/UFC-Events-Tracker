@@ -53,5 +53,15 @@
     "eventId": "600054482",
     "eventName": "UFC Fight Night: Vancouver",
     "fightId": "401780824"
+  },
+  {
+    "eventId": "600055085",
+    "eventName": "UFC 321",
+    "fightId": "401800821"
+  },
+  {
+    "eventId": "600055085",
+    "eventName": "UFC 321",
+    "fightId": "401800640"
   }
 ]
