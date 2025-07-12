@@ -983,5 +983,25 @@
     "timestamp": "2025-07-11T01:44:31.170Z",
     "eventName": "UFC 321",
     "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-07-12T01:45:54.462Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Martin Buday vs Marcus Buchecha"
+  },
+  {
+    "timestamp": "2025-07-12T01:45:54.463Z",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fight": "Muslim Salikhov vs Carlos Leal"
+  },
+  {
+    "timestamp": "2025-07-12T01:45:55.002Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Mateusz Rębecki vs Chris Duncan"
+  },
+  {
+    "timestamp": "2025-07-12T01:45:55.002Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Esteban Ribovics vs Elves Brener"
   }
 ]

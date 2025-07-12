@@ -1028,5 +1028,45 @@
     "eventId": "600055085",
     "eventName": "UFC 321",
     "unannounced": true
+  },
+  "401800968": {
+    "fightName": "Esteban Ribovics vs Elves Brener",
+    "athletes": [
+      "Esteban Ribovics",
+      "Elves Brener"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401800969": {
+    "fightName": "Mateusz Rębecki vs Chris Duncan",
+    "athletes": [
+      "Mateusz Rębecki",
+      "Chris Duncan"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401800976": {
+    "fightName": "Muslim Salikhov vs Carlos Leal",
+    "athletes": [
+      "Muslim Salikhov",
+      "Carlos Leal"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401800977": {
+    "fightName": "Martin Buday vs Marcus Buchecha",
+    "athletes": [
+      "Martin Buday",
+      "Marcus Buchecha"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
   }
 }
