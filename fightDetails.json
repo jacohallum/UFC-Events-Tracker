@@ -139,26 +139,6 @@
     "eventName": "UFC 318: Holloway vs Poirier 3",
     "unannounced": false
   },
-  "401774502": {
-    "fightName": "Derrick Lewis vs Tallison Teixeira",
-    "athletes": [
-      "Derrick Lewis",
-      "Tallison Teixeira"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
-    "unannounced": false
-  },
-  "401774507": {
-    "fightName": "Steve Garcia vs Calvin Kattar",
-    "athletes": [
-      "Calvin Kattar",
-      "Steve Garcia"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
-    "unannounced": false
-  },
   "401776541": {
     "fightName": "Kyler Phillips vs Vinicius Oliveira",
     "athletes": [
@@ -217,76 +197,6 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "unannounced": false
-  },
-  "401777392": {
-    "fightName": "Chidi Njokuani vs Jake Matthews",
-    "athletes": [
-      "Chidi Njokuani",
-      "Jake Matthews"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
-    "unannounced": false
-  },
-  "401777402": {
-    "fightName": "Tuco Tokkos vs Junior Tafa",
-    "athletes": [
-      "Junior Tafa",
-      "Tuco Tokkos"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
-    "unannounced": false
-  },
-  "401777404": {
-    "fightName": "Austen Lane vs Vitor Petrino",
-    "athletes": [
-      "Austen Lane",
-      "Vitor Petrino"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
-    "unannounced": false
-  },
-  "401777406": {
-    "fightName": "Chris Curtis vs Max Griffin",
-    "athletes": [
-      "Chris Curtis",
-      "Max Griffin"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
-    "unannounced": false
-  },
-  "401777407": {
-    "fightName": "Melissa Martinez vs Fatima Kline",
-    "athletes": [
-      "Fatima Kline",
-      "Melissa Martinez"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
-    "unannounced": false
-  },
-  "401777408": {
-    "fightName": "Lauren Murphy vs Eduarda Moura",
-    "athletes": [
-      "Eduarda Moura",
-      "Lauren Murphy"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
-    "unannounced": false
-  },
-  "401777480": {
-    "fightName": "Stephen Thompson vs Gabriel Bonfim",
-    "athletes": [
-      "Gabriel Bonfim",
-      "Stephen Thompson"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
     "unannounced": false
   },
   "401777790": {
@@ -557,36 +467,6 @@
     ],
     "eventId": "600053891",
     "eventName": "UFC 318: Holloway vs Poirier 3",
-    "unannounced": false
-  },
-  "401790367": {
-    "fightName": "Nate Landwehr vs Morgan Charrière",
-    "athletes": [
-      "Morgan Charrière",
-      "Nate Landwehr"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
-    "unannounced": false
-  },
-  "401790368": {
-    "fightName": "Kennedy Nzechukwu vs Valter Walker",
-    "athletes": [
-      "Kennedy Nzechukwu",
-      "Valter Walker"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
-    "unannounced": false
-  },
-  "401790369": {
-    "fightName": "Mike Davis vs Mitch Ramirez",
-    "athletes": [
-      "Mike Davis",
-      "Mitch Ramirez"
-    ],
-    "eventId": "600054061",
-    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
     "unannounced": false
   },
   "401790370": {

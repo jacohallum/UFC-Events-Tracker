@@ -1978,5 +1978,95 @@
         ]
       }
     ]
+  },
+  {
+    "eventId": "600054061",
+    "eventName": "UFC Fight Night: Lewis vs. Teixeira",
+    "fights": [
+      {
+        "fightId": "401777407",
+        "athletes": [
+          "Melissa Martinez",
+          "Fatima Kline"
+        ]
+      },
+      {
+        "fightId": "401790369",
+        "athletes": [
+          "Mike Davis",
+          "Mitch Ramirez"
+        ]
+      },
+      {
+        "fightId": "401790368",
+        "athletes": [
+          "Kennedy Nzechukwu",
+          "Valter Walker"
+        ]
+      },
+      {
+        "fightId": "401777408",
+        "athletes": [
+          "Lauren Murphy",
+          "Eduarda Moura"
+        ]
+      },
+      {
+        "fightId": "401777392",
+        "athletes": [
+          "Chidi Njokuani",
+          "Jake Matthews"
+        ]
+      },
+      {
+        "fightId": "401777406",
+        "athletes": [
+          "Chris Curtis",
+          "Max Griffin"
+        ]
+      },
+      {
+        "fightId": "401777402",
+        "athletes": [
+          "Tuco Tokkos",
+          "Junior Tafa"
+        ]
+      },
+      {
+        "fightId": "401777404",
+        "athletes": [
+          "Austen Lane",
+          "Vitor Petrino"
+        ]
+      },
+      {
+        "fightId": "401790367",
+        "athletes": [
+          "Nate Landwehr",
+          "Morgan Charrière"
+        ]
+      },
+      {
+        "fightId": "401774507",
+        "athletes": [
+          "Steve Garcia",
+          "Calvin Kattar"
+        ]
+      },
+      {
+        "fightId": "401777480",
+        "athletes": [
+          "Stephen Thompson",
+          "Gabriel Bonfim"
+        ]
+      },
+      {
+        "fightId": "401774502",
+        "athletes": [
+          "Derrick Lewis",
+          "Tallison Teixeira"
+        ]
+      }
+    ]
   }
 ]
