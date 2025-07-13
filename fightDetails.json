@@ -948,5 +948,45 @@
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
     "unannounced": false
+  },
+  "401801204": {
+    "fightName": "Cam Rowston vs Jon Kunneman",
+    "athletes": [
+      "Cam Rowston",
+      "Jon Kunneman"
+    ],
+    "eventId": "600055021",
+    "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "unannounced": false
+  },
+  "401801205": {
+    "fightName": "Louis Lee Scott vs Kaushik Saikumar",
+    "athletes": [
+      "Louis Lee Scott",
+      "Kaushik Saikumar"
+    ],
+    "eventId": "600055021",
+    "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "unannounced": false
+  },
+  "401801206": {
+    "fightName": "Josh Hokit vs Guilherme Uriel",
+    "athletes": [
+      "Josh Hokit",
+      "Guilherme Uriel"
+    ],
+    "eventId": "600055021",
+    "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "unannounced": false
+  },
+  "401801207": {
+    "fightName": "Tommy Cuozzi vs Ramiro Jimenez",
+    "athletes": [
+      "Tommy Cuozzi",
+      "Ramiro Jimenez"
+    ],
+    "eventId": "600055021",
+    "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "unannounced": false
   }
 }

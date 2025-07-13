@@ -1003,5 +1003,25 @@
     "timestamp": "2025-07-12T01:45:55.002Z",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
     "fight": "Esteban Ribovics vs Elves Brener"
+  },
+  {
+    "timestamp": "2025-07-13T03:59:33.894Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "fight": "Tommy Cuozzi vs Ramiro Jimenez"
+  },
+  {
+    "timestamp": "2025-07-13T03:59:33.894Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "fight": "Josh Hokit vs Guilherme Uriel"
+  },
+  {
+    "timestamp": "2025-07-13T03:59:33.894Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "fight": "Louis Lee Scott vs Kaushik Saikumar"
+  },
+  {
+    "timestamp": "2025-07-13T03:59:33.894Z",
+    "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "fight": "Cam Rowston vs Jon Kunneman"
   }
 ]
