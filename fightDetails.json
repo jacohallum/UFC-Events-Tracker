@@ -992,8 +992,8 @@
   "401801744": {
     "fightName": "Neil Magny vs Elizeu Zaleski dos Santos",
     "athletes": [
-      "Neil Magny",
-      "Elizeu Zaleski dos Santos"
+      "Elizeu Zaleski dos Santos",
+      "Neil Magny"
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
@@ -1002,8 +1002,8 @@
   "401801745": {
     "fightName": "TBA vs Opponent TBA",
     "athletes": [
-      "TBA",
-      "Opponent TBA"
+      "Opponent TBA",
+      "TBA"
     ],
     "eventId": "600055226",
     "eventName": "UFC Fight Night: Perth",
@@ -1012,8 +1012,8 @@
   "401801746": {
     "fightName": "TBA vs Opponent TBA",
     "athletes": [
-      "TBA",
-      "Opponent TBA"
+      "Opponent TBA",
+      "TBA"
     ],
     "eventId": "600055226",
     "eventName": "UFC Fight Night: Perth",
