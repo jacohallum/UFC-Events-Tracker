@@ -988,5 +988,35 @@
     "eventId": "600055021",
     "eventName": "Dana White's Contender Series: Season 9, Week 2",
     "unannounced": false
+  },
+  "401801744": {
+    "fightName": "Neil Magny vs Elizeu Zaleski dos Santos",
+    "athletes": [
+      "Neil Magny",
+      "Elizeu Zaleski dos Santos"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401801745": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600055226",
+    "eventName": "UFC Fight Night: Perth",
+    "unannounced": true
+  },
+  "401801746": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600055226",
+    "eventName": "UFC Fight Night: Perth",
+    "unannounced": true
   }
 }

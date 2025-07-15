@@ -1023,5 +1023,20 @@
     "timestamp": "2025-07-13T03:59:33.894Z",
     "eventName": "Dana White's Contender Series: Season 9, Week 2",
     "fight": "Cam Rowston vs Jon Kunneman"
+  },
+  {
+    "timestamp": "2025-07-15T01:49:41.474Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Neil Magny vs Elizeu Zaleski dos Santos"
+  },
+  {
+    "timestamp": "2025-07-15T01:49:42.431Z",
+    "eventName": "UFC Fight Night: Perth",
+    "fight": "TBA vs Opponent TBA"
+  },
+  {
+    "timestamp": "2025-07-15T01:49:42.431Z",
+    "eventName": "UFC Fight Night: Perth",
+    "fight": "TBA vs Opponent TBA"
   }
 ]
