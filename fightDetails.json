@@ -1018,5 +1018,15 @@
     "eventId": "600055226",
     "eventName": "UFC Fight Night: Perth",
     "unannounced": true
+  },
+  "401803715": {
+    "fightName": "Danny Silva vs Kevin Vallejos",
+    "athletes": [
+      "Danny Silva",
+      "Kevin Vallejos"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
   }
 }
