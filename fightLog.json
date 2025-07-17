@@ -1278,5 +1278,15 @@
     "timestamp": "2025-07-17T01:47:02.164Z",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
     "fight": "Danny Silva vs Kevin Vallejos"
+  },
+  {
+    "timestamp": "2025-07-17T15:22:55.788Z",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "fight": "Geoff Neal vs Carlos Prates"
+  },
+  {
+    "timestamp": "2025-07-17T15:22:56.412Z",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "fight": "Farés Ziam vs Kauê Fernandes"
   }
 ]

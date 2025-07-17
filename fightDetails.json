@@ -120,10 +120,10 @@
     "unannounced": false
   },
   "401772660": {
-    "fightName": "Asu Almabayev vs Ramazan Temirov",
+    "fightName": "Asu Almabayev vs Jose Ochoa",
     "athletes": [
       "Asu Almabayev",
-      "Ramazan Temirov"
+      "Jose Ochoa"
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
@@ -270,10 +270,10 @@
     "unannounced": false
   },
   "401777987": {
-    "fightName": "Felipe Bunes vs Andre Lima",
+    "fightName": "Felipe Bunes vs Rafael Estevam",
     "athletes": [
-      "Andre Lima",
-      "Felipe Bunes"
+      "Felipe Bunes",
+      "Rafael Estevam"
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
@@ -1027,6 +1027,26 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401803936": {
+    "fightName": "Geoff Neal vs Carlos Prates",
+    "athletes": [
+      "Geoff Neal",
+      "Carlos Prates"
+    ],
+    "eventId": "600054045",
+    "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "unannounced": false
+  },
+  "401803937": {
+    "fightName": "Farés Ziam vs Kauê Fernandes",
+    "athletes": [
+      "Farés Ziam",
+      "Kauê Fernandes"
+    ],
+    "eventId": "600054419",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
     "unannounced": false
   }
 }
