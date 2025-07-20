@@ -2068,5 +2068,109 @@
         ]
       }
     ]
+  },
+  {
+    "eventId": "600053891",
+    "eventName": "UFC 318: Holloway vs. Poirier 3",
+    "fights": [
+      {
+        "fightId": "401769291",
+        "athletes": [
+          "Nicolle Caliari",
+          "Carli Judice"
+        ]
+      },
+      {
+        "fightId": "401799532",
+        "athletes": [
+          "Brunno Ferreira",
+          "Jackson McVey"
+        ]
+      },
+      {
+        "fightId": "401799531",
+        "athletes": [
+          "Ryan Spann",
+          "Lukasz Brzeski"
+        ]
+      },
+      {
+        "fightId": "401776542",
+        "athletes": [
+          "Marcin Prachnio",
+          "Jimmy Crute"
+        ]
+      },
+      {
+        "fightId": "401769290",
+        "athletes": [
+          "Adam Fugitt",
+          "Islam Dulatov"
+        ]
+      },
+      {
+        "fightId": "401782335",
+        "athletes": [
+          "Robert Valentin",
+          "Ateba Gautier"
+        ]
+      },
+      {
+        "fightId": "401799530",
+        "athletes": [
+          "Nikolay Veretennikov",
+          "Francisco Prado"
+        ]
+      },
+      {
+        "fightId": "401773313",
+        "athletes": [
+          "Marvin Vettori",
+          "Brendan Allen"
+        ]
+      },
+      {
+        "fightId": "401776541",
+        "athletes": [
+          "Kyler Phillips",
+          "Vinicius Oliveira"
+        ]
+      },
+      {
+        "fightId": "401794120",
+        "athletes": [
+          "Michael Johnson",
+          "Daniel Zellhuber"
+        ]
+      },
+      {
+        "fightId": "401794200",
+        "athletes": [
+          "Patricio Pitbull",
+          "Dan Ige"
+        ]
+      },
+      {
+        "fightId": "401799529",
+        "athletes": [
+          "Kevin Holland",
+          "Daniel Rodriguez"
+        ]
+      },
+      {
+        "fightId": "401789179",
+        "athletes": [
+          "Paulo Costa",
+          "Roman Kopylov"
+        ]
+      },
+      {
+        "fightId": "401769288",
+        "athletes": [
+          "Dustin Poirier",
+          "Max Holloway"
+        ]
+      }
+    ]
   }
 ]
