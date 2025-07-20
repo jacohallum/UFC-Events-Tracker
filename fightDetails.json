@@ -908,5 +908,45 @@
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
     "unannounced": false
+  },
+  "401804266": {
+    "fightName": "Damon Wilson vs Marcio Barbosa",
+    "athletes": [
+      "Damon Wilson",
+      "Marcio Barbosa"
+    ],
+    "eventId": "600055005",
+    "eventName": "Dana White's Contender Series: Season 9, Week 3",
+    "unannounced": false
+  },
+  "401804267": {
+    "fightName": "Alik Lorenz vs Abdul-Rakhman Yakhyaev",
+    "athletes": [
+      "Alik Lorenz",
+      "Abdul-Rakhman Yakhyaev"
+    ],
+    "eventId": "600055005",
+    "eventName": "Dana White's Contender Series: Season 9, Week 3",
+    "unannounced": false
+  },
+  "401804268": {
+    "fightName": "Manoel Sousa vs Cristian Perez",
+    "athletes": [
+      "Manoel Sousa",
+      "Cristian Perez"
+    ],
+    "eventId": "600055005",
+    "eventName": "Dana White's Contender Series: Season 9, Week 3",
+    "unannounced": false
+  },
+  "401804269": {
+    "fightName": "Elisha Ellison vs Brando Peričić",
+    "athletes": [
+      "Elisha Ellison",
+      "Brando Peričić"
+    ],
+    "eventId": "600055005",
+    "eventName": "Dana White's Contender Series: Season 9, Week 3",
+    "unannounced": false
   }
 }
