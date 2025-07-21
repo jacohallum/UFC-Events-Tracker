@@ -938,5 +938,15 @@
     "eventId": "600055005",
     "eventName": "Dana White's Contender Series: Season 9, Week 3",
     "unannounced": false
+  },
+  "401804486": {
+    "fightName": "William Gomis vs Robert Ruchała",
+    "athletes": [
+      "William Gomis",
+      "Robert Ruchała"
+    ],
+    "eventId": "600054419",
+    "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "unannounced": false
   }
 }
