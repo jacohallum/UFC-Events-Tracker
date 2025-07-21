@@ -90,10 +90,10 @@
     "unannounced": false
   },
   "401772660": {
-    "fightName": "Asu Almabayev vs Ramazan Temirov",
+    "fightName": "Asu Almabayev vs Jose Ochoa",
     "athletes": [
       "Asu Almabayev",
-      "Ramazan Temirov"
+      "Jose Ochoa"
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
@@ -230,10 +230,10 @@
     "unannounced": false
   },
   "401777989": {
-    "fightName": "Torrez Finney vs Azamat Bekoev",
+    "fightName": "Azamat Bekoev vs Yousri Belgaroui",
     "athletes": [
       "Azamat Bekoev",
-      "Torrez Finney"
+      "Yousri Belgaroui"
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
@@ -364,16 +364,6 @@
     "athletes": [
       "Marcus McGhee",
       "Petr Yan"
-    ],
-    "eventId": "600053545",
-    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
-    "unannounced": false
-  },
-  "401785970": {
-    "fightName": "Movsar Evloev vs Aaron Pico",
-    "athletes": [
-      "Aaron Pico",
-      "Movsar Evloev"
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
