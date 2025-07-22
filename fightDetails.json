@@ -90,10 +90,10 @@
     "unannounced": false
   },
   "401772660": {
-    "fightName": "Asu Almabayev vs Jose Ochoa",
+    "fightName": "Asu Almabayev vs Ramazan Temirov",
     "athletes": [
       "Asu Almabayev",
-      "Jose Ochoa"
+      "Ramazan Temirov"
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
@@ -732,8 +732,8 @@
   "401800343": {
     "fightName": "TBA vs Opponent TBA",
     "athletes": [
-      "TBA",
-      "Opponent TBA"
+      "Opponent TBA",
+      "TBA"
     ],
     "eventId": "600055175",
     "eventName": "UFC Fight Night: Qatar",
@@ -742,8 +742,8 @@
   "401800344": {
     "fightName": "TBA vs Opponent TBA",
     "athletes": [
-      "TBA",
-      "Opponent TBA"
+      "Opponent TBA",
+      "TBA"
     ],
     "eventId": "600055175",
     "eventName": "UFC Fight Night: Qatar",
