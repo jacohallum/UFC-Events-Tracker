@@ -1313,5 +1313,20 @@
     "timestamp": "2025-07-21T21:19:42.364Z",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
     "fight": "William Gomis vs Robert Ruchała"
+  },
+  {
+    "timestamp": "2025-07-22T01:47:20.042Z",
+    "eventName": "UFC Fight Night: Perth",
+    "fight": "Josias Musasa vs Colby Thicknesse"
+  },
+  {
+    "timestamp": "2025-07-22T01:47:20.042Z",
+    "eventName": "UFC Fight Night: Perth",
+    "fight": "Rodolfo Bellato vs Navajo Stirling"
+  },
+  {
+    "timestamp": "2025-07-22T01:47:20.042Z",
+    "eventName": "UFC Fight Night: Perth",
+    "fight": "Dooho Choi vs Daniel Santos"
   }
 ]

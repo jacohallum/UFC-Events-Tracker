@@ -210,10 +210,10 @@
     "unannounced": false
   },
   "401777987": {
-    "fightName": "Felipe Bunes vs Rafael Estevam",
+    "fightName": "Felipe Bunes vs Andre Lima",
     "athletes": [
-      "Felipe Bunes",
-      "Rafael Estevam"
+      "Andre Lima",
+      "Felipe Bunes"
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
@@ -224,16 +224,6 @@
     "athletes": [
       "Ketlen Souza",
       "Piera Rodriguez"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "unannounced": false
-  },
-  "401777989": {
-    "fightName": "Azamat Bekoev vs Yousri Belgaroui",
-    "athletes": [
-      "Azamat Bekoev",
-      "Yousri Belgaroui"
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
@@ -860,14 +850,14 @@
     "unannounced": true
   },
   "401801746": {
-    "fightName": "TBA vs Opponent TBA",
+    "fightName": "Loma Lookboonmee vs Alexia Thainara",
     "athletes": [
-      "Opponent TBA",
-      "TBA"
+      "Alexia Thainara",
+      "Loma Lookboonmee"
     ],
     "eventId": "600055226",
     "eventName": "UFC Fight Night: Perth",
-    "unannounced": true
+    "unannounced": false
   },
   "401803715": {
     "fightName": "Danny Silva vs Kevin Vallejos",
@@ -942,11 +932,41 @@
   "401804486": {
     "fightName": "William Gomis vs Robert Ruchała",
     "athletes": [
-      "William Gomis",
-      "Robert Ruchała"
+      "Robert Ruchała",
+      "William Gomis"
     ],
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "unannounced": false
+  },
+  "401804648": {
+    "fightName": "Josias Musasa vs Colby Thicknesse",
+    "athletes": [
+      "Josias Musasa",
+      "Colby Thicknesse"
+    ],
+    "eventId": "600055226",
+    "eventName": "UFC Fight Night: Perth",
+    "unannounced": false
+  },
+  "401804649": {
+    "fightName": "Dooho Choi vs Daniel Santos",
+    "athletes": [
+      "Dooho Choi",
+      "Daniel Santos"
+    ],
+    "eventId": "600055226",
+    "eventName": "UFC Fight Night: Perth",
+    "unannounced": false
+  },
+  "401804650": {
+    "fightName": "Rodolfo Bellato vs Navajo Stirling",
+    "athletes": [
+      "Rodolfo Bellato",
+      "Navajo Stirling"
+    ],
+    "eventId": "600055226",
+    "eventName": "UFC Fight Night: Perth",
     "unannounced": false
   }
 }
