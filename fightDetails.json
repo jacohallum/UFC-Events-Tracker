@@ -729,6 +729,26 @@
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
     "unannounced": false
   },
+  "401800343": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600055175",
+    "eventName": "UFC Fight Night: Qatar",
+    "unannounced": true
+  },
+  "401800344": {
+    "fightName": "TBA vs Opponent TBA",
+    "athletes": [
+      "TBA",
+      "Opponent TBA"
+    ],
+    "eventId": "600055175",
+    "eventName": "UFC Fight Night: Qatar",
+    "unannounced": true
+  },
   "401800640": {
     "fightName": "TBA vs Opponent TBA",
     "athletes": [

@@ -68,5 +68,15 @@
     "eventId": "600055085",
     "eventName": "UFC 321",
     "fightId": "401800640"
+  },
+  {
+    "eventId": "600055175",
+    "eventName": "UFC Fight Night: Qatar",
+    "fightId": "401800344"
+  },
+  {
+    "eventId": "600055175",
+    "eventName": "UFC Fight Night: Qatar",
+    "fightId": "401800343"
   }
 ]
