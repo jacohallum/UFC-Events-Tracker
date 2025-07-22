@@ -89,16 +89,6 @@
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
     "unannounced": false
   },
-  "401772660": {
-    "fightName": "Asu Almabayev vs Ramazan Temirov",
-    "athletes": [
-      "Asu Almabayev",
-      "Ramazan Temirov"
-    ],
-    "eventId": "600053545",
-    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
-    "unannounced": false
-  },
   "401776550": {
     "fightName": "Johnny Walker vs Zhang Mingyang",
     "athletes": [
@@ -987,6 +977,16 @@
     ],
     "eventId": "600055226",
     "eventName": "UFC Fight Night: Perth",
+    "unannounced": false
+  },
+  "401804702": {
+    "fightName": "Asu Almabayev vs Jose Ochoa",
+    "athletes": [
+      "Asu Almabayev",
+      "Jose Ochoa"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
     "unannounced": false
   }
 }
