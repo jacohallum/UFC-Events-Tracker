@@ -7,6 +7,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401765008": {
@@ -17,6 +18,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401766298": {
@@ -27,6 +29,7 @@
     ],
     "eventId": "600053664",
     "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
     "unannounced": false
   },
   "401766299": {
@@ -37,6 +40,7 @@
     ],
     "eventId": "600053664",
     "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
     "unannounced": true
   },
   "401772654": {
@@ -47,6 +51,7 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventDate": "2025-08-16T22:00Z",
     "unannounced": false
   },
   "401772655": {
@@ -57,6 +62,7 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventDate": "2025-08-16T22:00Z",
     "unannounced": false
   },
   "401772656": {
@@ -67,6 +73,7 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventDate": "2025-08-16T22:00Z",
     "unannounced": false
   },
   "401772658": {
@@ -77,6 +84,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401772659": {
@@ -87,6 +95,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401776550": {
@@ -97,6 +106,7 @@
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
     "unannounced": false
   },
   "401776551": {
@@ -107,6 +117,7 @@
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
     "unannounced": false
   },
   "401776615": {
@@ -117,6 +128,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401776616": {
@@ -127,6 +139,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401777790": {
@@ -137,6 +150,7 @@
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "eventDate": "2025-08-09T20:00Z",
     "unannounced": false
   },
   "401777791": {
@@ -147,6 +161,7 @@
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "eventDate": "2025-08-09T20:00Z",
     "unannounced": false
   },
   "401777792": {
@@ -157,6 +172,7 @@
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "eventDate": "2025-08-09T20:00Z",
     "unannounced": false
   },
   "401777944": {
@@ -167,6 +183,7 @@
     ],
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "eventDate": "2025-09-06T16:00Z",
     "unannounced": false
   },
   "401777945": {
@@ -177,6 +194,7 @@
     ],
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "eventDate": "2025-09-06T16:00Z",
     "unannounced": false
   },
   "401777975": {
@@ -187,6 +205,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401777984": {
@@ -197,6 +216,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401777987": {
@@ -207,6 +227,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401777988": {
@@ -217,6 +238,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401780156": {
@@ -227,6 +249,7 @@
     ],
     "eventId": "600054473",
     "eventName": "UFC 320: Ankalaev vs. Pereira 2",
+    "eventDate": "2025-10-04T22:00Z",
     "unannounced": false
   },
   "401780157": {
@@ -237,6 +260,7 @@
     ],
     "eventId": "600054473",
     "eventName": "UFC 320: Ankalaev vs. Pereira 2",
+    "eventDate": "2025-10-04T22:00Z",
     "unannounced": true
   },
   "401780158": {
@@ -247,6 +271,7 @@
     ],
     "eventId": "600054473",
     "eventName": "UFC 320: Ankalaev vs. Pereira 2",
+    "eventDate": "2025-10-04T22:00Z",
     "unannounced": true
   },
   "401780824": {
@@ -257,6 +282,7 @@
     ],
     "eventId": "600054482",
     "eventName": "UFC Fight Night: Vancouver",
+    "eventDate": "2025-10-18T20:00Z",
     "unannounced": true
   },
   "401780825": {
@@ -267,6 +293,7 @@
     ],
     "eventId": "600054482",
     "eventName": "UFC Fight Night: Vancouver",
+    "eventDate": "2025-10-18T20:00Z",
     "unannounced": true
   },
   "401782308": {
@@ -277,6 +304,7 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventDate": "2025-08-16T22:00Z",
     "unannounced": false
   },
   "401784468": {
@@ -287,6 +315,7 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventDate": "2025-08-16T22:00Z",
     "unannounced": false
   },
   "401784469": {
@@ -297,6 +326,7 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventDate": "2025-08-16T22:00Z",
     "unannounced": false
   },
   "401784470": {
@@ -307,6 +337,7 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventDate": "2025-08-16T22:00Z",
     "unannounced": false
   },
   "401784471": {
@@ -317,6 +348,7 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventDate": "2025-08-16T22:00Z",
     "unannounced": false
   },
   "401784472": {
@@ -327,6 +359,7 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventDate": "2025-08-16T22:00Z",
     "unannounced": false
   },
   "401784494": {
@@ -337,6 +370,7 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventDate": "2025-08-16T22:00Z",
     "unannounced": false
   },
   "401785969": {
@@ -347,6 +381,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401785971": {
@@ -357,6 +392,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401790370": {
@@ -367,6 +403,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401790371": {
@@ -377,6 +414,7 @@
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "eventDate": "2025-08-09T20:00Z",
     "unannounced": false
   },
   "401790372": {
@@ -387,6 +425,7 @@
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "eventDate": "2025-08-09T20:00Z",
     "unannounced": false
   },
   "401792132": {
@@ -397,6 +436,7 @@
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
     "unannounced": false
   },
   "401792133": {
@@ -407,6 +447,7 @@
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
     "unannounced": false
   },
   "401792134": {
@@ -417,6 +458,7 @@
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
     "unannounced": false
   },
   "401792135": {
@@ -427,6 +469,7 @@
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
     "unannounced": false
   },
   "401792136": {
@@ -437,6 +480,7 @@
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
     "unannounced": false
   },
   "401793731": {
@@ -447,6 +491,7 @@
     ],
     "eventId": "600055020",
     "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "eventDate": "2025-08-12T23:00Z",
     "unannounced": false
   },
   "401793732": {
@@ -457,6 +502,7 @@
     ],
     "eventId": "600055020",
     "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "eventDate": "2025-08-12T23:00Z",
     "unannounced": false
   },
   "401793733": {
@@ -467,6 +513,7 @@
     ],
     "eventId": "600055020",
     "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "eventDate": "2025-08-12T23:00Z",
     "unannounced": false
   },
   "401793734": {
@@ -477,6 +524,7 @@
     ],
     "eventId": "600055020",
     "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "eventDate": "2025-08-12T23:00Z",
     "unannounced": false
   },
   "401793735": {
@@ -487,6 +535,7 @@
     ],
     "eventId": "600055020",
     "eventName": "Dana White's Contender Series: Season 9, Week 1",
+    "eventDate": "2025-08-12T23:00Z",
     "unannounced": false
   },
   "401794169": {
@@ -497,6 +546,7 @@
     ],
     "eventId": "600055021",
     "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "eventDate": "2025-08-20T00:00Z",
     "unannounced": false
   },
   "401794170": {
@@ -507,6 +557,7 @@
     ],
     "eventId": "600055005",
     "eventName": "Dana White's Contender Series: Season 9, Week 3",
+    "eventDate": "2025-08-27T00:00Z",
     "unannounced": false
   },
   "401794187": {
@@ -517,6 +568,7 @@
     ],
     "eventId": "600055006",
     "eventName": "Dana White's Contender Series: Season 9, Week 4",
+    "eventDate": "2025-09-03T00:00Z",
     "unannounced": false
   },
   "401794188": {
@@ -527,6 +579,7 @@
     ],
     "eventId": "600055007",
     "eventName": "Dana White's Contender Series: Season 9, Week 5",
+    "eventDate": "2025-09-10T00:00Z",
     "unannounced": false
   },
   "401794767": {
@@ -537,6 +590,7 @@
     ],
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "eventDate": "2025-09-06T16:00Z",
     "unannounced": false
   },
   "401794768": {
@@ -547,6 +601,7 @@
     ],
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "eventDate": "2025-09-06T16:00Z",
     "unannounced": false
   },
   "401794769": {
@@ -557,6 +612,7 @@
     ],
     "eventId": "600055031",
     "eventName": "Dana White's Contender Series: Season 9, Week 6",
+    "eventDate": "2025-09-17T00:00Z",
     "unannounced": true
   },
   "401794770": {
@@ -567,6 +623,7 @@
     ],
     "eventId": "600055032",
     "eventName": "Dana White's Contender Series: Season 9, Week 7",
+    "eventDate": "2025-09-24T00:00Z",
     "unannounced": true
   },
   "401794771": {
@@ -577,6 +634,7 @@
     ],
     "eventId": "600055033",
     "eventName": "Dana White's Contender Series: Season 9, Week 8",
+    "eventDate": "2025-10-01T00:00Z",
     "unannounced": true
   },
   "401794772": {
@@ -587,6 +645,7 @@
     ],
     "eventId": "600055054",
     "eventName": "Dana White's Contender Series: Season 9, Week 9",
+    "eventDate": "2025-10-08T00:00Z",
     "unannounced": true
   },
   "401794773": {
@@ -597,6 +656,7 @@
     ],
     "eventId": "600055055",
     "eventName": "Dana White's Contender Series: Season 9, Week 10",
+    "eventDate": "2025-10-15T00:00Z",
     "unannounced": true
   },
   "401795134": {
@@ -607,6 +667,7 @@
     ],
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "eventDate": "2025-09-06T16:00Z",
     "unannounced": false
   },
   "401795977": {
@@ -617,6 +678,7 @@
     ],
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "eventDate": "2025-09-06T16:00Z",
     "unannounced": false
   },
   "401799265": {
@@ -627,6 +689,7 @@
     ],
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "eventDate": "2025-09-06T16:00Z",
     "unannounced": false
   },
   "401799266": {
@@ -637,6 +700,7 @@
     ],
     "eventId": "600054141",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
     "unannounced": false
   },
   "401799502": {
@@ -647,6 +711,7 @@
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "eventDate": "2025-08-09T20:00Z",
     "unannounced": false
   },
   "401799503": {
@@ -657,6 +722,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401799504": {
@@ -667,6 +733,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401799505": {
@@ -677,6 +744,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401799776": {
@@ -687,6 +755,7 @@
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "eventDate": "2025-08-09T20:00Z",
     "unannounced": false
   },
   "401799777": {
@@ -697,6 +766,7 @@
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "eventDate": "2025-08-09T20:00Z",
     "unannounced": false
   },
   "401799778": {
@@ -707,6 +777,7 @@
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "eventDate": "2025-08-09T20:00Z",
     "unannounced": false
   },
   "401799779": {
@@ -717,6 +788,7 @@
     ],
     "eventId": "600054396",
     "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
+    "eventDate": "2025-08-09T20:00Z",
     "unannounced": false
   },
   "401800343": {
@@ -727,6 +799,7 @@
     ],
     "eventId": "600055175",
     "eventName": "UFC Fight Night: Qatar",
+    "eventDate": "2025-11-22T15:00Z",
     "unannounced": true
   },
   "401800344": {
@@ -737,6 +810,7 @@
     ],
     "eventId": "600055175",
     "eventName": "UFC Fight Night: Qatar",
+    "eventDate": "2025-11-22T15:00Z",
     "unannounced": true
   },
   "401800640": {
@@ -747,6 +821,7 @@
     ],
     "eventId": "600055085",
     "eventName": "UFC 321: Aspinall vs. Gane",
+    "eventDate": "2025-10-25T14:00Z",
     "unannounced": false
   },
   "401800821": {
@@ -757,6 +832,7 @@
     ],
     "eventId": "600055085",
     "eventName": "UFC 321: Aspinall vs. Gane",
+    "eventDate": "2025-10-25T14:00Z",
     "unannounced": true
   },
   "401800968": {
@@ -767,6 +843,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401800969": {
@@ -777,6 +854,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401800976": {
@@ -787,6 +865,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401800977": {
@@ -797,6 +876,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401801204": {
@@ -807,6 +887,7 @@
     ],
     "eventId": "600055021",
     "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "eventDate": "2025-08-20T00:00Z",
     "unannounced": false
   },
   "401801205": {
@@ -817,6 +898,7 @@
     ],
     "eventId": "600055021",
     "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "eventDate": "2025-08-20T00:00Z",
     "unannounced": false
   },
   "401801206": {
@@ -827,6 +909,7 @@
     ],
     "eventId": "600055021",
     "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "eventDate": "2025-08-20T00:00Z",
     "unannounced": false
   },
   "401801207": {
@@ -837,6 +920,7 @@
     ],
     "eventId": "600055021",
     "eventName": "Dana White's Contender Series: Season 9, Week 2",
+    "eventDate": "2025-08-20T00:00Z",
     "unannounced": false
   },
   "401801744": {
@@ -847,6 +931,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401801745": {
@@ -857,6 +942,7 @@
     ],
     "eventId": "600055226",
     "eventName": "UFC Fight Night: Perth",
+    "eventDate": "2025-09-27T23:00Z",
     "unannounced": true
   },
   "401801746": {
@@ -867,6 +953,7 @@
     ],
     "eventId": "600055226",
     "eventName": "UFC Fight Night: Perth",
+    "eventDate": "2025-09-27T23:00Z",
     "unannounced": false
   },
   "401803715": {
@@ -877,6 +964,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401803936": {
@@ -887,6 +975,7 @@
     ],
     "eventId": "600054045",
     "eventName": "UFC 319: Du Plessis vs. Chimaev",
+    "eventDate": "2025-08-16T22:00Z",
     "unannounced": false
   },
   "401803937": {
@@ -897,6 +986,7 @@
     ],
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "eventDate": "2025-09-06T16:00Z",
     "unannounced": false
   },
   "401804266": {
@@ -907,6 +997,7 @@
     ],
     "eventId": "600055005",
     "eventName": "Dana White's Contender Series: Season 9, Week 3",
+    "eventDate": "2025-08-27T00:00Z",
     "unannounced": false
   },
   "401804267": {
@@ -917,6 +1008,7 @@
     ],
     "eventId": "600055005",
     "eventName": "Dana White's Contender Series: Season 9, Week 3",
+    "eventDate": "2025-08-27T00:00Z",
     "unannounced": false
   },
   "401804268": {
@@ -927,6 +1019,7 @@
     ],
     "eventId": "600055005",
     "eventName": "Dana White's Contender Series: Season 9, Week 3",
+    "eventDate": "2025-08-27T00:00Z",
     "unannounced": false
   },
   "401804269": {
@@ -937,6 +1030,7 @@
     ],
     "eventId": "600055005",
     "eventName": "Dana White's Contender Series: Season 9, Week 3",
+    "eventDate": "2025-08-27T00:00Z",
     "unannounced": false
   },
   "401804486": {
@@ -947,6 +1041,7 @@
     ],
     "eventId": "600054419",
     "eventName": "UFC Fight Night: Imavov vs. Borralho",
+    "eventDate": "2025-09-06T16:00Z",
     "unannounced": false
   },
   "401804648": {
@@ -957,6 +1052,7 @@
     ],
     "eventId": "600055226",
     "eventName": "UFC Fight Night: Perth",
+    "eventDate": "2025-09-27T23:00Z",
     "unannounced": false
   },
   "401804649": {
@@ -967,6 +1063,7 @@
     ],
     "eventId": "600055226",
     "eventName": "UFC Fight Night: Perth",
+    "eventDate": "2025-09-27T23:00Z",
     "unannounced": false
   },
   "401804650": {
@@ -977,6 +1074,7 @@
     ],
     "eventId": "600055226",
     "eventName": "UFC Fight Night: Perth",
+    "eventDate": "2025-09-27T23:00Z",
     "unannounced": false
   },
   "401804702": {
@@ -987,6 +1085,7 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
     "unannounced": false
   },
   "401804703": {
@@ -997,6 +1096,7 @@
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "eventDate": "2025-08-02T22:00Z",
     "unannounced": false
   },
   "401804710": {
@@ -1007,6 +1107,7 @@
     ],
     "eventId": "600054473",
     "eventName": "UFC 320: Ankalaev vs. Pereira 2",
+    "eventDate": "2025-10-04T22:00Z",
     "unannounced": false
   },
   "401804714": {
@@ -1017,6 +1118,7 @@
     ],
     "eventId": "600054473",
     "eventName": "UFC 320: Ankalaev vs. Pereira 2",
+    "eventDate": "2025-10-04T22:00Z",
     "unannounced": false
   }
 }
