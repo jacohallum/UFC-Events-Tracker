@@ -213,7 +213,7 @@ const fetchAthletesBatch = async (athleteRefs, concurrencyLimit = 8) => {
 };
 
 // Process competitions in batches to reduce API calls
-const processEventCompetitions = async (competitions, eventId, eventName) => {
+const processEventCompetitions = async (competitions, eventId, eventName, eventDate) => {
   const allAthleteRefs = [];
   const competitionData = [];
   
@@ -244,7 +244,8 @@ const processEventCompetitions = async (competitions, eventId, eventName) => {
       fightName: athleteNames.join(" vs "),
       unannounced: athleteNames.every(name => name.toLowerCase().includes("tba")),
       eventId,
-      eventName
+      eventName,
+      eventDate
     });
   }
   
@@ -390,7 +391,7 @@ export async function getUFCFights() {
       if (eventDate < now) {
         console.log(`📝 Processing past event: ${event.name}`);
         // Use the same processing function to get proper athlete names
-        const pastFights = await processEventCompetitions(event.competitions, eventId, event.name);
+        const pastFights = await processEventCompetitions(event.competitions, eventId, event.name, event.date);
         
         const pastEvent = { 
           eventId, 
@@ -410,7 +411,7 @@ export async function getUFCFights() {
       console.log(`\n📅 Event: ${event.name} on ${eventDate.toDateString()}`);
 
       // Process all fights for this event in batch
-      const fights = await processEventCompetitions(event.competitions, eventId, event.name);
+      const fights = await processEventCompetitions(event.competitions, eventId, event.name, event.date);
       allCurrentFights.push(...fights);
       
       const newFightsThisEvent = [];
