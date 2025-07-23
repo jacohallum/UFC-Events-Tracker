@@ -200,10 +200,10 @@
     "unannounced": false
   },
   "401777987": {
-    "fightName": "Felipe Bunes vs Andre Lima",
+    "fightName": "Felipe Bunes vs Rafael Estevam",
     "athletes": [
-      "Andre Lima",
-      "Felipe Bunes"
+      "Felipe Bunes",
+      "Rafael Estevam"
     ],
     "eventId": "600054244",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
@@ -220,14 +220,14 @@
     "unannounced": false
   },
   "401780156": {
-    "fightName": "TBA vs Opponent TBA",
+    "fightName": "Magomed Ankalaev vs Alex Pereira",
     "athletes": [
-      "Opponent TBA",
-      "TBA"
+      "Alex Pereira",
+      "Magomed Ankalaev"
     ],
     "eventId": "600054473",
-    "eventName": "UFC 320",
-    "unannounced": true
+    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
+    "unannounced": false
   },
   "401780157": {
     "fightName": "TBA vs Opponent TBA",
@@ -236,7 +236,7 @@
       "TBA"
     ],
     "eventId": "600054473",
-    "eventName": "UFC 320",
+    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
     "unannounced": true
   },
   "401780158": {
@@ -246,7 +246,7 @@
       "TBA"
     ],
     "eventId": "600054473",
-    "eventName": "UFC 320",
+    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
     "unannounced": true
   },
   "401780824": {
@@ -740,14 +740,14 @@
     "unannounced": true
   },
   "401800640": {
-    "fightName": "TBA vs Opponent TBA",
+    "fightName": "Tom Aspinall vs Ciryl Gane",
     "athletes": [
-      "Opponent TBA",
-      "TBA"
+      "Ciryl Gane",
+      "Tom Aspinall"
     ],
     "eventId": "600055085",
-    "eventName": "UFC 321",
-    "unannounced": true
+    "eventName": "UFC 321: Aspinall vs. Gane",
+    "unannounced": false
   },
   "401800821": {
     "fightName": "TBA vs Opponent TBA",
@@ -756,7 +756,7 @@
       "TBA"
     ],
     "eventId": "600055085",
-    "eventName": "UFC 321",
+    "eventName": "UFC 321: Aspinall vs. Gane",
     "unannounced": true
   },
   "401800968": {
@@ -987,6 +987,36 @@
     ],
     "eventId": "600053545",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "unannounced": false
+  },
+  "401804703": {
+    "fightName": "Azamat Bekoev vs Yousri Belgaroui",
+    "athletes": [
+      "Azamat Bekoev",
+      "Yousri Belgaroui"
+    ],
+    "eventId": "600054244",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "unannounced": false
+  },
+  "401804710": {
+    "fightName": "Merab Dvalishvili vs Cory Sandhagen",
+    "athletes": [
+      "Merab Dvalishvili",
+      "Cory Sandhagen"
+    ],
+    "eventId": "600054473",
+    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
+    "unannounced": false
+  },
+  "401804714": {
+    "fightName": "Jiří Procházka vs Khalil Rountree Jr.",
+    "athletes": [
+      "Jiří Procházka",
+      "Khalil Rountree Jr."
+    ],
+    "eventId": "600054473",
+    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
     "unannounced": false
   }
 }

@@ -1343,5 +1343,20 @@
     "timestamp": "2025-07-22T21:19:52.960Z",
     "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
     "fight": "Asu Almabayev vs Jose Ochoa"
+  },
+  {
+    "timestamp": "2025-07-23T01:48:17.060Z",
+    "eventName": "UFC Fight Night: Albazi vs. Taira",
+    "fight": "Azamat Bekoev vs Yousri Belgaroui"
+  },
+  {
+    "timestamp": "2025-07-23T01:48:18.104Z",
+    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
+    "fight": "Merab Dvalishvili vs Cory Sandhagen"
+  },
+  {
+    "timestamp": "2025-07-23T01:48:18.104Z",
+    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
+    "fight": "Jiří Procházka vs Khalil Rountree Jr."
   }
 ]
