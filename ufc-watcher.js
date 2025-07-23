@@ -78,18 +78,53 @@ const sendDiscordMessage = async (content) => {
   }
 };
 
-const sendDiscordAlert = async (eventName, fightNames) => {
-  const content = `🚨 **${eventName}**\nNew fights added:\n${fightNames.map(name => `- ${name}`).join('\n')}`;
+// Helper function to format event date and time in PST/PDT
+const formatEventDateTime = (eventDate) => {
+  try {
+    // eventDate comes as UTC string like "2025-07-26T16:00Z"
+    const date = new Date(eventDate);
+    
+    // Format date (e.g., "Saturday, July 26, 2025")
+    const dateString = date.toLocaleDateString("en-US", {
+      timeZone: "America/Los_Angeles",
+      weekday: "long",
+      year: "numeric", 
+      month: "long",
+      day: "numeric"
+    });
+    
+    // Format time (e.g., "9:00 AM PDT" or "9:00 AM PST")
+    const timeString = date.toLocaleTimeString("en-US", {
+      timeZone: "America/Los_Angeles",
+      hour: "numeric",
+      minute: "2-digit",
+      timeZoneName: "short",
+      hour12: true
+    });
+    
+    return `${dateString} at ${timeString}`;
+  } catch (err) {
+    console.warn("⚠️ Could not format event date:", err);
+    return "Date/Time TBA";
+  }
+};
+
+// Updated Discord alert functions with date/time info
+const sendDiscordAlert = async (eventName, eventDate, fightNames) => {
+  const dateTimeInfo = formatEventDateTime(eventDate);
+  const content = `🚨 **${eventName}**\n📅 ${dateTimeInfo}\nNew fights added:\n${fightNames.map(name => `• ${name}`).join('\n')}`;
   await sendDiscordMessage(content);
 };
 
-const sendUpdatedFightsAlert = async (eventName, fightNames) => {
-  const content = `🔄 **${eventName}**\nUpdated fights:\n${fightNames.map(name => `- ${name}`).join('\n')}`;
+const sendUpdatedFightsAlert = async (eventName, eventDate, fightNames) => {
+  const dateTimeInfo = formatEventDateTime(eventDate);
+  const content = `🔄 **${eventName}**\n📅 ${dateTimeInfo}\nUpdated fights:\n${fightNames.map(name => `• ${name}`).join('\n')}`;
   await sendDiscordMessage(content);
 };
 
-const sendFightChangesAlert = async (eventName, changes) => {
-  const content = `⚠️ **${eventName}**\nFight changes detected:\n${changes.map(change => `- ${change}`).join('\n')}`;
+const sendFightChangesAlert = async (eventName, eventDate, changes) => {
+  const dateTimeInfo = formatEventDateTime(eventDate);
+  const content = `⚠️ **${eventName}**\n📅 ${dateTimeInfo}\nFight changes detected:\n${changes.map(change => `• ${change}`).join('\n')}`;
   await sendDiscordMessage(content);
 };
 
@@ -128,7 +163,6 @@ const fetchAthletesBatch = async (athleteRefs, concurrencyLimit = 8) => {
   
   const results = [];
   const toFetch = [];
-  const refToIndexMap = new Map();
   
   // Check cache first and build index mapping
   for (let i = 0; i < athleteRefs.length; i++) {
@@ -138,7 +172,6 @@ const fetchAthletesBatch = async (athleteRefs, concurrencyLimit = 8) => {
     } else {
       results[i] = null;
       toFetch.push({ ref, originalIndex: i });
-      refToIndexMap.set(ref, i);
     }
   }
   
@@ -220,14 +253,10 @@ const processEventCompetitions = async (competitions, eventId, eventName) => {
 
 // Compare fight details to detect changes
 const detectFightChanges = (previousDetails, currentFights) => {
-  const changes = [];
   const removedFights = [];
   const currentFightIds = new Set(currentFights.map(f => f.fightId));
   
   // Check for removed fights - but exclude fights from recently completed events
-  const now = new Date();
-  const oneDayAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
-  
   for (const [fightId, oldFight] of Object.entries(previousDetails)) {
     if (!currentFightIds.has(fightId)) {
       // Check if this fight is from a recently completed event
@@ -249,22 +278,33 @@ const detectFightChanges = (previousDetails, currentFights) => {
   }
   
   // Check for fighter changes in existing fights
+  const changesByEvent = {};
+  
   for (const currentFight of currentFights) {
     const oldFight = previousDetails[currentFight.fightId];
     if (oldFight) {
-      // Compare fighters
-      const oldFighters = oldFight.athletes.sort();
-      const newFighters = currentFight.athletes.sort();
+      // Compare fighters - Use spread operator to avoid mutating original arrays
+      const oldFighters = [...oldFight.athletes].sort();
+      const newFighters = [...currentFight.athletes].sort();
       
       if (JSON.stringify(oldFighters) !== JSON.stringify(newFighters)) {
         const changeMsg = `${oldFight.fightName} → ${currentFight.fightName}`;
-        changes.push(changeMsg);
+        
+        // Use the current fight's event name directly and store event date
+        if (!changesByEvent[currentFight.eventName]) {
+          changesByEvent[currentFight.eventName] = {
+            changes: [],
+            eventDate: currentFight.eventDate // Store event date for notifications
+          };
+        }
+        changesByEvent[currentFight.eventName].changes.push(changeMsg);
+        
         console.log(`  🔄 Fight changed: ${changeMsg} in ${currentFight.eventName}`);
       }
     }
   }
   
-  return { changes, removedFights };
+  return { changesByEvent, removedFights };
 };
 
 export async function getUFCFights() {
@@ -385,6 +425,7 @@ export async function getUFCFights() {
           athletes: fight.athletes,
           eventId: fight.eventId,
           eventName: fight.eventName,
+          eventDate: event.date,
           unannounced: fight.unannounced
         };
         
@@ -410,30 +451,21 @@ export async function getUFCFights() {
       }
 
       // Send Discord notifications
-      if (newFightsThisEvent.length) await sendDiscordAlert(event.name, newFightsThisEvent);
-      if (updatedFightsThisEvent.length) await sendUpdatedFightsAlert(event.name, updatedFightsThisEvent);
+      if (newFightsThisEvent.length) await sendDiscordAlert(event.name, event.date, newFightsThisEvent);
+      if (updatedFightsThisEvent.length) await sendUpdatedFightsAlert(event.name, event.date, updatedFightsThisEvent);
     }
 
     // Detect fight changes and removals
     console.log("\n🔍 Checking for fight changes and removals...");
-    const { changes, removedFights } = detectFightChanges(previousFightDetails, allCurrentFights);
-    
-    // Group changes by event for cleaner notifications
-    const changesByEvent = {};
-    for (const change of changes) {
-      const fight = allCurrentFights.find(f => change.includes(f.fightName));
-      if (fight) {
-        if (!changesByEvent[fight.eventName]) {
-          changesByEvent[fight.eventName] = [];
-        }
-        changesByEvent[fight.eventName].push(change);
-      }
-    }
+    const { changesByEvent, removedFights } = detectFightChanges(previousFightDetails, allCurrentFights);
     
     // Send change notifications
-    for (const [eventName, eventChanges] of Object.entries(changesByEvent)) {
-      await sendFightChangesAlert(eventName, eventChanges);
+    for (const [eventName, eventData] of Object.entries(changesByEvent)) {
+      await sendFightChangesAlert(eventName, eventData.eventDate, eventData.changes);
     }
+    
+    // Count total changes for logging
+    const totalChanges = Object.values(changesByEvent).reduce((total, eventData) => total + eventData.changes.length, 0);
     
     // Only send removal notifications if there are actually removed fights (not just moved to past events)
     if (removedFights.length > 0) {
@@ -449,15 +481,15 @@ export async function getUFCFights() {
     saveFightDetails(currentFightDetails);
     if (newFightLogEntries.length) logNewFights(newFightLogEntries);
     
-    if (newFightIdsGlobal.length === 0 && changes.length === 0 && removedFights.length === 0) {
+    if (newFightIdsGlobal.length === 0 && totalChanges === 0 && removedFights.length === 0) {
       await sendDiscordMessage("✅ UFC watcher ran — no changes detected.");
     }
 
     const executionTime = ((Date.now() - startTime) / 1000).toFixed(2);
     console.log(`⚡ Completed in ${executionTime} seconds`);
     console.log(`📊 Cache stats: ${athleteCache.size} athletes cached`);
-    console.log(`📊 Changes detected: ${changes.length} fighter changes, ${removedFights.length} removed fights`);
-    await sendDiscordMessage(`✅ UFC watcher completed in ${executionTime}s - Cache: ${athleteCache.size} athletes, ${changes.length} changes, ${removedFights.length} removals`);
+    console.log(`📊 Changes detected: ${totalChanges} fighter changes, ${removedFights.length} removed fights`);
+    await sendDiscordMessage(`✅ UFC watcher completed in ${executionTime}s - Cache: ${athleteCache.size} athletes, ${totalChanges} changes, ${removedFights.length} removals`);
     
   } catch (err) {
     console.error("❌ General failure in getUFCFights:", err);
