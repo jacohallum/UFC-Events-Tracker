@@ -33,15 +33,15 @@
     "unannounced": false
   },
   "401766299": {
-    "fightName": "TBA vs Opponent TBA",
+    "fightName": "Duško Todorović vs Jose Daniel Medina",
     "athletes": [
-      "TBA",
-      "Opponent TBA"
+      "Duško Todorović",
+      "Jose Daniel Medina"
     ],
     "eventId": "600053664",
     "eventName": "Noche UFC: Lopes vs. Silva",
     "eventDate": "2025-09-13T19:00Z",
-    "unannounced": true
+    "unannounced": false
   },
   "401772654": {
     "fightName": "Dricus Du Plessis vs Khamzat Chimaev",
@@ -1075,6 +1075,61 @@
     "eventId": "600055226",
     "eventName": "UFC Fight Night: Perth",
     "eventDate": "2025-09-27T23:00Z",
+    "unannounced": false
+  },
+  "401804668": {
+    "fightName": "Austin Hubbard vs Rongzhu",
+    "athletes": [
+      "Austin Hubbard",
+      "Rongzhu"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
+    "unannounced": false
+  },
+  "401804669": {
+    "fightName": "Xiao Long vs SuYoung You",
+    "athletes": [
+      "Xiao Long",
+      "SuYoung You"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
+    "unannounced": false
+  },
+  "401804670": {
+    "fightName": "Alessandro Costa vs Édgar Cháirez",
+    "athletes": [
+      "Alessandro Costa",
+      "Édgar Cháirez"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
+    "unannounced": false
+  },
+  "401804671": {
+    "fightName": "Jesus Aguilar vs Luis Gurule",
+    "athletes": [
+      "Jesus Aguilar",
+      "Luis Gurule"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
+    "unannounced": false
+  },
+  "401804672": {
+    "fightName": "Jared Gordon vs Rafa Garcia",
+    "athletes": [
+      "Jared Gordon",
+      "Rafa Garcia"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
     "unannounced": false
   },
   "401804702": {

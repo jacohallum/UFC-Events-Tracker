@@ -1358,5 +1358,30 @@
     "timestamp": "2025-07-23T01:48:18.104Z",
     "eventName": "UFC 320: Ankalaev vs. Pereira 2",
     "fight": "Jiří Procházka vs Khalil Rountree Jr."
+  },
+  {
+    "timestamp": "2025-07-24T06:32:47.056Z",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "fight": "Xiao Long vs SuYoung You"
+  },
+  {
+    "timestamp": "2025-07-24T06:32:47.056Z",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "fight": "Austin Hubbard vs Rongzhu"
+  },
+  {
+    "timestamp": "2025-07-24T06:32:48.437Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "Jared Gordon vs Rafa Garcia"
+  },
+  {
+    "timestamp": "2025-07-24T06:32:48.437Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "Jesus Aguilar vs Luis Gurule"
+  },
+  {
+    "timestamp": "2025-07-24T06:32:48.437Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "Alessandro Costa vs Édgar Cháirez"
   }
 ]
