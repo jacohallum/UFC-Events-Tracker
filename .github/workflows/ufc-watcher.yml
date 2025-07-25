@@ -1,23 +1,95 @@
-name: Run UFC Watcher
+name: UFC Live Event Watcher
 
 on:
   schedule:
-    - cron: "0 */3 * * *"  # Every 3 hours
-  workflow_dispatch:  # Allows manual triggering
+    # Default schedule - every 3 hours when no live events
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      force_live_mode:
+        description: 'Force live event mode'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
-  contents: write  # Required for pushing changes back to repo
+  contents: write
+  actions: write
 
 jobs:
+  check-live-events:
+    runs-on: ubuntu-latest
+    outputs:
+      is_live: ${{ steps.live-check.outputs.is_live }}
+      event_name: ${{ steps.live-check.outputs.event_name }}
+      next_check: ${{ steps.live-check.outputs.next_check }}
+      needs_rapid_monitoring: ${{ steps.live-check.outputs.needs_rapid_monitoring }}
+      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Check for live UFC events
+        id: live-check
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          # Create a simple runner script
+          cat > check-live.js << 'EOF'
+          import { checkLiveEvents } from './ufc-live-checker.js';
+          import fs from 'fs';
+          
+          checkLiveEvents().then(result => {
+            console.log('Live check result:', JSON.stringify(result, null, 2));
+            
+            // Determine if we need rapid monitoring (live OR upcoming soon)
+            const needsRapidMonitoring = result.isLive || 
+              (result.status === 'UPCOMING' && result.minutesUntil <= 60);
+            
+            // Write outputs for GitHub Actions
+            const outputs = [
+              `is_live=${result.isLive}`,
+              `event_name=${result.eventName || 'None'}`,
+              `next_check=${result.nextCheckInterval || '3 hours'}`,
+              `needs_rapid_monitoring=${needsRapidMonitoring}`
+            ].join('\n');
+            
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, outputs + '\n');
+          }).catch(error => {
+            console.error('Error:', error);
+            // Set default values on error
+            const outputs = [
+              'is_live=false',
+              'event_name=Error',
+              'next_check=1 hour',
+              'needs_rapid_monitoring=false'
+            ].join('\n');
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, outputs + '\n');
+          });
+          EOF
+          
+          # Run the check
+          node check-live.js
+
   run-ufc-watcher:
     runs-on: ubuntu-latest
+    needs: check-live-events
     
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0  # Fetch full history for better git operations
+          fetch-depth: 0
        
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -27,67 +99,79 @@ jobs:
          
       - name: Install dependencies
         run: npm install
-        continue-on-error: false
        
-      - name: Run UFC Watcher
-        id: ufc-watcher
+      - name: Run UFC Watcher (Live Mode)
+        if: needs.check-live-events.outputs.is_live == 'true'
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          LIVE_MODE: 'true'
+          EVENT_NAME: ${{ needs.check-live-events.outputs.event_name }}
+        run: node ufc-watcher.js
+        continue-on-error: true
+        
+      - name: Run UFC Watcher (Normal Mode)
+        if: needs.check-live-events.outputs.is_live == 'false'
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          LIVE_MODE: 'false'
         run: node ufc-watcher.js
         continue-on-error: true
        
       - name: Check for changes
         id: git-check
-        if: steps.ufc-watcher.outcome == 'success'
         run: |
           git add -A
           if git diff --staged --quiet; then
             echo "changes=false" >> $GITHUB_OUTPUT
-            echo "No changes detected"
           else
             echo "changes=true" >> $GITHUB_OUTPUT
-            echo "Changes detected"
           fi
        
       - name: Commit and push changes
-        if: steps.git-check.outputs.changes == 'true' && steps.ufc-watcher.outcome == 'success'
+        if: steps.git-check.outputs.changes == 'true'
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git commit -m "🥊 Update UFC fight data - $(date '+%Y-%m-%d %H:%M:%S UTC')"
+          
+          # Enhanced commit message logic for different monitoring states
+          if [[ "${{ needs.check-live-events.outputs.is_live }}" == "true" ]]; then
+            git commit -m "🔴 LIVE: Update UFC fight data - ${{ needs.check-live-events.outputs.event_name }} - $(date '+%Y-%m-%d %H:%M:%S UTC')"
+          elif [[ "${{ needs.check-live-events.outputs.needs_rapid_monitoring }}" == "true" ]]; then
+            git commit -m "⏰ PRE-EVENT: Monitoring ${{ needs.check-live-events.outputs.event_name }} - Next check: ${{ needs.check-live-events.outputs.next_check }} - $(date '+%Y-%m-%d %H:%M:%S UTC')"
+          else
+            git commit -m "🥊 Update UFC fight data - $(date '+%Y-%m-%d %H:%M:%S UTC')"
+          fi
+          
           git push origin main
         continue-on-error: true
 
-      - name: Notify on success with changes
-        if: steps.ufc-watcher.outcome == 'success' && steps.git-check.outputs.changes == 'true'
+      - name: Schedule next check (Dynamic)
+        if: needs.check-live-events.outputs.needs_rapid_monitoring == 'true'
         run: |
-          curl -H "Content-Type: application/json" \
-               -d '{"content":"✅ UFC Watcher completed successfully! Fight data updated."}' \
-               ${{ secrets.DISCORD_WEBHOOK_URL }}
-        continue-on-error: true
-
-      - name: Notify on success with no changes
-        if: steps.ufc-watcher.outcome == 'success' && steps.git-check.outputs.changes == 'false'
-        run: |
-          curl -H "Content-Type: application/json" \
-               -d '{"content":"ℹ️ UFC Watcher ran successfully - no changes detected. Data is up to date."}' \
-               ${{ secrets.DISCORD_WEBHOOK_URL }}
-        continue-on-error: true
-
-      - name: Notify on UFC Watcher failure
-        if: steps.ufc-watcher.outcome == 'failure'
-        run: |
-          curl -H "Content-Type: application/json" \
-               -d '{"content":"🚨 UFC Watcher script failed! Check the logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
-               ${{ secrets.DISCORD_WEBHOOK_URL }}
-        continue-on-error: true
-
-      - name: Notify on git push failure
-        if: steps.ufc-watcher.outcome == 'success' && steps.git-check.outputs.changes == 'true' && failure()
-        run: |
-          curl -H "Content-Type: application/json" \
-               -d '{"content":"⚠️ UFC Watcher ran successfully but failed to push changes to GitHub. Check the logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"}' \
-               ${{ secrets.DISCORD_WEBHOOK_URL }}
+          # Calculate sleep time based on next_check interval
+          NEXT_CHECK="${{ needs.check-live-events.outputs.next_check }}"
+          
+          if [[ "$NEXT_CHECK" == *"second"* ]]; then
+            SLEEP_TIME=10
+          elif [[ "$NEXT_CHECK" == *"1 minute"* ]]; then
+            SLEEP_TIME=60
+          elif [[ "$NEXT_CHECK" == *"5 minutes"* ]]; then
+            SLEEP_TIME=300
+          else
+            SLEEP_TIME=300  # Default to 5 minutes
+          fi
+          
+          echo "⏰ Scheduling next check in $SLEEP_TIME seconds for: ${{ needs.check-live-events.outputs.next_check }}"
+          sleep $SLEEP_TIME
+          
+          # Trigger another workflow run
+          curl -L \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/${{ github.repository }}/actions/workflows/ufc-watcher.yml/dispatches \
+            -d '{"ref":"main"}'
         continue-on-error: true
 
       - name: Create summary
@@ -95,12 +179,7 @@ jobs:
         run: |
           echo "## UFC Watcher Run Summary" >> $GITHUB_STEP_SUMMARY
           echo "- **Timestamp:** $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
-          echo "- **UFC Watcher Status:** ${{ steps.ufc-watcher.outcome }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Changes Detected:** ${{ steps.git-check.outputs.changes || 'N/A' }}" >> $GITHUB_STEP_SUMMARY
-          if [[ "${{ steps.ufc-watcher.outcome }}" == "failure" ]]; then
-            echo "- **Error:** UFC Watcher script failed" >> $GITHUB_STEP_SUMMARY
-          elif [[ "${{ steps.git-check.outputs.changes }}" == "true" ]]; then
-            echo "- **Result:** Fight data updated successfully" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "- **Result:** No changes detected, data is up to date" >> $GITHUB_STEP_SUMMARY
-          fi
+          echo "- **Live Event:** ${{ needs.check-live-events.outputs.is_live }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Event Name:** ${{ needs.check-live-events.outputs.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Next Check:** ${{ needs.check-live-events.outputs.next_check }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Rapid Monitoring:** ${{ needs.check-live-events.outputs.needs_rapid_monitoring }}" >> $GITHUB_STEP_SUMMARY

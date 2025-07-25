@@ -33,15 +33,15 @@
     "unannounced": false
   },
   "401766299": {
-    "fightName": "TBA vs Opponent TBA",
+    "fightName": "Duško Todorović vs Jose Daniel Medina",
     "athletes": [
-      "TBA",
-      "Opponent TBA"
+      "Duško Todorović",
+      "Jose Daniel Medina"
     ],
     "eventId": "600053664",
     "eventName": "Noche UFC: Lopes vs. Silva",
     "eventDate": "2025-09-13T19:00Z",
-    "unannounced": true
+    "unannounced": false
   },
   "401772654": {
     "fightName": "Dricus Du Plessis vs Khamzat Chimaev",
@@ -825,15 +825,15 @@
     "unannounced": false
   },
   "401800821": {
-    "fightName": "TBA vs Opponent TBA",
+    "fightName": "Chris Barnett vs Hamdy Abdelwahab",
     "athletes": [
-      "TBA",
-      "Opponent TBA"
+      "Chris Barnett",
+      "Hamdy Abdelwahab"
     ],
     "eventId": "600055085",
     "eventName": "UFC 321: Aspinall vs. Gane",
     "eventDate": "2025-10-25T14:00Z",
-    "unannounced": true
+    "unannounced": false
   },
   "401800968": {
     "fightName": "Esteban Ribovics vs Elves Brener",
@@ -1077,6 +1077,61 @@
     "eventDate": "2025-09-27T23:00Z",
     "unannounced": false
   },
+  "401804668": {
+    "fightName": "Austin Hubbard vs Rongzhu",
+    "athletes": [
+      "Austin Hubbard",
+      "Rongzhu"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
+    "unannounced": false
+  },
+  "401804669": {
+    "fightName": "Xiao Long vs SuYoung You",
+    "athletes": [
+      "Xiao Long",
+      "SuYoung You"
+    ],
+    "eventId": "600054141",
+    "eventName": "UFC Fight Night: Walker vs. Zhang",
+    "eventDate": "2025-08-23T08:00Z",
+    "unannounced": false
+  },
+  "401804670": {
+    "fightName": "Alessandro Costa vs Édgar Cháirez",
+    "athletes": [
+      "Alessandro Costa",
+      "Édgar Cháirez"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
+    "unannounced": false
+  },
+  "401804671": {
+    "fightName": "Jesus Aguilar vs Luis Gurule",
+    "athletes": [
+      "Jesus Aguilar",
+      "Luis Gurule"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
+    "unannounced": false
+  },
+  "401804672": {
+    "fightName": "Jared Gordon vs Rafa Garcia",
+    "athletes": [
+      "Jared Gordon",
+      "Rafa Garcia"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
+    "unannounced": false
+  },
   "401804702": {
     "fightName": "Asu Almabayev vs Jose Ochoa",
     "athletes": [
@@ -1119,6 +1174,105 @@
     "eventId": "600054473",
     "eventName": "UFC 320: Ankalaev vs. Pereira 2",
     "eventDate": "2025-10-04T22:00Z",
+    "unannounced": false
+  },
+  "401805080": {
+    "fightName": "Alexander Volkov vs Jailton Almeida",
+    "athletes": [
+      "Alexander Volkov",
+      "Jailton Almeida"
+    ],
+    "eventId": "600055085",
+    "eventName": "UFC 321: Aspinall vs. Gane",
+    "eventDate": "2025-10-25T14:00Z",
+    "unannounced": false
+  },
+  "401805081": {
+    "fightName": "JunYong Park vs Ikram Aliskerov",
+    "athletes": [
+      "JunYong Park",
+      "Ikram Aliskerov"
+    ],
+    "eventId": "600055085",
+    "eventName": "UFC 321: Aspinall vs. Gane",
+    "eventDate": "2025-10-25T14:00Z",
+    "unannounced": false
+  },
+  "401805082": {
+    "fightName": "Mitch Raposo vs Azat Maksum",
+    "athletes": [
+      "Mitch Raposo",
+      "Azat Maksum"
+    ],
+    "eventId": "600055085",
+    "eventName": "UFC 321: Aspinall vs. Gane",
+    "eventDate": "2025-10-25T14:00Z",
+    "unannounced": false
+  },
+  "401805084": {
+    "fightName": "Aleksandar Rakic vs Azamat Murzakanov",
+    "athletes": [
+      "Aleksandar Rakic",
+      "Azamat Murzakanov"
+    ],
+    "eventId": "600055085",
+    "eventName": "UFC 321: Aspinall vs. Gane",
+    "eventDate": "2025-10-25T14:00Z",
+    "unannounced": false
+  },
+  "401805085": {
+    "fightName": "Tatiana Suarez vs Amanda Lemos",
+    "athletes": [
+      "Tatiana Suarez",
+      "Amanda Lemos"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
+    "unannounced": false
+  },
+  "401805086": {
+    "fightName": "Joaquim Silva vs Claudio Puelles",
+    "athletes": [
+      "Joaquim Silva",
+      "Claudio Puelles"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
+    "unannounced": false
+  },
+  "401805087": {
+    "fightName": "Sedriques Dumas vs Zachary Reese",
+    "athletes": [
+      "Sedriques Dumas",
+      "Zachary Reese"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
+    "unannounced": false
+  },
+  "401805088": {
+    "fightName": "Montserrat Rendon vs Alice Pereira",
+    "athletes": [
+      "Montserrat Rendon",
+      "Alice Pereira"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
+    "unannounced": false
+  },
+  "401805152": {
+    "fightName": "Raquel Pennington vs Norma Dumont",
+    "athletes": [
+      "Raquel Pennington",
+      "Norma Dumont"
+    ],
+    "eventId": "600053664",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "eventDate": "2025-09-13T19:00Z",
     "unannounced": false
   }
 }

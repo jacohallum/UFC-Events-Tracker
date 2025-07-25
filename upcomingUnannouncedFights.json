@@ -1,10 +1,5 @@
 [
   {
-    "eventId": "600053664",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "fightId": "401766299"
-  },
-  {
     "eventId": "600055031",
     "eventName": "Dana White's Contender Series: Season 9, Week 6",
     "fightId": "401794769"
@@ -53,11 +48,6 @@
     "eventId": "600054482",
     "eventName": "UFC Fight Night: Vancouver",
     "fightId": "401780824"
-  },
-  {
-    "eventId": "600055085",
-    "eventName": "UFC 321: Aspinall vs. Gane",
-    "fightId": "401800821"
   },
   {
     "eventId": "600055175",

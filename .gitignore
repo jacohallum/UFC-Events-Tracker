@@ -134,3 +134,6 @@ dist
 
 # .env
 .env
+
+# .live-state.json
+.live-state.json
