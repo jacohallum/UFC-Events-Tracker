@@ -13,6 +13,7 @@ const UPCOMING_UNANNOUNCED_FILE = "upcomingUnannouncedFights.json";
 const FIGHT_LOG_FILE = "fightLog.json";
 const FIGHT_DETAILS_FILE = "fightDetails.json";
 const fightDetailsHistory = new Map();
+const sentAlerts = new Map();
 
 // Debug configuration
 const DEBUG_CONFIG = {
@@ -1611,16 +1612,45 @@ async function processLiveMode(allEvents, LIVE_MODE_CONFIG, now, fourMonthsFromN
     for (const { eventId, event } of liveEvents) {
       console.log(`\n🔴 LIVE EVENT: ${event.name}`);
       
+      // First, get all fights from the event
       const fights = await processLiveFights(event.competitions, eventId, event.name, event.date);
+      
+      // Then filter for live fights
       const liveFights = fights.filter(f => f.isCurrentlyLive);
       
+      // Now handle the alert logic
       if (liveFights.length > 0) {
         console.log(`🥊 ${liveFights.length} fights currently live!`);
-        await sendLiveEventAlert(event.name, event.date, liveFights, true);
+        
+        // Check if any fight status actually changed
+        let hasStatusChanges = false;
+        let changedFights = [];
+        
+        for (const fight of liveFights) {
+          // Create a simple key for tracking
+          const fightKey = `${fight.fightId}-live`;
+          const previousAlertSent = fightDetailsHistory.get(fightKey);
+          
+          if (!previousAlertSent) {
+            // First time seeing this fight as live
+            console.log(`🆕 NEW live fight detected: ${fight.fightName}`);
+            hasStatusChanges = true;
+            changedFights.push(fight);
+            fightDetailsHistory.set(fightKey, true); // Mark as alerted
+          } else {
+            // Already sent alert for this live fight
+            console.log(`⚪ Already sent alert for live fight: ${fight.fightName}`);
+          }
+        }
+        
+        if (hasStatusChanges && changedFights.length > 0) {
+          console.log(`📺 Sending live fight alert due to NEW live fights (${changedFights.length} fights)`);
+          await sendLiveEventAlert(event.name, event.date, changedFights, true);
+        } else {
+          console.log(`⚪ No NEW live fights detected - skipping duplicate alert`);
+        }
       } else {
         console.log(`⚪ No fights currently live for ${event.name}`);
-        // Still send an alert showing the event is live but no active fights
-        //await sendLiveEventAlert(event.name, event.date, fights, true);
       }
       
       // Process live event fights for tracking
