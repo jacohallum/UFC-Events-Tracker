@@ -1,1146 +1,146 @@
 {
-  "401766298": {
-    "fightName": "Diego Lopes vs Jean Silva",
+  "401765007": {
+    "fightName": "Robert Whittaker vs Reinier de Ridder",
     "athletes": [
-      "Diego Lopes",
-      "Jean Silva"
-    ],
-    "eventId": "600053664",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "eventDate": "2025-09-13T19:00Z",
-    "unannounced": false
-  },
-  "401766299": {
-    "fightName": "Duško Todorović vs Jose Daniel Medina",
-    "athletes": [
-      "Duško Todorović",
-      "Jose Daniel Medina"
-    ],
-    "eventId": "600053664",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "eventDate": "2025-09-13T19:00Z",
-    "unannounced": false
-  },
-  "401772654": {
-    "fightName": "Dricus Du Plessis vs Khamzat Chimaev",
-    "athletes": [
-      "Dricus Du Plessis",
-      "Khamzat Chimaev"
-    ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "eventDate": "2025-08-16T22:00Z",
-    "unannounced": false
-  },
-  "401772655": {
-    "fightName": "King Green vs Diego Ferreira",
-    "athletes": [
-      "King Green",
-      "Diego Ferreira"
-    ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "eventDate": "2025-08-16T22:00Z",
-    "unannounced": false
-  },
-  "401772656": {
-    "fightName": "Nursulton Ruziboev vs Bryan Battle",
-    "athletes": [
-      "Nursulton Ruziboev",
-      "Bryan Battle"
-    ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "eventDate": "2025-08-16T22:00Z",
-    "unannounced": false
-  },
-  "401776550": {
-    "fightName": "Johnny Walker vs Zhang Mingyang",
-    "athletes": [
-      "Johnny Walker",
-      "Zhang Mingyang"
-    ],
-    "eventId": "600054141",
-    "eventName": "UFC Fight Night: Walker vs. Zhang",
-    "eventDate": "2025-08-23T08:00Z",
-    "unannounced": false
-  },
-  "401776551": {
-    "fightName": "Aljamain Sterling vs Brian Ortega",
-    "athletes": [
-      "Aljamain Sterling",
-      "Brian Ortega"
-    ],
-    "eventId": "600054141",
-    "eventName": "UFC Fight Night: Walker vs. Zhang",
-    "eventDate": "2025-08-23T08:00Z",
-    "unannounced": false
-  },
-  "401776615": {
-    "fightName": "Amir Albazi vs Tatsuro Taira",
-    "athletes": [
-      "Amir Albazi",
-      "Tatsuro Taira"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401776616": {
-    "fightName": "Nick Klein vs Andrey Pulyaev",
-    "athletes": [
-      "Nick Klein",
-      "Andrey Pulyaev"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401777790": {
-    "fightName": "Anthony Hernandez vs Roman Dolidze",
-    "athletes": [
-      "Anthony Hernandez",
-      "Roman Dolidze"
-    ],
-    "eventId": "600054396",
-    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
-    "eventDate": "2025-08-09T20:00Z",
-    "unannounced": false
-  },
-  "401777791": {
-    "fightName": "Steve Erceg vs HyunSung Park",
-    "athletes": [
-      "Steve Erceg",
-      "HyunSung Park"
-    ],
-    "eventId": "600054396",
-    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
-    "eventDate": "2025-08-09T20:00Z",
-    "unannounced": false
-  },
-  "401777792": {
-    "fightName": "Julija Stoliarenko vs Gabriella Fernandes",
-    "athletes": [
-      "Julija Stoliarenko",
-      "Gabriella Fernandes"
-    ],
-    "eventId": "600054396",
-    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
-    "eventDate": "2025-08-09T20:00Z",
-    "unannounced": false
-  },
-  "401777944": {
-    "fightName": "Nassourdine Imavov vs Caio Borralho",
-    "athletes": [
-      "Nassourdine Imavov",
-      "Caio Borralho"
-    ],
-    "eventId": "600054419",
-    "eventName": "UFC Fight Night: Imavov vs. Borralho",
-    "eventDate": "2025-09-06T16:00Z",
-    "unannounced": false
-  },
-  "401777945": {
-    "fightName": "Mason Jones vs Bolaji Oki",
-    "athletes": [
-      "Mason Jones",
-      "Bolaji Oki"
-    ],
-    "eventId": "600054419",
-    "eventName": "UFC Fight Night: Imavov vs. Borralho",
-    "eventDate": "2025-09-06T16:00Z",
-    "unannounced": false
-  },
-  "401777975": {
-    "fightName": "Karol Rosa vs Nora Cornolle",
-    "athletes": [
-      "Karol Rosa",
-      "Nora Cornolle"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401777984": {
-    "fightName": "Rodolfo Vieira vs Tresean Gore",
-    "athletes": [
-      "Rodolfo Vieira",
-      "Tresean Gore"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401777987": {
-    "fightName": "Felipe Bunes vs Rafael Estevam",
-    "athletes": [
-      "Felipe Bunes",
-      "Rafael Estevam"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401777988": {
-    "fightName": "Ketlen Souza vs Piera Rodriguez",
-    "athletes": [
-      "Ketlen Souza",
-      "Piera Rodriguez"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401780156": {
-    "fightName": "Magomed Ankalaev vs Alex Pereira",
-    "athletes": [
-      "Magomed Ankalaev",
-      "Alex Pereira"
-    ],
-    "eventId": "600054473",
-    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
-    "eventDate": "2025-10-04T22:00Z",
-    "unannounced": false
-  },
-  "401780157": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600054473",
-    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
-    "eventDate": "2025-10-04T22:00Z",
-    "unannounced": true
-  },
-  "401780158": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600054473",
-    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
-    "eventDate": "2025-10-04T22:00Z",
-    "unannounced": true
-  },
-  "401780824": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600054482",
-    "eventName": "UFC Fight Night: Vancouver",
-    "eventDate": "2025-10-18T20:00Z",
-    "unannounced": true
-  },
-  "401780825": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600054482",
-    "eventName": "UFC Fight Night: Vancouver",
-    "eventDate": "2025-10-18T20:00Z",
-    "unannounced": true
-  },
-  "401782308": {
-    "fightName": "Michael Page vs Jared Cannonier",
-    "athletes": [
-      "Michael Page",
-      "Jared Cannonier"
-    ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "eventDate": "2025-08-16T22:00Z",
-    "unannounced": false
-  },
-  "401784468": {
-    "fightName": "Tim Elliott vs Kai Asakura",
-    "athletes": [
-      "Tim Elliott",
-      "Kai Asakura"
-    ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "eventDate": "2025-08-16T22:00Z",
-    "unannounced": false
-  },
-  "401784469": {
-    "fightName": "Gerald Meerschaert vs Michal Oleksiejczuk",
-    "athletes": [
-      "Gerald Meerschaert",
-      "Michal Oleksiejczuk"
-    ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "eventDate": "2025-08-16T22:00Z",
-    "unannounced": false
-  },
-  "401784470": {
-    "fightName": "JJ Aldrich vs Karine Silva",
-    "athletes": [
-      "JJ Aldrich",
-      "Karine Silva"
-    ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "eventDate": "2025-08-16T22:00Z",
-    "unannounced": false
-  },
-  "401784471": {
-    "fightName": "Jessica Andrade vs Loopy Godínez",
-    "athletes": [
-      "Jessica Andrade",
-      "Loopy Godínez"
-    ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "eventDate": "2025-08-16T22:00Z",
-    "unannounced": false
-  },
-  "401784472": {
-    "fightName": "Alexander Hernandez vs Chase Hooper",
-    "athletes": [
-      "Alexander Hernandez",
-      "Chase Hooper"
-    ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "eventDate": "2025-08-16T22:00Z",
-    "unannounced": false
-  },
-  "401784494": {
-    "fightName": "Edson Barboza vs Drakkar Klose",
-    "athletes": [
-      "Edson Barboza",
-      "Drakkar Klose"
-    ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "eventDate": "2025-08-16T22:00Z",
-    "unannounced": false
-  },
-  "401790370": {
-    "fightName": "Nathan Fletcher vs Rinya Nakamura",
-    "athletes": [
-      "Nathan Fletcher",
-      "Rinya Nakamura"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401790371": {
-    "fightName": "Toshiomi Kazama vs Elijah Smith",
-    "athletes": [
-      "Toshiomi Kazama",
-      "Elijah Smith"
-    ],
-    "eventId": "600054396",
-    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
-    "eventDate": "2025-08-09T20:00Z",
-    "unannounced": false
-  },
-  "401790372": {
-    "fightName": "Miles Johns vs Jean Matsumoto",
-    "athletes": [
-      "Miles Johns",
-      "Jean Matsumoto"
-    ],
-    "eventId": "600054396",
-    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
-    "eventDate": "2025-08-09T20:00Z",
-    "unannounced": false
-  },
-  "401792132": {
-    "fightName": "Sumudaerji vs Kevin Borjas",
-    "athletes": [
-      "Sumudaerji",
-      "Kevin Borjas"
-    ],
-    "eventId": "600054141",
-    "eventName": "UFC Fight Night: Walker vs. Zhang",
-    "eventDate": "2025-08-23T08:00Z",
-    "unannounced": false
-  },
-  "401792133": {
-    "fightName": "Charles Johnson vs Lone'er Kavanagh",
-    "athletes": [
-      "Charles Johnson",
-      "Lone'er Kavanagh"
-    ],
-    "eventId": "600054141",
-    "eventName": "UFC Fight Night: Walker vs. Zhang",
-    "eventDate": "2025-08-23T08:00Z",
-    "unannounced": false
-  },
-  "401792134": {
-    "fightName": "Uran Satybaldiev vs Diyar Nurgozhay",
-    "athletes": [
-      "Uran Satybaldiev",
-      "Diyar Nurgozhay"
-    ],
-    "eventId": "600054141",
-    "eventName": "UFC Fight Night: Walker vs. Zhang",
-    "eventDate": "2025-08-23T08:00Z",
-    "unannounced": false
-  },
-  "401792135": {
-    "fightName": "Michel Pereira vs Marco Tulio",
-    "athletes": [
-      "Michel Pereira",
-      "Marco Tulio"
-    ],
-    "eventId": "600054141",
-    "eventName": "UFC Fight Night: Walker vs. Zhang",
-    "eventDate": "2025-08-23T08:00Z",
-    "unannounced": false
-  },
-  "401792136": {
-    "fightName": "Sergei Pavlovich vs Waldo Cortes-Acosta",
-    "athletes": [
-      "Sergei Pavlovich",
-      "Waldo Cortes-Acosta"
-    ],
-    "eventId": "600054141",
-    "eventName": "UFC Fight Night: Walker vs. Zhang",
-    "eventDate": "2025-08-23T08:00Z",
-    "unannounced": false
-  },
-  "401793731": {
-    "fightName": "Ilian Bouafia vs Neemias Santana",
-    "athletes": [
-      "Ilian Bouafia",
-      "Neemias Santana"
-    ],
-    "eventId": "600055020",
-    "eventName": "Dana White's Contender Series: Season 9, Week 1",
-    "eventDate": "2025-08-12T23:00Z",
-    "unannounced": false
-  },
-  "401793732": {
-    "fightName": "Jimmy Drago vs Ty Miller",
-    "athletes": [
-      "Jimmy Drago",
-      "Ty Miller"
-    ],
-    "eventId": "600055020",
-    "eventName": "Dana White's Contender Series: Season 9, Week 1",
-    "eventDate": "2025-08-12T23:00Z",
-    "unannounced": false
-  },
-  "401793733": {
-    "fightName": "Murtaza Talha vs Damian Pinas",
-    "athletes": [
-      "Murtaza Talha",
-      "Damian Pinas"
-    ],
-    "eventId": "600055020",
-    "eventName": "Dana White's Contender Series: Season 9, Week 1",
-    "eventDate": "2025-08-12T23:00Z",
-    "unannounced": false
-  },
-  "401793734": {
-    "fightName": "Radley da Silva vs George Mangos",
-    "athletes": [
-      "Radley da Silva",
-      "George Mangos"
-    ],
-    "eventId": "600055020",
-    "eventName": "Dana White's Contender Series: Season 9, Week 1",
-    "eventDate": "2025-08-12T23:00Z",
-    "unannounced": false
-  },
-  "401793735": {
-    "fightName": "Yuri Panferov vs Christopher Ewert",
-    "athletes": [
-      "Yuri Panferov",
-      "Christopher Ewert"
-    ],
-    "eventId": "600055020",
-    "eventName": "Dana White's Contender Series: Season 9, Week 1",
-    "eventDate": "2025-08-12T23:00Z",
-    "unannounced": false
-  },
-  "401794169": {
-    "fightName": "Jose Delano vs Manuel Exposito",
-    "athletes": [
-      "Jose Delano",
-      "Manuel Exposito"
-    ],
-    "eventId": "600055021",
-    "eventName": "Dana White's Contender Series: Season 9, Week 2",
-    "eventDate": "2025-08-20T00:00Z",
-    "unannounced": false
-  },
-  "401794170": {
-    "fightName": "Vitor Costa vs Ryan Gandra",
-    "athletes": [
-      "Vitor Costa",
-      "Ryan Gandra"
-    ],
-    "eventId": "600055005",
-    "eventName": "Dana White's Contender Series: Season 9, Week 3",
-    "eventDate": "2025-08-27T00:00Z",
-    "unannounced": false
-  },
-  "401794187": {
-    "fightName": "Jean-Paul Lebosnoyani vs Jack Congdon",
-    "athletes": [
-      "Jean-Paul Lebosnoyani",
-      "Jack Congdon"
-    ],
-    "eventId": "600055006",
-    "eventName": "Dana White's Contender Series: Season 9, Week 4",
-    "eventDate": "2025-09-03T00:00Z",
-    "unannounced": false
-  },
-  "401794188": {
-    "fightName": "Guilherme Pat vs Anthony Guarascio",
-    "athletes": [
-      "Guilherme Pat",
-      "Anthony Guarascio"
-    ],
-    "eventId": "600055007",
-    "eventName": "Dana White's Contender Series: Season 9, Week 5",
-    "eventDate": "2025-09-10T00:00Z",
-    "unannounced": false
-  },
-  "401794767": {
-    "fightName": "Rinat Fakhretdinov vs Andreas Gustafsson",
-    "athletes": [
-      "Rinat Fakhretdinov",
-      "Andreas Gustafsson"
-    ],
-    "eventId": "600054419",
-    "eventName": "UFC Fight Night: Imavov vs. Borralho",
-    "eventDate": "2025-09-06T16:00Z",
-    "unannounced": false
-  },
-  "401794768": {
-    "fightName": "Sam Hughes vs Shauna Bannon",
-    "athletes": [
-      "Sam Hughes",
-      "Shauna Bannon"
-    ],
-    "eventId": "600054419",
-    "eventName": "UFC Fight Night: Imavov vs. Borralho",
-    "eventDate": "2025-09-06T16:00Z",
-    "unannounced": false
-  },
-  "401794769": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600055031",
-    "eventName": "Dana White's Contender Series: Season 9, Week 6",
-    "eventDate": "2025-09-17T00:00Z",
-    "unannounced": true
-  },
-  "401794770": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600055032",
-    "eventName": "Dana White's Contender Series: Season 9, Week 7",
-    "eventDate": "2025-09-24T00:00Z",
-    "unannounced": true
-  },
-  "401794771": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600055033",
-    "eventName": "Dana White's Contender Series: Season 9, Week 8",
-    "eventDate": "2025-10-01T00:00Z",
-    "unannounced": true
-  },
-  "401794772": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600055054",
-    "eventName": "Dana White's Contender Series: Season 9, Week 9",
-    "eventDate": "2025-10-08T00:00Z",
-    "unannounced": true
-  },
-  "401794773": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600055055",
-    "eventName": "Dana White's Contender Series: Season 9, Week 10",
-    "eventDate": "2025-10-15T00:00Z",
-    "unannounced": true
-  },
-  "401795134": {
-    "fightName": "Ante Delija vs Marcin Tybura",
-    "athletes": [
-      "Ante Delija",
-      "Marcin Tybura"
-    ],
-    "eventId": "600054419",
-    "eventName": "UFC Fight Night: Imavov vs. Borralho",
-    "eventDate": "2025-09-06T16:00Z",
-    "unannounced": false
-  },
-  "401795977": {
-    "fightName": "Kennedy Freeman vs Yuneisy Duben",
-    "athletes": [
-      "Kennedy Freeman",
-      "Yuneisy Duben"
-    ],
-    "eventId": "600054419",
-    "eventName": "UFC Fight Night: Imavov vs. Borralho",
-    "eventDate": "2025-09-06T16:00Z",
-    "unannounced": false
-  },
-  "401799265": {
-    "fightName": "Paul Craig vs Modestas Bukauskas",
-    "athletes": [
-      "Paul Craig",
-      "Modestas Bukauskas"
-    ],
-    "eventId": "600054419",
-    "eventName": "UFC Fight Night: Imavov vs. Borralho",
-    "eventDate": "2025-09-06T16:00Z",
-    "unannounced": false
-  },
-  "401799266": {
-    "fightName": "Song Kenan vs Kiefer Crosbie",
-    "athletes": [
-      "Song Kenan",
-      "Kiefer Crosbie"
-    ],
-    "eventId": "600054141",
-    "eventName": "UFC Fight Night: Walker vs. Zhang",
-    "eventDate": "2025-08-23T08:00Z",
-    "unannounced": false
-  },
-  "401799502": {
-    "fightName": "Eryk Anders vs Christian Leroy Duncan",
-    "athletes": [
-      "Eryk Anders",
-      "Christian Leroy Duncan"
-    ],
-    "eventId": "600054396",
-    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
-    "eventDate": "2025-08-09T20:00Z",
-    "unannounced": false
-  },
-  "401799776": {
-    "fightName": "Andre Fili vs Christian Rodriguez",
-    "athletes": [
-      "Andre Fili",
-      "Christian Rodriguez"
-    ],
-    "eventId": "600054396",
-    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
-    "eventDate": "2025-08-09T20:00Z",
-    "unannounced": false
-  },
-  "401799777": {
-    "fightName": "Priscila Cachoeira vs Joselyne Edwards",
-    "athletes": [
-      "Priscila Cachoeira",
-      "Joselyne Edwards"
-    ],
-    "eventId": "600054396",
-    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
-    "eventDate": "2025-08-09T20:00Z",
-    "unannounced": false
-  },
-  "401799778": {
-    "fightName": "Angela Hill vs Iasmin Lucindo",
-    "athletes": [
-      "Angela Hill",
-      "Iasmin Lucindo"
-    ],
-    "eventId": "600054396",
-    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
-    "eventDate": "2025-08-09T20:00Z",
-    "unannounced": false
-  },
-  "401799779": {
-    "fightName": "Rafael Cerqueira vs Julius Walker",
-    "athletes": [
-      "Rafael Cerqueira",
-      "Julius Walker"
-    ],
-    "eventId": "600054396",
-    "eventName": "UFC Fight Night: Dolidze vs. Hernandez",
-    "eventDate": "2025-08-09T20:00Z",
-    "unannounced": false
-  },
-  "401800343": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600055175",
-    "eventName": "UFC Fight Night: Qatar",
-    "eventDate": "2025-11-22T15:00Z",
-    "unannounced": true
-  },
-  "401800344": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600055175",
-    "eventName": "UFC Fight Night: Qatar",
-    "eventDate": "2025-11-22T15:00Z",
-    "unannounced": true
-  },
-  "401800640": {
-    "fightName": "Tom Aspinall vs Ciryl Gane",
-    "athletes": [
-      "Tom Aspinall",
-      "Ciryl Gane"
-    ],
-    "eventId": "600055085",
-    "eventName": "UFC 321: Aspinall vs. Gane",
-    "eventDate": "2025-10-25T14:00Z",
-    "unannounced": false
-  },
-  "401800821": {
-    "fightName": "Chris Barnett vs Hamdy Abdelwahab",
-    "athletes": [
-      "Chris Barnett",
-      "Hamdy Abdelwahab"
-    ],
-    "eventId": "600055085",
-    "eventName": "UFC 321: Aspinall vs. Gane",
-    "eventDate": "2025-10-25T14:00Z",
-    "unannounced": false
-  },
-  "401800968": {
-    "fightName": "Esteban Ribovics vs Elves Brener",
-    "athletes": [
-      "Esteban Ribovics",
-      "Elves Brener"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401800969": {
-    "fightName": "Mateusz Rębecki vs Chris Duncan",
-    "athletes": [
-      "Mateusz Rębecki",
-      "Chris Duncan"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401801204": {
-    "fightName": "Cam Rowston vs Jon Kunneman",
-    "athletes": [
-      "Cam Rowston",
-      "Jon Kunneman"
-    ],
-    "eventId": "600055021",
-    "eventName": "Dana White's Contender Series: Season 9, Week 2",
-    "eventDate": "2025-08-20T00:00Z",
-    "unannounced": false
-  },
-  "401801205": {
-    "fightName": "Louis Lee Scott vs Kaushik Saikumar",
-    "athletes": [
-      "Louis Lee Scott",
-      "Kaushik Saikumar"
-    ],
-    "eventId": "600055021",
-    "eventName": "Dana White's Contender Series: Season 9, Week 2",
-    "eventDate": "2025-08-20T00:00Z",
-    "unannounced": false
-  },
-  "401801206": {
-    "fightName": "Josh Hokit vs Guilherme Uriel",
-    "athletes": [
-      "Josh Hokit",
-      "Guilherme Uriel"
-    ],
-    "eventId": "600055021",
-    "eventName": "Dana White's Contender Series: Season 9, Week 2",
-    "eventDate": "2025-08-20T00:00Z",
-    "unannounced": false
-  },
-  "401801207": {
-    "fightName": "Tommy Cuozzi vs Ramiro Jimenez",
-    "athletes": [
-      "Tommy Cuozzi",
-      "Ramiro Jimenez"
-    ],
-    "eventId": "600055021",
-    "eventName": "Dana White's Contender Series: Season 9, Week 2",
-    "eventDate": "2025-08-20T00:00Z",
-    "unannounced": false
-  },
-  "401801744": {
-    "fightName": "Neil Magny vs Elizeu Zaleski dos Santos",
-    "athletes": [
-      "Neil Magny",
-      "Elizeu Zaleski dos Santos"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401801745": {
-    "fightName": "TBA vs Opponent TBA",
-    "athletes": [
-      "TBA",
-      "Opponent TBA"
-    ],
-    "eventId": "600055226",
-    "eventName": "UFC Fight Night: Perth",
-    "eventDate": "2025-09-27T23:00Z",
-    "unannounced": true
-  },
-  "401801746": {
-    "fightName": "Loma Lookboonmee vs Alexia Thainara",
-    "athletes": [
-      "Loma Lookboonmee",
-      "Alexia Thainara"
-    ],
-    "eventId": "600055226",
-    "eventName": "UFC Fight Night: Perth",
-    "eventDate": "2025-09-27T23:00Z",
-    "unannounced": false
-  },
-  "401803715": {
-    "fightName": "Danny Silva vs Kevin Vallejos",
-    "athletes": [
-      "Danny Silva",
-      "Kevin Vallejos"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401803936": {
-    "fightName": "Geoff Neal vs Carlos Prates",
-    "athletes": [
-      "Geoff Neal",
-      "Carlos Prates"
-    ],
-    "eventId": "600054045",
-    "eventName": "UFC 319: Du Plessis vs. Chimaev",
-    "eventDate": "2025-08-16T22:00Z",
-    "unannounced": false
-  },
-  "401803937": {
-    "fightName": "Farés Ziam vs Kauê Fernandes",
-    "athletes": [
-      "Farés Ziam",
-      "Kauê Fernandes"
-    ],
-    "eventId": "600054419",
-    "eventName": "UFC Fight Night: Imavov vs. Borralho",
-    "eventDate": "2025-09-06T16:00Z",
-    "unannounced": false
-  },
-  "401804266": {
-    "fightName": "Damon Wilson vs Marcio Barbosa",
-    "athletes": [
-      "Damon Wilson",
-      "Marcio Barbosa"
-    ],
-    "eventId": "600055005",
-    "eventName": "Dana White's Contender Series: Season 9, Week 3",
-    "eventDate": "2025-08-27T00:00Z",
-    "unannounced": false
-  },
-  "401804267": {
-    "fightName": "Alik Lorenz vs Abdul-Rakhman Yakhyaev",
-    "athletes": [
-      "Alik Lorenz",
-      "Abdul-Rakhman Yakhyaev"
-    ],
-    "eventId": "600055005",
-    "eventName": "Dana White's Contender Series: Season 9, Week 3",
-    "eventDate": "2025-08-27T00:00Z",
-    "unannounced": false
-  },
-  "401804268": {
-    "fightName": "Manoel Sousa vs Cristian Perez",
-    "athletes": [
-      "Manoel Sousa",
-      "Cristian Perez"
-    ],
-    "eventId": "600055005",
-    "eventName": "Dana White's Contender Series: Season 9, Week 3",
-    "eventDate": "2025-08-27T00:00Z",
-    "unannounced": false
-  },
-  "401804269": {
-    "fightName": "Elisha Ellison vs Brando Peričić",
-    "athletes": [
-      "Elisha Ellison",
-      "Brando Peričić"
-    ],
-    "eventId": "600055005",
-    "eventName": "Dana White's Contender Series: Season 9, Week 3",
-    "eventDate": "2025-08-27T00:00Z",
-    "unannounced": false
-  },
-  "401804486": {
-    "fightName": "William Gomis vs Robert Ruchała",
-    "athletes": [
-      "William Gomis",
-      "Robert Ruchała"
-    ],
-    "eventId": "600054419",
-    "eventName": "UFC Fight Night: Imavov vs. Borralho",
-    "eventDate": "2025-09-06T16:00Z",
-    "unannounced": false
-  },
-  "401804648": {
-    "fightName": "Josias Musasa vs Colby Thicknesse",
-    "athletes": [
-      "Josias Musasa",
-      "Colby Thicknesse"
-    ],
-    "eventId": "600055226",
-    "eventName": "UFC Fight Night: Perth",
-    "eventDate": "2025-09-27T23:00Z",
-    "unannounced": false
-  },
-  "401804649": {
-    "fightName": "Dooho Choi vs Daniel Santos",
-    "athletes": [
-      "Dooho Choi",
-      "Daniel Santos"
-    ],
-    "eventId": "600055226",
-    "eventName": "UFC Fight Night: Perth",
-    "eventDate": "2025-09-27T23:00Z",
-    "unannounced": false
-  },
-  "401804650": {
-    "fightName": "Rodolfo Bellato vs Navajo Stirling",
-    "athletes": [
-      "Rodolfo Bellato",
-      "Navajo Stirling"
-    ],
-    "eventId": "600055226",
-    "eventName": "UFC Fight Night: Perth",
-    "eventDate": "2025-09-27T23:00Z",
-    "unannounced": false
-  },
-  "401804668": {
-    "fightName": "Austin Hubbard vs Rongzhu",
-    "athletes": [
-      "Austin Hubbard",
-      "Rongzhu"
-    ],
-    "eventId": "600054141",
-    "eventName": "UFC Fight Night: Walker vs. Zhang",
-    "eventDate": "2025-08-23T08:00Z",
-    "unannounced": false
-  },
-  "401804669": {
-    "fightName": "Xiao Long vs SuYoung You",
-    "athletes": [
-      "Xiao Long",
-      "SuYoung You"
-    ],
-    "eventId": "600054141",
-    "eventName": "UFC Fight Night: Walker vs. Zhang",
-    "eventDate": "2025-08-23T08:00Z",
-    "unannounced": false
-  },
-  "401804670": {
-    "fightName": "Alessandro Costa vs Édgar Cháirez",
-    "athletes": [
-      "Alessandro Costa",
-      "Édgar Cháirez"
-    ],
-    "eventId": "600053664",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "eventDate": "2025-09-13T19:00Z",
-    "unannounced": false
-  },
-  "401804671": {
-    "fightName": "Jesus Aguilar vs Luis Gurule",
-    "athletes": [
-      "Jesus Aguilar",
-      "Luis Gurule"
-    ],
-    "eventId": "600053664",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "eventDate": "2025-09-13T19:00Z",
-    "unannounced": false
-  },
-  "401804672": {
-    "fightName": "Jared Gordon vs Rafa Garcia",
-    "athletes": [
-      "Jared Gordon",
-      "Rafa Garcia"
-    ],
-    "eventId": "600053664",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "eventDate": "2025-09-13T19:00Z",
-    "unannounced": false
-  },
-  "401804703": {
-    "fightName": "Azamat Bekoev vs Yousri Belgaroui",
-    "athletes": [
-      "Azamat Bekoev",
-      "Yousri Belgaroui"
-    ],
-    "eventId": "600054244",
-    "eventName": "UFC Fight Night: Albazi vs. Taira",
-    "eventDate": "2025-08-02T22:00Z",
-    "unannounced": false
-  },
-  "401804710": {
-    "fightName": "Merab Dvalishvili vs Cory Sandhagen",
-    "athletes": [
-      "Merab Dvalishvili",
-      "Cory Sandhagen"
-    ],
-    "eventId": "600054473",
-    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
-    "eventDate": "2025-10-04T22:00Z",
-    "unannounced": false
-  },
-  "401804714": {
-    "fightName": "Jiří Procházka vs Khalil Rountree Jr.",
-    "athletes": [
-      "Jiří Procházka",
-      "Khalil Rountree Jr."
-    ],
-    "eventId": "600054473",
-    "eventName": "UFC 320: Ankalaev vs. Pereira 2",
-    "eventDate": "2025-10-04T22:00Z",
-    "unannounced": false
-  },
-  "401805080": {
-    "fightName": "Alexander Volkov vs Jailton Almeida",
-    "athletes": [
-      "Alexander Volkov",
-      "Jailton Almeida"
-    ],
-    "eventId": "600055085",
-    "eventName": "UFC 321: Aspinall vs. Gane",
-    "eventDate": "2025-10-25T14:00Z",
-    "unannounced": false
-  },
-  "401805081": {
-    "fightName": "JunYong Park vs Ikram Aliskerov",
-    "athletes": [
-      "JunYong Park",
-      "Ikram Aliskerov"
-    ],
-    "eventId": "600055085",
-    "eventName": "UFC 321: Aspinall vs. Gane",
-    "eventDate": "2025-10-25T14:00Z",
-    "unannounced": false
-  },
-  "401805082": {
-    "fightName": "Mitch Raposo vs Azat Maksum",
-    "athletes": [
-      "Mitch Raposo",
-      "Azat Maksum"
-    ],
-    "eventId": "600055085",
-    "eventName": "UFC 321: Aspinall vs. Gane",
-    "eventDate": "2025-10-25T14:00Z",
-    "unannounced": false
-  },
-  "401805084": {
-    "fightName": "Aleksandar Rakic vs Azamat Murzakanov",
-    "athletes": [
-      "Aleksandar Rakic",
-      "Azamat Murzakanov"
-    ],
-    "eventId": "600055085",
-    "eventName": "UFC 321: Aspinall vs. Gane",
-    "eventDate": "2025-10-25T14:00Z",
-    "unannounced": false
-  },
-  "401805085": {
-    "fightName": "Tatiana Suarez vs Amanda Lemos",
-    "athletes": [
-      "Tatiana Suarez",
-      "Amanda Lemos"
-    ],
-    "eventId": "600053664",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "eventDate": "2025-09-13T19:00Z",
-    "unannounced": false
-  },
-  "401805086": {
-    "fightName": "Joaquim Silva vs Claudio Puelles",
-    "athletes": [
-      "Joaquim Silva",
-      "Claudio Puelles"
-    ],
-    "eventId": "600053664",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "eventDate": "2025-09-13T19:00Z",
-    "unannounced": false
+      "Robert Whittaker",
+      "Reinier de Ridder"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": false
   },
-  "401805087": {
-    "fightName": "Sedriques Dumas vs Zachary Reese",
+  "401765008": {
+    "fightName": "Ibo Aslan vs Billy Elekana",
     "athletes": [
-      "Sedriques Dumas",
-      "Zachary Reese"
-    ],
-    "eventId": "600053664",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "eventDate": "2025-09-13T19:00Z",
-    "unannounced": false
+      "Ibo Aslan",
+      "Billy Elekana"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": true
   },
-  "401805088": {
-    "fightName": "Montserrat Rendon vs Alice Pereira",
+  "401772658": {
+    "fightName": "Marc-Andre Barriault vs Shara Magomedov",
     "athletes": [
-      "Montserrat Rendon",
-      "Alice Pereira"
-    ],
-    "eventId": "600053664",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "eventDate": "2025-09-13T19:00Z",
-    "unannounced": false
+      "Marc-Andre Barriault",
+      "Shara Magomedov"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": false
   },
-  "401805152": {
-    "fightName": "Raquel Pennington vs Norma Dumont",
+  "401772659": {
+    "fightName": "Nikita Krylov vs Bogdan Guskov",
     "athletes": [
-      "Raquel Pennington",
-      "Norma Dumont"
-    ],
-    "eventId": "600053664",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "eventDate": "2025-09-13T19:00Z",
-    "unannounced": false
+      "Nikita Krylov",
+      "Bogdan Guskov"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": false
+  },
+  "401785969": {
+    "fightName": "Petr Yan vs Marcus McGhee",
+    "athletes": [
+      "Petr Yan",
+      "Marcus McGhee"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": false
+  },
+  "401785971": {
+    "fightName": "Said Nurmagomedov vs Bryce Mitchell",
+    "athletes": [
+      "Said Nurmagomedov",
+      "Bryce Mitchell"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": false
+  },
+  "401799503": {
+    "fightName": "Amanda Ribas vs Tabatha Ricci",
+    "athletes": [
+      "Amanda Ribas",
+      "Tabatha Ricci"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": false
+  },
+  "401799504": {
+    "fightName": "Davey Grant vs Da'Mon Blackshear",
+    "athletes": [
+      "Davey Grant",
+      "Da'Mon Blackshear"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": false
+  },
+  "401799505": {
+    "fightName": "Mohammad Yahya vs Steven Nguyen",
+    "athletes": [
+      "Mohammad Yahya",
+      "Steven Nguyen"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": false
+  },
+  "401800976": {
+    "fightName": "Muslim Salikhov vs Carlos Leal",
+    "athletes": [
+      "Muslim Salikhov",
+      "Carlos Leal"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": false
+  },
+  "401800977": {
+    "fightName": "Martin Buday vs Marcus Buchecha",
+    "athletes": [
+      "Martin Buday",
+      "Marcus Buchecha"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": false
+  },
+  "401804702": {
+    "fightName": "Asu Almabayev vs Jose Ochoa",
+    "athletes": [
+      "Asu Almabayev",
+      "Jose Ochoa"
+    ],
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "eventDate": "2025-07-26T16:00Z",
+    "unannounced": false,
+    "isLive": false
   }
 }

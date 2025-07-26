@@ -12,7 +12,6 @@ const PAST_EVENTS_FILE = "pastEvents.json";
 const UPCOMING_UNANNOUNCED_FILE = "upcomingUnannouncedFights.json";
 const FIGHT_LOG_FILE = "fightLog.json";
 const FIGHT_DETAILS_FILE = "fightDetails.json";
-const LIVE_MODE_CONFIG = enhanceMainScriptForLiveEvents();
 
 // Debug configuration
 const DEBUG_CONFIG = {
@@ -968,19 +967,16 @@ export async function getUFCFights() {
 // Enhanced Discord message sending for live events
 const sendLiveDiscordMessage = async (content, isUrgent = false) => {
   try {
-    // Add live event prefix for urgent messages
-    const liveContent = LIVE_MODE_CONFIG.isLive && isUrgent ? 
-      `🔴 **LIVE** - ${content}` : content;
-      
+    // Remove the live event prefix logic that depends on global LIVE_MODE_CONFIG
     await fetch(DISCORD_WEBHOOK_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ content: liveContent }),
+      body: JSON.stringify({ content }),
     });
     
-    // In live mode, also log to console for immediate feedback
-    if (LIVE_MODE_CONFIG.isLive) {
-      console.log(`📺 LIVE DISCORD: ${liveContent.substring(0, 100)}...`);
+    // Optional: Log to console if urgent
+    if (isUrgent) {
+      console.log(`📺 URGENT DISCORD: ${content.substring(0, 100)}...`);
     }
   } catch (err) {
     console.error("Discord message failed:", err.message);
@@ -992,43 +988,127 @@ const processEventsForLiveMode = async (allEvents) => {
   const now = new Date();
   const liveEvents = [];
   const upcomingEvents = [];
-  
+ 
   for (const { eventId, event } of allEvents) {
     const eventDate = new Date(event.date);
-    const timeDiff = Math.abs(now - eventDate);
-    const hoursFromNow = timeDiff / (1000 * 60 * 60);
+    const timeDiff = now - eventDate;  // ✅ Keep the sign! Positive = past, Negative = future
+    const hoursFromNow = Math.abs(timeDiff) / (1000 * 60 * 60);  // Only abs() for the hours calculation
     
+    console.log(`🔍 Event: ${event.name}, Hours: ${hoursFromNow.toFixed(2)}, TimeDiff: ${timeDiff > 0 ? 'past' : 'future'}`);
+   
     // Categorize events for live mode processing
-    if (eventDate <= now && hoursFromNow <= 6) {
+    if (timeDiff >= 0 && hoursFromNow <= 6) {  // ✅ Event is in the past (started) and within 6 hours
       // Potentially live event
       console.log(`🔴 Processing potential live event: ${event.name}`);
       liveEvents.push({ eventId, event, hoursFromNow });
-    } else if (eventDate > now && hoursFromNow <= 2) {
+    } else if (timeDiff < 0 && hoursFromNow <= 2) {  // ✅ Event is in the future and within 2 hours
       // Upcoming event
       console.log(`⏰ Processing upcoming event: ${event.name}`);
       upcomingEvents.push({ eventId, event, hoursFromNow });
+    } else {
+      console.log(`⚪ Skipping: ${event.name} (${hoursFromNow.toFixed(2)}h ${timeDiff > 0 ? 'ago' : 'away'})`);
     }
   }
   
+  console.log(`🔴 Total live events found: ${liveEvents.length}`);
+  console.log(`⏰ Total upcoming events found: ${upcomingEvents.length}`);
+ 
   return { liveEvents, upcomingEvents };
 };
 
 // Enhanced competition status checking
-const checkCompetitionStatus = (competition) => {
-  const status = competition.status?.type;
-  
-  if (!status) return 'unknown';
-  
-  switch (status.state) {
-    case 'pre':
-      return 'scheduled';
-    case 'in': 
-      return 'live';
-    case 'post':
-      return 'completed';
-    default:
-      return status.state || 'unknown';
+// FIXED: Enhanced competition status checking with API fetching
+const checkCompetitionStatus = async (competition) => {
+  if (!competition) {
+    console.log(`⚠️  No competition data provided`);
+    return 'unknown';
   }
+  
+  console.log(`🔍 Competition ID: ${competition.id}`);
+  
+  // Check if status is a reference that needs to be fetched
+  if (competition.status?.$ref) {
+    console.log(`📡 Fetching status from: ${competition.status.$ref}`);
+    
+    try {
+      const statusData = await safeFetch(competition.status.$ref);
+      if (statusData) {
+        console.log(`✅ Fetched status data:`, statusData);
+        return parseStatusData(statusData);
+      } else {
+        console.log(`❌ Failed to fetch status data`);
+        return 'unknown';
+      }
+    } catch (error) {
+      console.log(`❌ Error fetching status:`, error.message);
+      return 'unknown';
+    }
+  }
+  
+  // Handle direct status data (fallback)
+  return parseStatusData(competition.status);
+};
+
+// Helper function to parse the actual status data
+const parseStatusData = (statusData) => {
+  if (!statusData) {
+    console.log(`⚠️  No status data to parse`);
+    return 'unknown';
+  }
+  
+  console.log(`🔍 Parsing status data:`, statusData);
+  
+  // Handle different possible status structures
+  let status;
+  if (statusData.type?.state) {
+    status = statusData.type.state;
+  } else if (statusData.state) {
+    status = statusData.state;
+  } else if (statusData.type) {
+    status = statusData.type;
+  } else if (typeof statusData === 'string') {
+    status = statusData;
+  } else {
+    console.log(`⚠️  Unknown status structure:`, statusData);
+    return 'unknown';
+  }
+  
+  console.log(`🔍 Extracted status: "${status}"`);
+  
+  // Check for live status
+  if (status === 'in' || 
+      status === 'STATUS_IN_PROGRESS' || 
+      status === 'STATUS_LIVE' ||
+      status === 'in-progress' ||
+      status === 'live' ||
+      status === 'active' ||
+      status === 'ongoing') {
+    console.log(`🔴 STATUS IS LIVE: ${status}`);
+    return 'live';
+  }
+  
+  // Check for scheduled/upcoming
+  if (status === 'pre' ||
+      status === 'STATUS_SCHEDULED' ||
+      status === 'scheduled' ||
+      status === 'upcoming') {
+    console.log(`⏰ STATUS IS SCHEDULED: ${status}`);
+    return 'scheduled';
+  }
+  
+  // Check for completed
+  if (status === 'post' ||
+      status === 'STATUS_FINAL' ||
+      status === 'STATUS_COMPLETED' ||
+      status === 'final' ||
+      status === 'completed' ||
+      status === 'finished') {
+    console.log(`✅ STATUS IS COMPLETED: ${status}`);
+    return 'completed';
+  }
+  
+  console.log(`⚠️  Unrecognized status: "${status}"`);
+  return 'unknown';
 };
 
 // Live event fight processing with enhanced details
@@ -1036,19 +1116,67 @@ const processLiveFights = async (competitions, eventId, eventName, eventDate) =>
   console.log(`🔴 Processing ${competitions.length} competitions in LIVE MODE`);
   
   const fights = await processEventCompetitionsEnhanced(competitions, eventId, eventName, eventDate);
+  console.log(`📋 Total fights processed: ${fights.length}`);
   
-  // Add live status information to each fight
-  const enhancedFights = fights.map(fight => {
-    const competition = competitions.find(c => c.id === fight.fightId);
-    const status = checkCompetitionStatus(competition);
+  // Process fights with async status checking
+  const enhancedFights = [];
+  
+  for (let i = 0; i < fights.length; i++) {
+    const fight = fights[i];
+    console.log(`\n🥊 Processing fight ${i + 1}: ${fight.fightName}`);
     
-    return {
+    const competition = competitions.find(c => c.id === fight.fightId);
+    if (!competition) {
+      console.log(`❌ No competition found for fight ID: ${fight.fightId}`);
+      enhancedFights.push({
+        ...fight,
+        liveStatus: 'unknown',
+        lastUpdated: null,
+        isCurrentlyLive: false
+      });
+      continue;
+    }
+    
+    console.log(`✅ Found competition for fight ${fight.fightName}`);
+    
+    // Fetch the actual status (this is now async!)
+    const status = await checkCompetitionStatus(competition);
+    const isLive = status === 'live';
+    
+    console.log(`   Final status: ${status}`);
+    console.log(`   Is currently live: ${isLive}`);
+    
+    enhancedFights.push({
       ...fight,
       liveStatus: status,
       lastUpdated: competition?.lastUpdated || null,
-      isCurrentlyLive: status === 'live'
-    };
-  });
+      isCurrentlyLive: isLive
+    });
+  }
+  
+  // Count and report live fights
+  const liveFights = enhancedFights.filter(f => f.isCurrentlyLive);
+  const scheduledFights = enhancedFights.filter(f => f.liveStatus === 'scheduled');
+  const completedFights = enhancedFights.filter(f => f.liveStatus === 'completed');
+  
+  console.log(`\n🔴 LIVE FIGHTS SUMMARY:`);
+  console.log(`   🥊 Live: ${liveFights.length}`);
+  console.log(`   ⏰ Scheduled: ${scheduledFights.length}`);
+  console.log(`   ✅ Completed: ${completedFights.length}`);
+  console.log(`   ❓ Unknown: ${enhancedFights.length - liveFights.length - scheduledFights.length - completedFights.length}`);
+  
+  if (liveFights.length > 0) {
+    console.log(`🔴 LIVE FIGHTS FOUND:`);
+    liveFights.forEach(fight => {
+      console.log(`   - ${fight.fightName} (Status: ${fight.liveStatus})`);
+    });
+  } else {
+    console.log(`❌ NO LIVE FIGHTS DETECTED`);
+    console.log(`All fight statuses:`);
+    enhancedFights.forEach(fight => {
+      console.log(`   - ${fight.fightName}: ${fight.liveStatus}`);
+    });
+  }
   
   // Sort fights by status (live first, then scheduled, then completed)
   enhancedFights.sort((a, b) => {
@@ -1072,6 +1200,7 @@ const sendLiveEventAlert = async (eventName, eventDate, fights, isLiveEvent = fa
     const scheduledFights = fights.filter(f => f.liveStatus === 'scheduled');
     const completedFights = fights.filter(f => f.liveStatus === 'completed');
     
+    // FIXED: Show live fights first and prominently
     if (liveFights.length > 0) {
       content += `🔴 **LIVE NOW:**\n`;
       liveFights.forEach((fight, index) => {
@@ -1080,7 +1209,7 @@ const sendLiveEventAlert = async (eventName, eventDate, fights, isLiveEvent = fa
           fight.athletes[1], 
           fight.weightClass
         );
-        content += `**${index + 1}.** ${enhancedDisplay}\n\n`;
+        content += `**${index + 1}.** ${enhancedDisplay} 🔴\n\n`;
       });
     }
     
@@ -1124,8 +1253,12 @@ const sendLiveEventAlert = async (eventName, eventDate, fights, isLiveEvent = fa
 
 export async function getUFCFightsWithLiveMode() {
   const startTime = Date.now();
-  const modeIndicator = LIVE_MODE_CONFIG.isLive ? '🔴 LIVE MODE' : '📅 STANDARD MODE';
   
+  // ✅ DETECT LIVE MODE AT RUNTIME (not at import time)
+  console.log("🔍 Determining live mode...");
+  const LIVE_MODE_CONFIG = await enhanceMainScriptForLiveEvents();
+  
+  const modeIndicator = LIVE_MODE_CONFIG.isLive ? '🔴 LIVE MODE' : '📅 STANDARD MODE';
   console.log(`🚀 Starting UFC watcher in ${modeIndicator}...`);
   
   if (LIVE_MODE_CONFIG.isLive) {
@@ -1169,12 +1302,33 @@ export async function getUFCFightsWithLiveMode() {
     fourMonthsFromNow.setMonth(now.getMonth() + 4);
 
     const eventIds = calendar.map(item => item.event?.$ref?.match(/events\/(\d+)/)?.[1]).filter(Boolean);
-    const allEventIdsRaw = Array.from(new Set([...knownEvents, ...eventIds]));
+    
+    // ✅ LIVE MODE: Process fewer events BUT ensure live event is included
+    let allEventIdsRaw;
+    if (LIVE_MODE_CONFIG.isLive) {
+      // In live mode, get more recent events to ensure we catch the live one
+      const recentEventIds = eventIds.slice(-20);
+      const recentKnownEvents = knownEvents.slice(-20);
+      const priorityEventIds = [...recentEventIds, ...recentKnownEvents];
+      
+      // ✅ CRITICAL: Add the live event ID if we have it
+      if (LIVE_MODE_CONFIG.eventId) {
+        console.log(`🔴 ENSURING live event ${LIVE_MODE_CONFIG.eventId} is included`);
+        priorityEventIds.unshift(LIVE_MODE_CONFIG.eventId);
+      }
+      
+      allEventIdsRaw = Array.from(new Set(priorityEventIds));
+      console.log(`🔴 LIVE MODE: Focusing on ${allEventIdsRaw.length} events (expanded to include live event)`);
+    } else {
+      // Standard mode: Process all events
+      allEventIdsRaw = Array.from(new Set([...knownEvents, ...eventIds]));
+      console.log(`📅 STANDARD MODE: Processing all ${allEventIdsRaw.length} events`);
+    }
 
     // Fetch events with enhanced live mode processing
     console.log(`📡 Fetching ${allEventIdsRaw.length} events...`);
     const eventChunks = [];
-    const chunkSize = LIVE_MODE_CONFIG.isLive ? 10 : 6; // Faster processing in live mode
+    const chunkSize = LIVE_MODE_CONFIG.isLive ? 15 : 6;
     
     for (let i = 0; i < allEventIdsRaw.length; i += chunkSize) {
       eventChunks.push(allEventIdsRaw.slice(i, i + chunkSize));
@@ -1189,7 +1343,7 @@ export async function getUFCFightsWithLiveMode() {
         const event = await safeFetch(url);
         processedEvents++;
         
-        if (allEventIdsRaw.length > 20 && processedEvents % 10 === 0) {
+        if (allEventIdsRaw.length > 10 && processedEvents % 5 === 0) {
           console.log(`  ⚡ Events progress: ${processedEvents}/${allEventIdsRaw.length}`);
         }
         
@@ -1201,153 +1355,12 @@ export async function getUFCFightsWithLiveMode() {
 
     allEvents.sort((a, b) => new Date(a.event.date) - new Date(b.event.date));
 
-    // Process events with live mode categorization
-    const { liveEvents, upcomingEvents } = await processEventsForLiveMode(allEvents);
-    // ✅ Inject forced event ID into live events (for simulation/testing)
-    const forcedEventId = process.env.FORCE_EVENT_ID;
-    if (forcedEventId && !liveEvents.some(e => e.eventId === forcedEventId)) {
-      const forced = allEvents.find(e => e.eventId === forcedEventId);
-      if (forced) {
-        console.log(`🧪 FORCING event ${forced.event.name} (${forcedEventId}) to be live`);
-        liveEvents.push(forced);
-      } else {
-        console.warn(`⚠️ FORCE_EVENT_ID ${forcedEventId} not found in loaded events`);
-      }
+    // ✅ BRANCHING LOGIC: Different processing for live vs standard mode
+    if (LIVE_MODE_CONFIG.isLive) {
+      return await processLiveMode(allEvents, LIVE_MODE_CONFIG, now, fourMonthsFromNow, knownFights, knownEvents, upcomingUnannounced, previousFightDetails, startTime);
+    } else {
+      return await processStandardMode(allEvents, now, fourMonthsFromNow, knownFights, knownEvents, upcomingUnannounced, previousFightDetails, startTime);
     }
-
-    if (LIVE_MODE_CONFIG.isLive && liveEvents.length > 0) {
-      console.log(`🔴 Found ${liveEvents.length} potentially live events`);
-      
-      // Process live events with enhanced monitoring
-      for (const { eventId, event } of liveEvents) {
-        console.log(`\n🔴 LIVE EVENT: ${event.name}`);
-        
-        const fights = await processLiveFights(event.competitions, eventId, event.name, event.date);
-        const liveFights = fights.filter(f => f.isCurrentlyLive);
-        
-        if (liveFights.length > 0) {
-          console.log(`🥊 ${liveFights.length} fights currently live!`);
-          await sendLiveEventAlert(event.name, event.date, fights, true);
-        }
-      }
-    }
-
-    // *** MOVE THE ORPHANED CODE HERE ***
-    const validEventIds = [];
-    const validFightIds = [];
-    const newFightIdsGlobal = [];
-    const updatedUnannounced = [];
-    const newFightLogEntries = [];
-    const currentFightDetails = {};
-    const allCurrentFights = [];
-
-    console.log(`⚡ Processing ${allEvents.length} valid events...`);
-
-    for (const { eventId, event } of allEvents) {
-      const eventDate = new Date(event.date);
-      
-      // Process past events
-      if (eventDate < now) {
-        console.log(`📝 Processing past event: ${event.name}`);
-        const pastFights = await processEventCompetitionsEnhanced(event.competitions, eventId, event.name, event.date);
-        const pastEvent = { 
-          eventId, 
-          eventName: event.name, 
-          fights: pastFights.map(fight => ({
-            fightId: fight.fightId,
-            athletes: fight.athletes.map(a => a.displayName)
-          }))
-        };
-        appendPastEvent(pastEvent);
-        continue;
-      }
-
-      if (eventDate > fourMonthsFromNow) continue;
-
-      validEventIds.push(eventId);
-      console.log(`\n📅 Event: ${event.name} on ${eventDate.toDateString()}`);
-
-      // Process fights for this event
-      const fights = await processEventCompetitionsEnhanced(event.competitions, eventId, event.name, event.date);
-      allCurrentFights.push(...fights);
-      
-      const newFightsThisEvent = [];
-      const updatedFightsThisEvent = [];
-
-      for (const fight of fights) {
-        validFightIds.push(fight.fightId);
-        
-        currentFightDetails[fight.fightId] = {
-          fightName: fight.fightName,
-          athletes: fight.athletes.map(a => a.displayName),
-          eventId: fight.eventId,
-          eventName: fight.eventName,
-          eventDate: event.date,
-          unannounced: fight.unannounced
-        };
-        
-        const wasUnannounced = upcomingUnannounced.find(f => f.fightId === fight.fightId);
-        if (!fight.unannounced && wasUnannounced) {
-          updatedFightsThisEvent.push(fight);
-        }
-        if (fight.unannounced) {
-          updatedUnannounced.push({ eventId, eventName: event.name, fightId: fight.fightId });
-        }
-
-        if (!knownFights.includes(fight.fightId)) {
-          newFightsThisEvent.push(fight);
-          newFightIdsGlobal.push(fight.fightId);
-          newFightLogEntries.push({ 
-            timestamp: new Date().toISOString(), 
-            eventName: event.name, 
-            fight: fight.fightName 
-          });
-        }
-      }
-
-      // Send notifications (only if not already handled by live processing)
-      if (!LIVE_MODE_CONFIG.isLive) {
-        if (newFightsThisEvent.length) await sendEnhancedDiscordAlert(event.name, event.date, newFightsThisEvent);
-        if (updatedFightsThisEvent.length) await sendEnhancedUpdatedFightsAlert(event.name, event.date, updatedFightsThisEvent);
-      }
-    }
-
-    // Detect changes and save data
-    const { changesByEvent, removedFights } = detectFightChanges(previousFightDetails, allCurrentFights);
-
-    for (const [eventName, eventData] of Object.entries(changesByEvent)) {
-      await sendEnhancedFightChangesAlert(eventName, eventData.eventDate, eventData.changes);
-    }
-
-    const totalChanges = Object.values(changesByEvent).reduce((total, eventData) => total + eventData.changes.length, 0);
-
-    if (removedFights.length > 0) {
-      await sendRemovedFightsAlert(removedFights);
-    }
-
-    // Save all data
-    saveJson(KNOWN_EVENTS_FILE, validEventIds);
-    const cleanedFights = Array.from(new Set([...knownFights, ...newFightIdsGlobal]))
-      .filter(id => validFightIds.includes(id));
-    saveJson(KNOWN_FIGHTS_FILE, cleanedFights);
-    saveUnannouncedFights(updatedUnannounced);
-    saveFightDetails(currentFightDetails);
-    if (newFightLogEntries.length) logNewFights(newFightLogEntries);
-
-    if (newFightIdsGlobal.length === 0 && totalChanges === 0 && removedFights.length === 0) {
-      const message = LIVE_MODE_CONFIG.isLive ? 
-        "✅ Live mode: no changes detected" : 
-        "✅ UFC watcher ran — no changes detected.";
-      await sendLiveDiscordMessage(message);
-    }
-
-    const executionTime = ((Date.now() - startTime) / 1000).toFixed(2);
-    const modeStatus = LIVE_MODE_CONFIG.isLive ? 
-      `🔴 Live mode completed in ${executionTime}s` :
-      `✅ Standard mode completed in ${executionTime}s`;
-      
-    console.log(modeStatus);
-    await sendLiveDiscordMessage(modeStatus);
     
   } catch (err) {
     console.error("❌ General failure in getUFCFights:", err);
@@ -1355,16 +1368,212 @@ export async function getUFCFightsWithLiveMode() {
   }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  const isLiveMode = process.env.LIVE_MODE === 'true';
+// ✅ LIVE MODE: Focused processing for live events - NO EVENT CHECKER
+async function processLiveMode(allEvents, LIVE_MODE_CONFIG, now, fourMonthsFromNow, knownFights, knownEvents, upcomingUnannounced, previousFightDetails, startTime) {
+  console.log("🔴 PROCESSING IN LIVE MODE - Focused on live and essential events");
+  console.log("⚡ LIVE MODE: Skipping event categorization - processing known live event directly");
   
-  console.log(`🚀 Starting UFC Watcher in ${isLiveMode ? 'LIVE' : 'STANDARD'} mode...`);
+  // ✅ REMOVED: processEventsForLiveMode - we already know which event is live
+  const liveEvents = [];
   
-  if (isLiveMode) {
-    getUFCFightsWithLiveMode();
-  } else {
-    getUFCFights();
+  // Find the live event directly from LIVE_MODE_CONFIG
+  if (LIVE_MODE_CONFIG.eventId) {
+    const liveEvent = allEvents.find(({ eventId }) => eventId === LIVE_MODE_CONFIG.eventId);
+    if (liveEvent) {
+      console.log(`🔴 Found configured live event: ${liveEvent.event.name}`);
+      liveEvents.push(liveEvent);
+    } else {
+      console.log(`⚠️  Configured live event ${LIVE_MODE_CONFIG.eventId} not found in fetched events`);
+    }
   }
+  
+  // ✅ Inject forced event ID into live events (for simulation/testing)
+  const forcedEventId = process.env.FORCE_EVENT_ID;
+  if (forcedEventId && !liveEvents.some(e => e.eventId === forcedEventId)) {
+    const forced = allEvents.find(e => e.eventId === forcedEventId);
+    if (forced) {
+      console.log(`🧪 FORCING event ${forced.event.name} (${forcedEventId}) to be live`);
+      liveEvents.push(forced);
+    }
+  }
+
+  const validEventIds = [];
+  const validFightIds = [];
+  const currentFightDetails = {};
+  const allCurrentFights = [];
+  
+  // 🔴 PRIORITY 1: Process live events with enhanced monitoring
+  if (liveEvents.length > 0) {
+    console.log(`🔴 Found ${liveEvents.length} live events - PRIORITY PROCESSING`);
+    
+    for (const { eventId, event } of liveEvents) {
+      console.log(`\n🔴 LIVE EVENT: ${event.name}`);
+      
+      const fights = await processLiveFights(event.competitions, eventId, event.name, event.date);
+      const liveFights = fights.filter(f => f.isCurrentlyLive);
+      
+      if (liveFights.length > 0) {
+        console.log(`🥊 ${liveFights.length} fights currently live!`);
+        await sendLiveEventAlert(event.name, event.date, liveFights, true);
+      } else {
+        console.log(`⚪ No fights currently live for ${event.name}`);
+        // Still send an alert showing the event is live but no active fights
+        await sendLiveEventAlert(event.name, event.date, fights, true);
+      }
+      
+      // Process live event fights for tracking
+      allCurrentFights.push(...fights);
+      validEventIds.push(eventId);
+      fights.forEach(fight => {
+        validFightIds.push(fight.fightId);
+        currentFightDetails[fight.fightId] = {
+          fightName: fight.fightName,
+          athletes: fight.athletes.map(a => a.displayName),
+          eventId: fight.eventId,
+          eventName: fight.eventName,
+          eventDate: event.date,
+          unannounced: fight.unannounced,
+          isLive: fight.isCurrentlyLive
+        };
+      });
+    }
+  } else {
+    console.log(`❌ No live events found! Expected live event: ${LIVE_MODE_CONFIG.eventName} (${LIVE_MODE_CONFIG.eventId})`);
+  }
+  
+  // ⚪ SKIP: Upcoming events processing in live mode (save time and focus)
+  console.log("⚪ LIVE MODE: Skipping upcoming events processing to focus on live content");
+  
+  // ⚪ SKIP: Past events processing in live mode (save time)
+  console.log("⚪ LIVE MODE: Skipping past events processing to focus on live content");
+  
+  // Quick data saving (minimal processing)
+  saveJson(KNOWN_EVENTS_FILE, Array.from(new Set([...knownEvents, ...validEventIds])));
+  saveJson(KNOWN_FIGHTS_FILE, Array.from(new Set([...knownFights, ...validFightIds])));
+  saveFightDetails(currentFightDetails);
+  
+  const executionTime = ((Date.now() - startTime) / 1000).toFixed(2);
+  const modeStatus = `🔴 Live mode completed in ${executionTime}s - Focused on ${liveEvents.length} live events`;
+  console.log(modeStatus);
+  await sendLiveDiscordMessage(modeStatus);
+}
+
+// ✅ STANDARD MODE: Comprehensive processing (your existing logic)
+async function processStandardMode(allEvents, now, fourMonthsFromNow, knownFights, knownEvents, upcomingUnannounced, previousFightDetails, startTime) {
+  console.log("📅 PROCESSING IN STANDARD MODE - Comprehensive event processing");
+  
+  const validEventIds = [];
+  const validFightIds = [];
+  const newFightIdsGlobal = [];
+  const updatedUnannounced = [];
+  const newFightLogEntries = [];
+  const currentFightDetails = {};
+  const allCurrentFights = [];
+
+  console.log(`⚡ Processing ${allEvents.length} valid events...`);
+
+  for (const { eventId, event } of allEvents) {
+    const eventDate = new Date(event.date);
+    
+    // Process past events (full processing in standard mode)
+    if (eventDate < now) {
+      console.log(`📝 Processing past event: ${event.name}`);
+      const pastFights = await processEventCompetitionsEnhanced(event.competitions, eventId, event.name, event.date);
+      const pastEvent = { 
+        eventId, 
+        eventName: event.name, 
+        fights: pastFights.map(fight => ({
+          fightId: fight.fightId,
+          athletes: fight.athletes.map(a => a.displayName)
+        }))
+      };
+      appendPastEvent(pastEvent);
+      continue;
+    }
+
+    if (eventDate > fourMonthsFromNow) continue;
+
+    validEventIds.push(eventId);
+    console.log(`\n📅 Event: ${event.name} on ${eventDate.toDateString()}`);
+
+    // Process fights for this event
+    const fights = await processEventCompetitionsEnhanced(event.competitions, eventId, event.name, event.date);
+    allCurrentFights.push(...fights);
+    
+    const newFightsThisEvent = [];
+    const updatedFightsThisEvent = [];
+
+    for (const fight of fights) {
+      validFightIds.push(fight.fightId);
+      
+      currentFightDetails[fight.fightId] = {
+        fightName: fight.fightName,
+        athletes: fight.athletes.map(a => a.displayName),
+        eventId: fight.eventId,
+        eventName: fight.eventName,
+        eventDate: event.date,
+        unannounced: fight.unannounced
+      };
+      
+      const wasUnannounced = upcomingUnannounced.find(f => f.fightId === fight.fightId);
+      if (!fight.unannounced && wasUnannounced) {
+        updatedFightsThisEvent.push(fight);
+      }
+      if (fight.unannounced) {
+        updatedUnannounced.push({ eventId, eventName: event.name, fightId: fight.fightId });
+      }
+
+      if (!knownFights.includes(fight.fightId)) {
+        newFightsThisEvent.push(fight);
+        newFightIdsGlobal.push(fight.fightId);
+        newFightLogEntries.push({ 
+          timestamp: new Date().toISOString(), 
+          eventName: event.name, 
+          fight: fight.fightName 
+        });
+      }
+    }
+
+    // Send notifications (standard mode)
+    if (newFightsThisEvent.length) await sendEnhancedDiscordAlert(event.name, event.date, newFightsThisEvent);
+    if (updatedFightsThisEvent.length) await sendEnhancedUpdatedFightsAlert(event.name, event.date, updatedFightsThisEvent);
+  }
+
+  // Detect changes and save data (full processing)
+  const { changesByEvent, removedFights } = detectFightChanges(previousFightDetails, allCurrentFights);
+
+  for (const [eventName, eventData] of Object.entries(changesByEvent)) {
+    await sendEnhancedFightChangesAlert(eventName, eventData.eventDate, eventData.changes);
+  }
+
+  const totalChanges = Object.values(changesByEvent).reduce((total, eventData) => total + eventData.changes.length, 0);
+
+  if (removedFights.length > 0) {
+    await sendRemovedFightsAlert(removedFights);
+  }
+
+  // Save all data (comprehensive)
+  saveJson(KNOWN_EVENTS_FILE, validEventIds);
+  const cleanedFights = Array.from(new Set([...knownFights, ...newFightIdsGlobal]))
+    .filter(id => validFightIds.includes(id));
+  saveJson(KNOWN_FIGHTS_FILE, cleanedFights);
+  saveUnannouncedFights(updatedUnannounced);
+  saveFightDetails(currentFightDetails);
+  if (newFightLogEntries.length) logNewFights(newFightLogEntries);
+
+  if (newFightIdsGlobal.length === 0 && totalChanges === 0 && removedFights.length === 0) {
+    await sendLiveDiscordMessage("✅ UFC watcher ran — no changes detected.");
+  }
+
+  const executionTime = ((Date.now() - startTime) / 1000).toFixed(2);
+  const modeStatus = `✅ Standard mode completed in ${executionTime}s`;
+  console.log(modeStatus);
+  await sendLiveDiscordMessage(modeStatus);
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  console.log('🚀 Starting UFC Watcher...');
+  getUFCFightsWithLiveMode();
 }
 
 export {
@@ -1379,5 +1588,3 @@ export {
   getCountryFlag,
   formatEnhancedFightForDiscord
 };
-
-// export { getUFCFights, getUFCFightsWithLiveMode };

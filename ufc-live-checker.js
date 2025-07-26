@@ -87,21 +87,22 @@ export async function checkLiveEvents() {
   }
 }
 
-export function enhanceMainScriptForLiveEvents() {
+export async function enhanceMainScriptForLiveEvents() {
+  // First check manual overrides
   const isLiveMode = process.env.LIVE_MODE === 'true';
   const forceSimulate = process.env.FORCE_SIMULATE_LIVE === 'true';
   const eventName = process.env.EVENT_NAME;
-
+  
+  // Manual override - if LIVE_MODE or FORCE_SIMULATE_LIVE is set
   if (isLiveMode || forceSimulate) {
-    console.log(`🔴 ${forceSimulate ? 'SIMULATED' : 'LIVE'} MODE ACTIVATED for: ${eventName}`);
+    console.log(`🔴 ${forceSimulate ? 'SIMULATED' : 'MANUAL'} LIVE MODE ACTIVATED for: ${eventName}`);
     console.log("🚀 Enhanced monitoring enabled:");
     console.log("   - Real-time fight status tracking");
     console.log("   - Live stats monitoring");
     console.log("   - Immediate Discord notifications");
-
     return {
       isLive: true,
-      eventName: eventName,
+      eventName: eventName || 'Manual Live Event',
       refreshInterval: 10000,
       features: {
         liveStats: true,
@@ -110,10 +111,57 @@ export function enhanceMainScriptForLiveEvents() {
       }
     };
   }
-
+  
+  // ✅ AUTOMATIC DETECTION - Check for actual live events
+  console.log("🔍 Checking for live UFC events automatically...");
+  try {
+    const liveEventResult = await checkLiveEvents();
+    
+    if (liveEventResult.isLive) {
+      console.log(`🔴 AUTOMATIC LIVE EVENT DETECTED: ${liveEventResult.eventName}`);
+      console.log("🚀 Enhanced monitoring enabled:");
+      console.log("   - Real-time fight status tracking");
+      console.log("   - Live stats monitoring");
+      console.log("   - Immediate Discord notifications");
+      
+      return {
+        isLive: true,
+        eventName: liveEventResult.eventName,
+        eventId: liveEventResult.eventId,
+        refreshInterval: 10000,
+        features: {
+          liveStats: true,
+          immediateNotifications: true,
+          enhancedUpdates: true
+        }
+      };
+    } else if (liveEventResult.upcomingSoon) {
+      console.log(`⏰ UPCOMING EVENT DETECTED: ${liveEventResult.eventName}`);
+      console.log("🚀 Enhanced monitoring enabled for upcoming event:");
+      
+      return {
+        isLive: false,
+        eventName: liveEventResult.eventName,
+        eventId: liveEventResult.eventId,
+        refreshInterval: 60000, // Check every minute for upcoming events
+        features: {
+          liveStats: false,
+          immediateNotifications: true,
+          enhancedUpdates: true
+        }
+      };
+    }
+    
+    console.log("📅 No live events detected - using standard monitoring");
+  } catch (error) {
+    console.error("❌ Error checking for live events:", error);
+    console.log("📅 Falling back to standard monitoring");
+  }
+  
+  // Default: Standard monitoring
   return {
     isLive: false,
-    refreshInterval: 10800000,
+    refreshInterval: 10800000, // 3 hours
     features: {
       liveStats: false,
       immediateNotifications: false,
