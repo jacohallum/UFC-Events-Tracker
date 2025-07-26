@@ -2172,5 +2172,95 @@
         ]
       }
     ]
+  },
+  {
+    "eventId": "600053545",
+    "eventName": "UFC Fight Night: Whittaker vs. de Ridder",
+    "fights": [
+      {
+        "fightId": "401800977",
+        "athletes": [
+          "Martin Buday",
+          "Marcus Buchecha"
+        ]
+      },
+      {
+        "fightId": "401799505",
+        "athletes": [
+          "Mohammad Yahya",
+          "Steven Nguyen"
+        ]
+      },
+      {
+        "fightId": "401765008",
+        "athletes": [
+          "Ibo Aslan",
+          "Billy Elekana"
+        ]
+      },
+      {
+        "fightId": "401799503",
+        "athletes": [
+          "Amanda Ribas",
+          "Tabatha Ricci"
+        ]
+      },
+      {
+        "fightId": "401799504",
+        "athletes": [
+          "Davey Grant",
+          "Da'Mon Blackshear"
+        ]
+      },
+      {
+        "fightId": "401800976",
+        "athletes": [
+          "Muslim Salikhov",
+          "Carlos Leal"
+        ]
+      },
+      {
+        "fightId": "401785971",
+        "athletes": [
+          "Said Nurmagomedov",
+          "Bryce Mitchell"
+        ]
+      },
+      {
+        "fightId": "401772659",
+        "athletes": [
+          "Nikita Krylov",
+          "Bogdan Guskov"
+        ]
+      },
+      {
+        "fightId": "401804702",
+        "athletes": [
+          "Asu Almabayev",
+          "Jose Ochoa"
+        ]
+      },
+      {
+        "fightId": "401772658",
+        "athletes": [
+          "Marc-Andre Barriault",
+          "Shara Magomedov"
+        ]
+      },
+      {
+        "fightId": "401785969",
+        "athletes": [
+          "Petr Yan",
+          "Marcus McGhee"
+        ]
+      },
+      {
+        "fightId": "401765007",
+        "athletes": [
+          "Robert Whittaker",
+          "Reinier de Ridder"
+        ]
+      }
+    ]
   }
 ]

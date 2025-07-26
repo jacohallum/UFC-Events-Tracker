@@ -1380,4 +1380,4 @@ export {
   formatEnhancedFightForDiscord
 };
 
-export { getUFCFights, getUFCFightsWithLiveMode };
+// export { getUFCFights, getUFCFightsWithLiveMode };
