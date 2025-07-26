@@ -12,6 +12,7 @@ const PAST_EVENTS_FILE = "pastEvents.json";
 const UPCOMING_UNANNOUNCED_FILE = "upcomingUnannouncedFights.json";
 const FIGHT_LOG_FILE = "fightLog.json";
 const FIGHT_DETAILS_FILE = "fightDetails.json";
+const fightDetailsHistory = new Map();
 
 // Debug configuration
 const DEBUG_CONFIG = {
@@ -1016,17 +1017,91 @@ const processEventsForLiveMode = async (allEvents) => {
   return { liveEvents, upcomingEvents };
 };
 
+const detectLiveFightChanges = (currentDetails, previousDetails, fightName) => {
+  if (!previousDetails) return { type: 'initial', changes: [] };
+  
+  const changes = [];
+  
+  // Round change detection
+  if (currentDetails.round !== previousDetails.round && currentDetails.round > previousDetails.round) {
+    changes.push({
+      type: 'round_start',
+      data: {
+        fightName,
+        newRound: currentDetails.round,
+        previousRound: previousDetails.round,
+        timeRemaining: currentDetails.timeRemaining
+      }
+    });
+  }
+  
+  // Fight state changes
+  if (currentDetails.state !== previousDetails.state) {
+    changes.push({
+      type: 'state_change',
+      data: {
+        fightName,
+        from: previousDetails.state,
+        to: currentDetails.state,
+        round: currentDetails.round,
+        time: currentDetails.timeRemaining
+      }
+    });
+  }
+  
+  // Time-based alerts
+  if (currentDetails.isActive && previousDetails.isActive) {
+    // Round ending soon (30 seconds remaining)
+    if (currentDetails.clockSeconds <= 30 && previousDetails.clockSeconds > 30) {
+      changes.push({
+        type: 'round_ending',
+        data: {
+          fightName,
+          round: currentDetails.round,
+          timeRemaining: currentDetails.timeRemaining
+        }
+      });
+    }
+    
+    // Round halfway point
+    if (currentDetails.clockSeconds <= 150 && previousDetails.clockSeconds > 150) {
+      changes.push({
+        type: 'round_halfway',
+        data: {
+          fightName,
+          round: currentDetails.round,
+          timeRemaining: currentDetails.timeRemaining
+        }
+      });
+    }
+  }
+  
+  // Fight finish detection
+  if (currentDetails.isCompleted && !previousDetails.isCompleted) {
+    changes.push({
+      type: 'fight_finish',
+      data: {
+        fightName,
+        finalRound: previousDetails.round,
+        finalTime: previousDetails.timeRemaining,
+        completedAt: new Date().toISOString()
+      }
+    });
+  }
+  
+  return { type: 'update', changes };
+};
+
 // Enhanced competition status checking
-// FIXED: Enhanced competition status checking with API fetching
 const checkCompetitionStatus = async (competition) => {
   if (!competition) {
     console.log(`⚠️  No competition data provided`);
-    return 'unknown';
+    return { status: 'unknown', details: null };
   }
   
   console.log(`🔍 Competition ID: ${competition.id}`);
   
-  // Check if status is a reference that needs to be fetched
+  // Check if status is a reference that needs to be fetched (keeping your existing logic)
   if (competition.status?.$ref) {
     console.log(`📡 Fetching status from: ${competition.status.$ref}`);
     
@@ -1037,15 +1112,15 @@ const checkCompetitionStatus = async (competition) => {
         return parseStatusData(statusData);
       } else {
         console.log(`❌ Failed to fetch status data`);
-        return 'unknown';
+        return { status: 'unknown', details: null };
       }
     } catch (error) {
       console.log(`❌ Error fetching status:`, error.message);
-      return 'unknown';
+      return { status: 'unknown', details: null };
     }
   }
   
-  // Handle direct status data (fallback)
+  // Handle direct status data (fallback) - keeping your existing logic
   return parseStatusData(competition.status);
 };
 
@@ -1053,12 +1128,40 @@ const checkCompetitionStatus = async (competition) => {
 const parseStatusData = (statusData) => {
   if (!statusData) {
     console.log(`⚠️  No status data to parse`);
-    return 'unknown';
+    return { status: 'unknown', details: null };
   }
   
-  console.log(`🔍 Parsing status data:`, statusData);
+  // Log enhanced details including round/time info
+  console.log(`🔍 Parsing status data:`, {
+    state: statusData.type?.state,
+    round: statusData.period,
+    time: statusData.displayClock,
+    clock: statusData.clock
+  });
   
-  // Handle different possible status structures
+  // Extract detailed fight information for change detection
+  const fightDetails = {
+    round: statusData.period || 0,
+    timeRemaining: statusData.displayClock || '-',
+    clockSeconds: statusData.clock || 0,
+    state: statusData.type?.state || 'unknown',
+    lastUpdated: new Date().toISOString(),
+    
+    // Calculated fields for change detection
+    isActive: statusData.type?.state === 'in',
+    isCompleted: statusData.type?.state === 'post',
+    isScheduled: statusData.type?.state === 'pre',
+    
+    // Round information
+    isFirstRound: statusData.period === 1,
+    isFinalRound: statusData.period >= 3,
+    
+    // Progress calculations
+    roundProgress: calculateRoundProgress(statusData.clock, statusData.period),
+    fightProgress: calculateFightProgress(statusData.clock, statusData.period)
+  };
+  
+  // Handle different possible status structures (keeping your existing logic)
   let status;
   if (statusData.type?.state) {
     status = statusData.type.state;
@@ -1070,56 +1173,61 @@ const parseStatusData = (statusData) => {
     status = statusData;
   } else {
     console.log(`⚠️  Unknown status structure:`, statusData);
-    return 'unknown';
+    return { status: 'unknown', details: fightDetails };
   }
   
-  console.log(`🔍 Extracted status: "${status}"`);
+  // Enhanced logging with round/time info
+  const roundInfo = statusData.period ? ` | Round: ${statusData.period}` : '';
+  const timeInfo = statusData.displayClock ? ` | Time: ${statusData.displayClock}` : '';
+  console.log(`🔍 Extracted status: "${status}"${roundInfo}${timeInfo}`);
   
-  // Check for live status
-  if (status === 'in' || 
-      status === 'STATUS_IN_PROGRESS' || 
-      status === 'STATUS_LIVE' ||
-      status === 'in-progress' ||
-      status === 'live' ||
-      status === 'active' ||
-      status === 'ongoing') {
-    console.log(`🔴 STATUS IS LIVE: ${status}`);
-    return 'live';
-  }
-  
-  // Check for scheduled/upcoming
-  if (status === 'pre' ||
-      status === 'STATUS_SCHEDULED' ||
-      status === 'scheduled' ||
-      status === 'upcoming') {
+  // Determine final status
+  let finalStatus = 'unknown';
+  if (status === 'in' || status === 'STATUS_IN_PROGRESS' || status === 'STATUS_LIVE' ||
+      status === 'in-progress' || status === 'live' || status === 'active' || status === 'ongoing') {
+    console.log(`🔴 STATUS IS LIVE: ${status}${roundInfo}${timeInfo}`);
+    finalStatus = 'live';
+  } else if (status === 'pre' || status === 'STATUS_SCHEDULED' || status === 'scheduled' || status === 'upcoming') {
     console.log(`⏰ STATUS IS SCHEDULED: ${status}`);
-    return 'scheduled';
-  }
-  
-  // Check for completed
-  if (status === 'post' ||
-      status === 'STATUS_FINAL' ||
-      status === 'STATUS_COMPLETED' ||
-      status === 'final' ||
-      status === 'completed' ||
-      status === 'finished') {
+    finalStatus = 'scheduled';
+  } else if (status === 'post' || status === 'STATUS_FINAL' || status === 'STATUS_COMPLETED' ||
+             status === 'final' || status === 'completed' || status === 'finished') {
     console.log(`✅ STATUS IS COMPLETED: ${status}`);
-    return 'completed';
+    finalStatus = 'completed';
+  } else {
+    console.log(`⚠️  Unrecognized status: "${status}"`);
   }
   
-  console.log(`⚠️  Unrecognized status: "${status}"`);
-  return 'unknown';
+  return { status: finalStatus, details: fightDetails };
+};
+
+// Helper functions for calculations
+const calculateRoundProgress = (clockSeconds, period) => {
+  if (!clockSeconds || !period) return 0;
+  const totalRoundSeconds = 5 * 60; // 5 minutes = 300 seconds
+  const elapsedSeconds = totalRoundSeconds - clockSeconds;
+  return Math.round((elapsedSeconds / totalRoundSeconds) * 100);
+};
+
+const calculateFightProgress = (clockSeconds, period) => {
+  if (!clockSeconds || !period) return 0;
+  const totalFightSeconds = 3 * 5 * 60; // 3 rounds × 5 minutes × 60 seconds
+  const completedRounds = Math.max(0, period - 1) * 5 * 60;
+  const currentRoundElapsed = (5 * 60) - clockSeconds;
+  const totalElapsed = completedRounds + currentRoundElapsed;
+  return Math.round((totalElapsed / totalFightSeconds) * 100);
 };
 
 // Live event fight processing with enhanced details
 const processLiveFights = async (competitions, eventId, eventName, eventDate) => {
-  console.log(`🔴 Processing ${competitions.length} competitions in LIVE MODE`);
+  console.log(`🔴 Processing ${competitions.length} competitions with ENHANCED DETAILS + CHANGE DETECTION`);
   
   const fights = await processEventCompetitionsEnhanced(competitions, eventId, eventName, eventDate);
   console.log(`📋 Total fights processed: ${fights.length}`);
   
-  // Process fights with async status checking
+  // Process fights with enhanced details tracking and change detection
   const enhancedFights = [];
+  const allSignificantChanges = [];
   
   for (let i = 0; i < fights.length; i++) {
     const fight = fights[i];
@@ -1132,43 +1240,78 @@ const processLiveFights = async (competitions, eventId, eventName, eventDate) =>
         ...fight,
         liveStatus: 'unknown',
         lastUpdated: null,
-        isCurrentlyLive: false
+        isCurrentlyLive: false,
+        fightDetails: null
       });
       continue;
     }
     
     console.log(`✅ Found competition for fight ${fight.fightName}`);
     
-    // Fetch the actual status (this is now async!)
-    const status = await checkCompetitionStatus(competition);
+    // Get detailed status information (now returns both status and details)
+    const { status, details } = await checkCompetitionStatus(competition);
     const isLive = status === 'live';
     
-    console.log(`   Final status: ${status}`);
+    // Check for changes if we have previous data
+    const previousDetails = fightDetailsHistory.get(fight.fightId);
+    if (details && previousDetails) {
+      console.log(`🔍 Checking for changes in ${fight.fightName}...`);
+      const changeDetection = detectLiveFightChanges(details, previousDetails, fight.fightName);
+      
+      if (changeDetection.changes.length > 0) {
+        console.log(`🔔 ${changeDetection.changes.length} significant changes detected for ${fight.fightName}`);
+        allSignificantChanges.push(...changeDetection.changes);
+        
+        // Log each change for debugging
+        changeDetection.changes.forEach(change => {
+          console.log(`   📝 Change: ${change.type} - ${JSON.stringify(change.data)}`);
+        });
+      }
+    } else if (details) {
+      console.log(`📝 First time tracking ${fight.fightName} - storing initial state`);
+    }
+    
+    // Store current details for next comparison
+    if (details) {
+      fightDetailsHistory.set(fight.fightId, details);
+    }
+    
+    console.log(`   Final status: ${status}${details ? ` | Round: ${details.round} | Time: ${details.timeRemaining}` : ''}`);
     console.log(`   Is currently live: ${isLive}`);
     
     enhancedFights.push({
       ...fight,
       liveStatus: status,
       lastUpdated: competition?.lastUpdated || null,
-      isCurrentlyLive: isLive
+      isCurrentlyLive: isLive,
+      fightDetails: details // Store detailed fight information
     });
   }
   
-  // Count and report live fights
+  // Send alerts for all significant changes
+  console.log(`\n📢 Processing ${allSignificantChanges.length} total significant changes...`);
+  for (const change of allSignificantChanges) {
+    console.log(`📺 Sending alert for: ${change.type} - ${change.data.fightName}`);
+    await sendFightDetailAlert(change, eventName, eventDate);
+  }
+  
+  // Count and report live fights (keeping your existing structure)
   const liveFights = enhancedFights.filter(f => f.isCurrentlyLive);
   const scheduledFights = enhancedFights.filter(f => f.liveStatus === 'scheduled');
   const completedFights = enhancedFights.filter(f => f.liveStatus === 'completed');
   
-  console.log(`\n🔴 LIVE FIGHTS SUMMARY:`);
+  console.log(`\n🔴 ENHANCED LIVE FIGHTS SUMMARY:`);
   console.log(`   🥊 Live: ${liveFights.length}`);
   console.log(`   ⏰ Scheduled: ${scheduledFights.length}`);
   console.log(`   ✅ Completed: ${completedFights.length}`);
-  console.log(`   ❓ Unknown: ${enhancedFights.length - liveFights.length - scheduledFights.length - completedFights.length}`);
+  console.log(`   🔔 Significant changes detected: ${allSignificantChanges.length}`);
+  console.log(`   📊 Total fights tracked: ${fightDetailsHistory.size}`);
   
   if (liveFights.length > 0) {
-    console.log(`🔴 LIVE FIGHTS FOUND:`);
+    console.log(`🔴 LIVE FIGHTS WITH DETAILS:`);
     liveFights.forEach(fight => {
-      console.log(`   - ${fight.fightName} (Status: ${fight.liveStatus})`);
+      const details = fight.fightDetails;
+      console.log(`   - ${fight.fightName} (Round ${details?.round || '?'}, Time: ${details?.timeRemaining || '?'})`);
     });
   } else {
     console.log(`❌ NO LIVE FIGHTS DETECTED`);
@@ -1178,13 +1321,72 @@ const processLiveFights = async (competitions, eventId, eventName, eventDate) =>
     });
   }
   
-  // Sort fights by status (live first, then scheduled, then completed)
+  // Sort fights by status (keeping your existing logic)
   enhancedFights.sort((a, b) => {
     const statusPriority = { live: 0, scheduled: 1, completed: 2, unknown: 3 };
     return statusPriority[a.liveStatus] - statusPriority[b.liveStatus];
   });
   
   return enhancedFights;
+};
+
+const sendFightDetailAlert = async (change, eventName, eventDate) => {
+  const dateTimeInfo = formatEventDateTime(eventDate);
+  let content = '';
+  
+  switch (change.type) {
+    case 'round_start':
+      content = `🚨 **ROUND ${change.data.newRound} STARTING!**\n\n` +
+                `🥊 **${change.data.fightName}**\n` +
+                `📅 ${eventName}\n` +
+                `⏱️ **Round ${change.data.newRound}** - ${change.data.timeRemaining}\n\n` +
+                `🔥 **Previous Round Complete** - Moving to Round ${change.data.newRound}`;
+      break;
+      
+    case 'round_ending':
+      content = `⏰ **ROUND ENDING SOON!**\n\n` +
+                `🥊 **${change.data.fightName}**\n` +
+                `📅 ${eventName}\n` +
+                `⏱️ **${change.data.timeRemaining} remaining** in Round ${change.data.round}\n\n` +
+                `🔥 **Final 30 seconds of action!**`;
+      break;
+      
+    case 'round_halfway':
+      content = `📊 **ROUND ${change.data.round} HALFWAY POINT**\n\n` +
+                `🥊 **${change.data.fightName}**\n` +
+                `📅 ${eventName}\n` +
+                `⏱️ **${change.data.timeRemaining} remaining** in Round ${change.data.round}\n\n` +
+                `⚡ **2:30 elapsed - heating up!**`;
+      break;
+      
+    case 'fight_finish':
+      content = `🏁 **FIGHT OVER!**\n\n` +
+                `🥊 **${change.data.fightName}**\n` +
+                `📅 ${eventName}\n` +
+                `⏱️ **Finished:** ${change.data.finalTime} of Round ${change.data.finalRound}\n\n` +
+                `🎬 **Fight completed** - Results coming soon!`;
+      break;
+      
+    case 'state_change':
+      if (change.data.to === 'in') {
+        content = `🚨 **FIGHT STARTING NOW!**\n\n` +
+                  `🥊 **${change.data.fightName}**\n` +
+                  `📅 ${eventName}\n` +
+                  `⏱️ **Round ${change.data.round}** - ${change.data.time}\n\n` +
+                  `🔴 **LIVE ACTION BEGINNING!**`;
+      }
+      break;
+  }
+  
+  if (content) {
+    // Handle Discord's 2000 character limit
+    if (content.length > 1900) {
+      content = content.substring(0, 1900) + '\n\n*...truncated*';
+    }
+    
+    await sendLiveDiscordMessage(content, true);
+    console.log(`📺 Sent detailed fight alert: ${change.type} for ${change.data.fightName}`);
+  }
 };
 
 // Enhanced Discord alert for live events
@@ -1195,12 +1397,12 @@ const sendLiveEventAlert = async (eventName, eventDate, fights, isLiveEvent = fa
   let content = `${liveIndicator}🚨 **${eventName}**\n\n📅 **${dateTimeInfo}**\n\n`;
   
   if (isLiveEvent) {
-    // Group fights by live status
+    // Group fights by live status (keeping your existing logic)
     const liveFights = fights.filter(f => f.liveStatus === 'live');
     const scheduledFights = fights.filter(f => f.liveStatus === 'scheduled');
     const completedFights = fights.filter(f => f.liveStatus === 'completed');
     
-    // FIXED: Show live fights first and prominently
+    // Show live fights first and prominently (keeping your existing structure)
     if (liveFights.length > 0) {
       content += `🔴 **LIVE NOW:**\n`;
       liveFights.forEach((fight, index) => {
@@ -1229,7 +1431,7 @@ const sendLiveEventAlert = async (eventName, eventDate, fights, isLiveEvent = fa
       content += `✅ **COMPLETED:** ${completedFights.length} fights\n\n`;
     }
   } else {
-    // Standard format for non-live events
+    // Standard format for non-live events (keeping your existing logic)
     content += `🥊 **New fights added:**\n\n`;
     fights.forEach((fight, index) => {
       if (fight.athletes && fight.athletes.length >= 2) {
@@ -1243,7 +1445,7 @@ const sendLiveEventAlert = async (eventName, eventDate, fights, isLiveEvent = fa
     });
   }
   
-  // Handle Discord's 2000 character limit
+  // Handle Discord's 2000 character limit (keeping your existing logic)
   if (content.length > 1900) {
     content = content.substring(0, 1900) + '\n\n*...truncated (message too long)*';
   }
@@ -1278,15 +1480,15 @@ export async function getUFCFightsWithLiveMode() {
   }
 
   // Send different startup messages based on mode
-  try {
-    const startupMessage = LIVE_MODE_CONFIG.isLive ? 
-      `🔴 **LIVE MODE** - UFC watcher monitoring live event at ${pstTime}` :
-      `👀 Running UFC watcher in standard mode at ${pstTime}`;
+  // try {
+  //   const startupMessage = LIVE_MODE_CONFIG.isLive ? 
+  //     `🔴 **LIVE MODE** - UFC watcher monitoring live event at ${pstTime}` :
+  //     `👀 Running UFC watcher in standard mode at ${pstTime}`;
       
-    await sendLiveDiscordMessage(startupMessage);
-  } catch (discordErr) {
-    console.error("❌ Failed to send initial Discord message:", discordErr);
-  }
+  //   await sendLiveDiscordMessage(startupMessage);
+  // } catch (discordErr) {
+  //   console.error("❌ Failed to send initial Discord message:", discordErr);
+  // }
 
   const knownFights = loadJson(KNOWN_FIGHTS_FILE);
   const knownEvents = loadJson(KNOWN_EVENTS_FILE);
@@ -1418,7 +1620,7 @@ async function processLiveMode(allEvents, LIVE_MODE_CONFIG, now, fourMonthsFromN
       } else {
         console.log(`⚪ No fights currently live for ${event.name}`);
         // Still send an alert showing the event is live but no active fights
-        await sendLiveEventAlert(event.name, event.date, fights, true);
+        //await sendLiveEventAlert(event.name, event.date, fights, true);
       }
       
       // Process live event fights for tracking
@@ -1455,7 +1657,7 @@ async function processLiveMode(allEvents, LIVE_MODE_CONFIG, now, fourMonthsFromN
   const executionTime = ((Date.now() - startTime) / 1000).toFixed(2);
   const modeStatus = `🔴 Live mode completed in ${executionTime}s - Focused on ${liveEvents.length} live events`;
   console.log(modeStatus);
-  await sendLiveDiscordMessage(modeStatus);
+  //await sendLiveDiscordMessage(modeStatus);
 }
 
 // ✅ STANDARD MODE: Comprehensive processing (your existing logic)
