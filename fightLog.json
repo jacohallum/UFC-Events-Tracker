@@ -1064,6 +1064,7 @@
     "eventName": "UFC Fight Night: Albazi vs. Taira",
     "fight": "Felipe Bunes vs Andre Lima"
   },
+[
   {
     "timestamp": "2025-07-16T18:30:15.226Z",
     "eventName": "UFC Fight Night: Albazi vs. Taira",
@@ -1360,72 +1361,72 @@
     "fight": "Jiří Procházka vs Khalil Rountree Jr."
   },
   {
-    "timestamp": "2025-07-25T02:30:22.763Z",
+    "timestamp": "2025-07-24T06:32:47.056Z",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
     "fight": "Xiao Long vs SuYoung You"
   },
   {
-    "timestamp": "2025-07-25T02:30:22.763Z",
+    "timestamp": "2025-07-24T06:32:47.056Z",
     "eventName": "UFC Fight Night: Walker vs. Zhang",
     "fight": "Austin Hubbard vs Rongzhu"
   },
   {
-    "timestamp": "2025-07-25T02:30:24.364Z",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "fight": "Raquel Pennington vs Norma Dumont"
-  },
-  {
-    "timestamp": "2025-07-25T02:30:24.364Z",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "fight": "Montserrat Rendon vs Alice Pereira"
-  },
-  {
-    "timestamp": "2025-07-25T02:30:24.364Z",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "fight": "Sedriques Dumas vs Zachary Reese"
-  },
-  {
-    "timestamp": "2025-07-25T02:30:24.364Z",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "fight": "Joaquim Silva vs Claudio Puelles"
-  },
-  {
-    "timestamp": "2025-07-25T02:30:24.364Z",
-    "eventName": "Noche UFC: Lopes vs. Silva",
-    "fight": "Tatiana Suarez vs Amanda Lemos"
-  },
-  {
-    "timestamp": "2025-07-25T02:30:24.364Z",
+    "timestamp": "2025-07-24T06:32:48.437Z",
     "eventName": "Noche UFC: Lopes vs. Silva",
     "fight": "Jared Gordon vs Rafa Garcia"
   },
   {
-    "timestamp": "2025-07-25T02:30:24.364Z",
+    "timestamp": "2025-07-24T06:32:48.437Z",
     "eventName": "Noche UFC: Lopes vs. Silva",
     "fight": "Jesus Aguilar vs Luis Gurule"
   },
   {
-    "timestamp": "2025-07-25T02:30:24.364Z",
+    "timestamp": "2025-07-24T06:32:48.437Z",
     "eventName": "Noche UFC: Lopes vs. Silva",
     "fight": "Alessandro Costa vs Édgar Cháirez"
   },
   {
-    "timestamp": "2025-07-25T02:30:25.285Z",
+    "timestamp": "2025-07-25T01:47:16.931Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "Raquel Pennington vs Norma Dumont"
+  },
+  {
+    "timestamp": "2025-07-25T01:47:16.932Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "Montserrat Rendon vs Alice Pereira"
+  },
+  {
+    "timestamp": "2025-07-25T01:47:16.932Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "Sedriques Dumas vs Zachary Reese"
+  },
+  {
+    "timestamp": "2025-07-25T01:47:16.932Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "Joaquim Silva vs Claudio Puelles"
+  },
+  {
+    "timestamp": "2025-07-25T01:47:16.932Z",
+    "eventName": "Noche UFC: Lopes vs. Silva",
+    "fight": "Tatiana Suarez vs Amanda Lemos"
+  },
+  {
+    "timestamp": "2025-07-25T01:47:17.527Z",
     "eventName": "UFC 321: Aspinall vs. Gane",
     "fight": "Aleksandar Rakic vs Azamat Murzakanov"
   },
   {
-    "timestamp": "2025-07-25T02:30:25.285Z",
+    "timestamp": "2025-07-25T01:47:17.527Z",
     "eventName": "UFC 321: Aspinall vs. Gane",
     "fight": "Mitch Raposo vs Azat Maksum"
   },
   {
-    "timestamp": "2025-07-25T02:30:25.285Z",
+    "timestamp": "2025-07-25T01:47:17.527Z",
     "eventName": "UFC 321: Aspinall vs. Gane",
     "fight": "JunYong Park vs Ikram Aliskerov"
   },
   {
-    "timestamp": "2025-07-25T02:30:25.285Z",
+    "timestamp": "2025-07-25T01:47:17.527Z",
     "eventName": "UFC 321: Aspinall vs. Gane",
     "fight": "Alexander Volkov vs Jailton Almeida"
   }
